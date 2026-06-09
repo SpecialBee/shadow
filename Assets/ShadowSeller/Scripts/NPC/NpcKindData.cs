@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // NPC 종류별 설정값 ScriptableObject.
+    // 시야각/범위, 의심도 상승·감소 속도, 임계값, 이동 속도, 각종 타이머를 인스펙터에서 조정.
+    // NPCController가 런타임에 이 데이터를 참조함. 종류마다 별도 에셋을 만들어 할당.
     [CreateAssetMenu(menuName = "ShadowSell/NPC Kind Data", fileName = "NpcKindData_Guard")]
     public class NpcKindData : ScriptableObject
     {

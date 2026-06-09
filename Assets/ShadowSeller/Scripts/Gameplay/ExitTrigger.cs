@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
-    // 탈출 지점: 목표 완료 후 플레이어 진입 시 승리
+    // 탈출 지점 트리거 — ObjectiveManager.IsComplete 상태에서 플레이어 진입 시 승리 처리.
+    // 에디터 Gizmo: 목표 미완료=회색, 완료=녹색으로 표시.
     [RequireComponent(typeof(Collider2D))]
     public class ExitTrigger : MonoBehaviour
     {

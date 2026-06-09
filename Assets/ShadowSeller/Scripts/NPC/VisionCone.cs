@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // NPC 시야각 시각화 — NPCController가 Awake에서 자식 GO에 자동 부착.
+    // 매 LateUpdate에 NPC의 FacingDir·viewAngle·viewRange를 읽어 부채꼴 메시를 재빌드.
+    // 상태별 색상: Idle=노랑 / Suspicious=주황 / Alert=짙은주황 / Chase=빨강.
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
     public class VisionCone : MonoBehaviour
     {

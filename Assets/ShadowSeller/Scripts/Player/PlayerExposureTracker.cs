@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace ShadowSeller.Core
 {
-    // 플레이어의 노출 상태를 관리하고, 그림자 판정까지 직접 수행.
-    // (ShadowSystem 흡수 — 그림자 상태를 소유하는 쪽이 직접 판정)
+    // 플레이어 노출 상태 관리 + 그림자 판정 (ShadowSystem 흡수).
+    //   - Tick() : 플레이어 AABB 5점 샘플링 → ShadowZone 3/5 이상 겹치면 Shadow 판정
+    //   - 우선순위 : Shadow > ExposedSight > Lit > Dark → SuspicionManager에 전달
+    //   - LightSource 트리거(OnEnter/ExitDangerZone)와 NPC 위협 등록도 여기서 통합 관리
     public class PlayerExposureTracker : MonoBehaviour, ITickable
     {
         public TickPhase Phase => TickPhase.ShadowUpdate;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace ShadowSeller.Core
 {
+    // 게임 루프 컨트롤러 — ITickable을 TickPhase 오름차순으로 정렬해 매 Update마다 순차 실행.
+    // 모든 시스템은 Awake에서 Register(), OnDestroy에서 Unregister()를 호출해야 함. 싱글턴.
     [DefaultExecutionOrder(-100)]
     public class GameLoopController : MonoBehaviour
     {

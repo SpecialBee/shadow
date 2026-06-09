@@ -2,6 +2,11 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // NPC AI 상태 머신 (FSM).
+    //   상태 전이: Idle ↔ Patrol → Suspicious → Alert → Chase → Search → Patrol/Idle
+    //   - 플레이어가 그림자 안에 있으면 CanSeePlayer() = false → 추격 중단
+    //   - Alert/Chase 상태 진입 시 PlayerExposureTracker에 위협 등록, 이탈 시 해제
+    //   - Chase 중 arrestTime 동안 근접 시 즉시 게임오버 (TriggerArrest)
     public class NPCController : MonoBehaviour, ITickable
     {
         public TickPhase Phase => TickPhase.NpcAI;

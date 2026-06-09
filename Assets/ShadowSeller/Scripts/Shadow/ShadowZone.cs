@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // 그림자 판정 트리거 콜라이더 마커.
+    // ShadowProjector가 _Shadow GO에 자동 부착. PlayerExposureTracker가 OverlapPoint로 감지함.
+    // 플레이 시작 시 Box/Circle 콜라이더 크기에 맞는 파란 반투명 시각화 박스를 자동 생성.
     [RequireComponent(typeof(Collider2D))]
     public class ShadowZone : MonoBehaviour
     {

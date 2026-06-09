@@ -2,8 +2,11 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
-    // 오브젝트 뒤에 그림자 스프라이트를 생성하고, 같은 위치·크기로 ShadowZone(판정 콜라이더)을 동기화.
-    // 오브젝트가 LightSource의 range 안에 있을 때만 그림자 생성.
+    // 오브젝트의 그림자 스프라이트(_Shadow GO)를 런타임에 생성하고 매 프레임 위치를 동기화.
+    //   - LightSource range 안에 있을 때만 _Shadow GO 활성화 (범위 밖이면 SetActive false)
+    //   - 그림자 방향 : 가장 가까운 LightSource 위치 기준으로 반대 방향 투영
+    //   - 그림자 길이 : 광원 가장자리에 가까울수록 길어짐 (Lerp 0.6~1.5)
+    //   - _Shadow GO 안에 ShadowZone 포함 → 그림자 숨기 판정도 함께 이동
     public class ShadowProjector : MonoBehaviour
     {
         [SerializeField] private float shadowDistance = 0.8f;
@@ -20,10 +23,10 @@ namespace ShadowSeller.Core
             if (sr == null) return;
 
             var go = new GameObject("_Shadow");
-            go.transform.SetParent(transform.parent);
-            go.transform.position   = transform.position;
-            go.transform.localScale = transform.localScale;
-            go.transform.rotation   = transform.rotation;
+            go.transform.SetParent(transform);
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localScale    = Vector3.one;
+            go.transform.localRotation = Quaternion.identity;
 
             _shadowTransform = go.transform;
 
@@ -90,7 +93,8 @@ namespace ShadowSeller.Core
             {
                 if (l == null || !l.gameObject.activeInHierarchy) continue;
                 float d = Vector2.Distance(transform.position, l.transform.position);
-                if (d > l.Range) continue;   // 범위 밖 → 이 광원은 무시
+                if (d > l.Range) continue;                      // 범위 밖 → 무시
+                if (l.WallBlocks(transform.position)) continue; // 벽으로 막힘 → 무시
                 if (d < minDist) { minDist = d; nearest = l; }
             }
 
@@ -109,9 +113,7 @@ namespace ShadowSeller.Core
             float   dist = shadowDistance * Mathf.Lerp(0.6f, 1.5f, Mathf.Clamp01(minDist / nearest.Range));
             Vector2 pos  = (Vector2)transform.position + dir * dist;
 
-            _shadowTransform.position   = pos;
-            _shadowTransform.localScale = transform.localScale;
-            _shadowTransform.rotation   = transform.rotation;
+            _shadowTransform.position = pos;
 
             if (_shadowRb != null)
                 _shadowRb.position = pos;

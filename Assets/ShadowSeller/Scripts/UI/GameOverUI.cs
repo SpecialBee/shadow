@@ -5,6 +5,9 @@ using TMPro;
 
 namespace ShadowSeller.UI
 {
+    // 게임 결과 UI — 패배/승리 패널 표시 및 재시작 처리.
+    // SuspicionManager.OnGameOver → 패배 패널 / ObjectiveManager.OnVictory → 승리 패널.
+    // 결과 표시 시 InputReader를 비활성화해 추가 입력 차단.
     public class GameOverUI : MonoBehaviour
     {
         [SerializeField] private GameObject  defeatPanel;

@@ -2,6 +2,8 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // 플레이어 이동 — InputReader.MoveInput을 받아 Rigidbody2D 속도로 변환.
+    // 씬 시작 시 spawnPoint 위치로 이동. 스프라이트 미설정 시 임시 파란 사각형 생성.
     public class PlayerController : MonoBehaviour, ITickable
     {
         public TickPhase Phase => TickPhase.PlayerMove;

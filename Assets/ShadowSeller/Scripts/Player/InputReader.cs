@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace ShadowSeller.Core
 {
+    // 키보드 입력 수집 — WASD 이동 / E 상호작용 / F 들기 / R 리셋을 매 틱 읽어 프로퍼티로 제공.
+    // 다른 컴포넌트(PlayerController, PlayerInteraction 등)가 이 값을 읽어서 동작함.
     public class InputReader : MonoBehaviour, ITickable
     {
         public TickPhase Phase => TickPhase.Input;

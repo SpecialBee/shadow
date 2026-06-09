@@ -2,6 +2,8 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
+    // 카메라 추적 — SmoothDamp로 target(플레이어)을 부드럽게 따라감.
+    // offset 기본값 Z=-10은 2D 카메라가 씬을 올바르게 렌더링하기 위한 거리.
     public class CameraFollow : MonoBehaviour
     {
         [SerializeField] private Transform target;

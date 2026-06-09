@@ -5,6 +5,8 @@ using ShadowSeller.Core;
 
 namespace ShadowSeller.UI
 {
+    // 의심도 UI — SuspicionManager.CurrentSuspicion을 매 Update마다 읽어 fillBar와 텍스트 갱신.
+    // 구간별 색상: 0~39=회색(안전) / 40~69=주황(주의) / 70~100=빨강(위험).
     public class SuspicionUI : MonoBehaviour
     {
         [SerializeField] private Image          fillBar;
