@@ -17,7 +17,7 @@ namespace ShadowSeller.Core
         private SpriteRenderer _shadowSR;
         private Rigidbody2D    _shadowRb;
         private LightSource[]  _lights = System.Array.Empty<LightSource>();
-        private BringObject    _bring;   // 들기 상태 확인용
+        private InteractableObject _bring;   // 들기 상태 확인용
 
         private void Awake()
         {
@@ -83,7 +83,7 @@ namespace ShadowSeller.Core
         private void Start()
         {
             _lights = Object.FindObjectsByType<LightSource>(FindObjectsInactive.Exclude);
-            _bring  = GetComponent<BringObject>();
+            _bring  = GetComponent<InteractableObject>();
         }
 
         private void LateUpdate()

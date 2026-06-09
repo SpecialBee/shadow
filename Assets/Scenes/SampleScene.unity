@@ -4462,7 +4462,7 @@ GameObject:
   - component: {fileID: 961367497}
   - component: {fileID: 961367498}
   - component: {fileID: 961367500}
-  - component: {fileID: 961367499}
+  - component: {fileID: 961367501}
   m_Layer: 0
   m_Name: Target_Placeholder
   m_TagString: Untagged
@@ -4545,19 +4545,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &961367499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961367496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a09d52a05dac234885f3c3d1a3f396b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.TargetInteractable
-  detectionRadius: 2
 --- !u!58 &961367500
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4594,6 +4581,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2
+--- !u!114 &961367501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961367496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  isDoor: 0
+  isTarget: 1
+  holdOffset: 0.7
+  pushDistance: 2
+  slideSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  buttonYOffset: 1.2
 --- !u!1 &1005822930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,6 +5399,7 @@ GameObject:
   - component: {fileID: 1102840221}
   - component: {fileID: 1102840220}
   - component: {fileID: 1102840222}
+  - component: {fileID: 1102840223}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -5400,7 +5416,7 @@ Transform:
   m_GameObject: {fileID: 1102840217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -8.95, z: 0}
+  m_LocalPosition: {x: 6.32, y: -14.43, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5517,6 +5533,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
   shadowDistance: 0.8
   shadowAlpha: 0.45
+--- !u!114 &1102840223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102840217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.InteractableObject
+  canCarry: 1
+  canPush: 1
+  isDoor: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  slideSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  highlightColor: {r: 1, g: 0.35940674, b: 0, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  buttonYOffset: 1.2
 --- !u!1 &1105062621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,7 +6225,7 @@ GameObject:
   - component: {fileID: 1345764301}
   m_Layer: 9
   m_Name: Wall_Right
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8046,7 +8090,7 @@ GameObject:
   - component: {fileID: 1750600300}
   m_Layer: 9
   m_Name: Wall_BotLeft
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10532,7 +10576,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 279379215408536400, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
