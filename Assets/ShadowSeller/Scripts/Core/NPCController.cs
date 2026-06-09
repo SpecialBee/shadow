@@ -1,0 +1,267 @@
+using UnityEngine;
+
+namespace ShadowSeller.Core
+{
+    public class NPCController : MonoBehaviour, ITickable
+    {
+        public TickPhase Phase => TickPhase.NpcAI;
+
+        [SerializeField] private NpcKindData   data;
+        [SerializeField] private Transform[]   patrolPoints;
+        [SerializeField] private LayerMask     obstacleLayer;
+
+        public NpcState    CurrentState    { get; private set; } = NpcState.Idle;
+        public bool        IsSeeingPlayer  { get; private set; }
+        public Vector2     FacingDir       => _facingDir;
+        public NpcKindData KindData        => data;
+
+        private float   _suspicion;
+        private float   _sightLoseTimer;
+        private float   _arrestTimer;
+        private float   _searchTimer;
+        private int     _patrolIndex;
+        private Vector2 _facingDir = Vector2.right;
+        private Vector2 _lastKnown;
+
+        private Transform             _player;
+        private PlayerExposureTracker _tracker;
+        private Rigidbody2D           _rb;
+
+        private void Awake()
+        {
+            _rb = GetComponent<Rigidbody2D>();
+            var playerGo = GameObject.FindWithTag("Player");
+            if (playerGo != null)
+            {
+                _player  = playerGo.transform;
+                _tracker = playerGo.GetComponent<PlayerExposureTracker>();
+            }
+            GameLoopController.Instance.Register(this);
+
+            // 시야 시각화 자식 생성
+            var coneGo = new UnityEngine.GameObject("VisionCone");
+            coneGo.transform.SetParent(transform);
+            coneGo.transform.localPosition = new Vector3(0f, 0f, 0.1f);
+            coneGo.AddComponent<VisionCone>();
+        }
+
+        private void OnDestroy()
+        {
+            _tracker?.UnregisterNpcThreat(this);
+            GameLoopController.Instance?.Unregister(this);
+        }
+
+        public void Tick()
+        {
+            if (data == null || _player == null) return;
+            IsSeeingPlayer = CanSeePlayer();
+
+            switch (CurrentState)
+            {
+                case NpcState.Idle:       TickIdle();       break;
+                case NpcState.Patrol:     TickPatrol();     break;
+                case NpcState.Suspicious: TickSuspicious(); break;
+                case NpcState.Alert:      TickAlert();      break;
+                case NpcState.Chase:      TickChase();      break;
+                case NpcState.Search:     TickSearch();     break;
+            }
+        }
+
+        // ── State ticks ──────────────────────────────────────────────────────
+
+        private void TickIdle()
+        {
+            if (patrolPoints != null && patrolPoints.Length > 0)
+            { TransitionTo(NpcState.Patrol); return; }
+
+            if (IsSeeingPlayer) GainSuspicion(allowImmediateChase: false);
+            else                DecaySuspicion();
+        }
+
+        private void TickPatrol()
+        {
+            if (patrolPoints == null || patrolPoints.Length == 0)
+            { TransitionTo(NpcState.Idle); return; }
+
+            var dest = (Vector2)patrolPoints[_patrolIndex].position;
+            MoveToward(dest, data.patrolSpeed);
+            if (Vector2.Distance(transform.position, dest) < 0.15f)
+                _patrolIndex = (_patrolIndex + 1) % patrolPoints.Length;
+
+            if (IsSeeingPlayer) GainSuspicion(allowImmediateChase: true);
+            else                DecaySuspicion();
+        }
+
+        private void TickSuspicious()
+        {
+            if (IsSeeingPlayer)
+            {
+                UpdateFacing();
+                _suspicion += data.suspicionGainRate * Time.deltaTime;
+                if (_suspicion >= data.alertThreshold) TransitionTo(NpcState.Alert);
+            }
+            else
+            {
+                DecaySuspicion();
+                if (_suspicion <= 0f)
+                    TransitionTo(patrolPoints?.Length > 0 ? NpcState.Patrol : NpcState.Idle);
+            }
+        }
+
+        private void TickAlert()
+        {
+            bool sees = IsSeeingPlayer;
+            MoveToward(sees ? (Vector2)_player.position : _lastKnown, data.patrolSpeed * 1.4f);
+
+            if (sees)
+            {
+                UpdateFacing();
+                _suspicion += data.suspicionGainRate * 2f * Time.deltaTime;
+                if (_suspicion >= data.chaseThreshold) TransitionTo(NpcState.Chase);
+            }
+            else
+            {
+                DecaySuspicion();
+                if (_suspicion < data.alertThreshold * 0.4f) TransitionTo(NpcState.Search);
+            }
+        }
+
+        private void TickChase()
+        {
+            bool sees = IsSeeingPlayer;
+            if (sees)
+            {
+                UpdateFacing();
+                _lastKnown = (Vector2)_player.position;
+                _sightLoseTimer = 0f;
+                _arrestTimer   += Time.deltaTime;
+                MoveToward(_lastKnown, data.chaseSpeed);
+
+                if (_arrestTimer >= data.arrestTime)
+                    SuspicionManager.Instance?.TriggerArrest();
+            }
+            else
+            {
+                _sightLoseTimer += Time.deltaTime;
+                MoveToward(_lastKnown, data.chaseSpeed);
+                if (_sightLoseTimer >= data.sightLoseDelay) TransitionTo(NpcState.Search);
+            }
+        }
+
+        private void TickSearch()
+        {
+            MoveToward(_lastKnown, data.patrolSpeed);
+            _searchTimer += Time.deltaTime;
+            if (_searchTimer >= data.searchDuration)
+                TransitionTo(patrolPoints?.Length > 0 ? NpcState.Patrol : NpcState.Idle);
+        }
+
+        // ── Helpers ──────────────────────────────────────────────────────────
+
+        private void GainSuspicion(bool allowImmediateChase)
+        {
+            UpdateFacing();
+
+            if (allowImmediateChase && IsCloseExposed())
+            { TransitionTo(NpcState.Chase); return; }
+
+            _suspicion += data.suspicionGainRate * Time.deltaTime;
+
+            if (_suspicion >= data.chaseThreshold && allowImmediateChase)
+                TransitionTo(NpcState.Chase);
+            else if (_suspicion >= data.alertThreshold)
+                TransitionTo(NpcState.Alert);
+            else
+                TransitionTo(NpcState.Suspicious);
+        }
+
+        private void DecaySuspicion()
+        {
+            _suspicion = Mathf.Max(0f, _suspicion - data.suspicionDecayRate * Time.deltaTime);
+        }
+
+        private bool CanSeePlayer()
+        {
+            var toPlayer = (Vector2)_player.position - (Vector2)transform.position;
+            float dist   = toPlayer.magnitude;
+
+            if (dist > data.viewRange) return false;
+            if (Vector2.Angle(_facingDir, toPlayer) > data.viewAngle * 0.5f) return false;
+
+            if ((int)obstacleLayer != 0)
+            {
+                var hit = Physics2D.Raycast(transform.position, toPlayer.normalized, dist, obstacleLayer);
+                if (hit.collider != null) return false;
+            }
+
+            _lastKnown = (Vector2)_player.position;
+            return true;
+        }
+
+        private bool IsCloseExposed() =>
+            Vector2.Distance(transform.position, _player.position) <= data.closeRange;
+
+        private void MoveToward(Vector2 target, float speed)
+        {
+            var next = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if (_rb != null) _rb.MovePosition(next);
+            else              transform.position = next;
+
+            var dir = target - (Vector2)transform.position;
+            if (dir.sqrMagnitude > 0.01f) _facingDir = dir.normalized;
+        }
+
+        private void UpdateFacing()
+        {
+            var dir = (Vector2)_player.position - (Vector2)transform.position;
+            if (dir.sqrMagnitude > 0.01f) _facingDir = dir.normalized;
+        }
+
+        private void TransitionTo(NpcState next)
+        {
+            if (CurrentState == next) return;
+
+            bool wasThreating = CurrentState == NpcState.Alert || CurrentState == NpcState.Chase;
+            bool willThreaten = next           == NpcState.Alert || next           == NpcState.Chase;
+
+            if (wasThreating && !willThreaten) _tracker?.UnregisterNpcThreat(this);
+            if (!wasThreating && willThreaten)  _tracker?.RegisterNpcThreat(this);
+
+            CurrentState = next;
+
+            if (next == NpcState.Chase)  { _sightLoseTimer = 0f; _arrestTimer = 0f; }
+            if (next == NpcState.Search) { _searchTimer = 0f; }
+        }
+
+        // ── Gizmos ───────────────────────────────────────────────────────────
+
+        private void OnDrawGizmos()
+        {
+            if (data == null) return;
+
+            Gizmos.color = CurrentState switch
+            {
+                NpcState.Chase      => Color.red,
+                NpcState.Alert      => new Color(1f, 0.5f, 0f),
+                NpcState.Suspicious => Color.yellow,
+                _                   => new Color(1f, 1f, 1f, 0.4f),
+            };
+
+            float half  = data.viewAngle * 0.5f;
+            var   left  = (Vector3)(RotateVec(_facingDir,  half) * data.viewRange);
+            var   right = (Vector3)(RotateVec(_facingDir, -half) * data.viewRange);
+            var   fwd   = (Vector3)(_facingDir * data.viewRange);
+
+            Gizmos.DrawRay(transform.position, left);
+            Gizmos.DrawRay(transform.position, right);
+            Gizmos.DrawRay(transform.position, fwd);
+        }
+
+        private static Vector2 RotateVec(Vector2 v, float deg)
+        {
+            float r = deg * Mathf.Deg2Rad;
+            float c = Mathf.Cos(r), s = Mathf.Sin(r);
+            return new Vector2(v.x * c - v.y * s, v.x * s + v.y * c);
+        }
+    }
+}
