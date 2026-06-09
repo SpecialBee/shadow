@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - movableobject
+  - Door
   layers:
   - Default
   - TransparentFX
