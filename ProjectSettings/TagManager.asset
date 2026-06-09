@@ -6,6 +6,13 @@ TagManager:
   tags:
   - movableobject
   - Door
+  - PushObject
+  - PullObject
+  - BringObject
+  - SwitchObject
+  - LeverObject
+  - Light
+  - wall
   layers:
   - Default
   - TransparentFX
