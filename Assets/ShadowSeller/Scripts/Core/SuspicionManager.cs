@@ -14,8 +14,9 @@ namespace ShadowSeller.Core
         public static event System.Action<float> OnSuspicionChanged;
         public static event System.Action        OnGameOver;
 
-        // 변화율 테이블 [/s] — index = (int)ExposureState (설계서 §Sheet2)
-        private static readonly float[] Rates = { -6f, -3f, 0f, 1.5f, 3f, 8f, 20f, 20f };
+        // 변화율 테이블 [/s] — index = (int)ExposureState
+        // Dark=-6, Shadow=0, Lit=+8, ExposedSight=+20, ExposedClose=+20
+        private static readonly float[] Rates = { -6f, 0f, 8f, 20f, 20f };
 
         private bool _spikeArmed = true;
         private bool _gameOver;

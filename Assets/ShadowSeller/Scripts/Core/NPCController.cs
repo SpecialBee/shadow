@@ -182,6 +182,8 @@ namespace ShadowSeller.Core
 
         private bool CanSeePlayer()
         {
+            if (_tracker != null && _tracker.IsInShadow) return false;
+
             var toPlayer = (Vector2)_player.position - (Vector2)transform.position;
             float dist   = toPlayer.magnitude;
 

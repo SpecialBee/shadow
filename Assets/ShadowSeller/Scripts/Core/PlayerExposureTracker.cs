@@ -5,38 +5,30 @@ namespace ShadowSeller.Core
 {
     public class PlayerExposureTracker : MonoBehaviour
     {
-        private int                         _litCount;
-        private ExposureState               _shadowGrade = ExposureState.Dark;
-        private readonly HashSet<NPCController> _threateningNpcs = new HashSet<NPCController>();
+        public bool IsInShadow { get; private set; }
 
-        // ── DangerZone 호출 ──────────────────────────────────────────────────
+        private int  _litCount;
+        private bool _inShadow;
+        private readonly HashSet<NPCController> _threateningNpcs = new HashSet<NPCController>();
 
         public void OnEnterDangerZone() { _litCount++; Evaluate(); }
         public void OnExitDangerZone()  { _litCount = Mathf.Max(0, _litCount - 1); Evaluate(); }
 
-        // ── ShadowSystem 호출 ────────────────────────────────────────────────
-
-        public void SetShadow(ExposureState grade) { _shadowGrade = grade; Evaluate(); }
-
-        // ── NPC 호출 ─────────────────────────────────────────────────────────
+        public void SetShadow(bool inShadow) { _inShadow = inShadow; IsInShadow = inShadow; Evaluate(); }
 
         public void RegisterNpcThreat(NPCController npc)   { _threateningNpcs.Add(npc);    Evaluate(); }
         public void UnregisterNpcThreat(NPCController npc) { _threateningNpcs.Remove(npc); Evaluate(); }
 
-        // ── 우선순위 판정: EXPOSED > SHADOW(A~D) > LIT > DARK ────────────────
-
+        // 우선순위: SHADOW > EXPOSED > LIT > DARK
+        // 그림자 안에 있으면 NPC 위협보다 그림자가 우선 — 의심도 상승 차단
         public void Evaluate()
         {
             ExposureState state;
 
-            bool exposed = _threateningNpcs.Count > 0
-                        || _shadowGrade == ExposureState.ExposedSight
-                        || _shadowGrade == ExposureState.ExposedClose;
-
-            if (exposed)
+            if (_inShadow)
+                state = ExposureState.Shadow;
+            else if (_threateningNpcs.Count > 0)
                 state = ExposureState.ExposedSight;
-            else if (_shadowGrade >= ExposureState.ShadowA && _shadowGrade <= ExposureState.ShadowD)
-                state = _shadowGrade;          // 그림자 안 → 그림자 품질 적용 (DangerZone 무시)
             else if (_litCount > 0)
                 state = ExposureState.Lit;
             else

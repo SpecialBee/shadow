@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2ac7e6c9fc1865f41961beb474829926
+guid: 28729fc8838bd5a4e8f7a59a7fd4c17c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3932194472762182180
-    second: BG_test_0
+      213: 2936283912739534262
+    second: Furniture_Chandelier_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG_test_0
+      name: Furniture_Chandelier_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1448
-        height: 1086
+        width: 785
+        height: 1177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd5714fe5f90e69c0800000000000000
-      internalID: -3932194472762182180
+      spriteID: 6b5b88a59a6cfb820800000000000000
+      internalID: 2936283912739534262
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BG_test_0: -3932194472762182180
+      Furniture_Chandelier_0: 2936283912739534262
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

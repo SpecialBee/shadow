@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ShadowSeller.Core
 {
-    // 샹들리에: 흔들림(D) ↔ 정지(B). 정지 후 stillDuration초 뒤 자동 흔들림 복귀.
+    // 샹들리에: 흔들리는 동안 그림자 판정 없음. 멈추면 그림자 활성, stillDuration 후 자동 복귀.
     public class ChandelierObject : MonoBehaviour, IUsable
     {
         [SerializeField] private ShadowZone shadowZone;
@@ -17,21 +17,19 @@ namespace ShadowSeller.Core
 
         private void Awake()
         {
-            if (shadowZone != null) shadowZone.SetGrade(ExposureState.ShadowD);
+            if (shadowZone != null) shadowZone.gameObject.SetActive(false);
         }
 
         public void OnUse(PlayerController user)
         {
-            if (_isSwinging)
-                SetStill();
-            else
-                SetSwinging();
+            if (_isSwinging) SetStill();
+            else             SetSwinging();
         }
 
         private void SetStill()
         {
             _isSwinging = false;
-            if (shadowZone != null) shadowZone.SetGrade(ExposureState.ShadowB);
+            if (shadowZone != null) shadowZone.gameObject.SetActive(true);
             if (_resetRoutine != null) StopCoroutine(_resetRoutine);
             _resetRoutine = StartCoroutine(AutoReset());
         }
@@ -40,7 +38,7 @@ namespace ShadowSeller.Core
         {
             _isSwinging = true;
             if (_resetRoutine != null) { StopCoroutine(_resetRoutine); _resetRoutine = null; }
-            if (shadowZone != null) shadowZone.SetGrade(ExposureState.ShadowD);
+            if (shadowZone != null) shadowZone.gameObject.SetActive(false);
         }
 
         private IEnumerator AutoReset()

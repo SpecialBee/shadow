@@ -92,7 +92,7 @@
 
 ---
 
-*마지막 업데이트: 2026-06-08*
+*마지막 업데이트: 2026-06-09*
 
 ---
 
@@ -169,3 +169,60 @@
 - "Shadow" 레이어(slot 8) 추가
 - 씬에 `ShadowSystem` 오브젝트 배치 (shadowLayer=Shadow)
 - 씬에 `ShadowZone_Test` 테스트용 배치 (-2,0,0): BoxCollider2D(3x3, trigger), Shadow 레이어, 파란 SpriteRenderer, grade=ShadowB
+
+---
+
+## 2026-06-09
+
+### [완료] 그림자 시스템 전면 리팩토링 — 등급 제거 & 이진 판정
+
+- **방식**: ShadowA~D 등급 체계 폐기 → 그림자 안/밖 이진 판정으로 단순화
+- `GameTypes.cs` — `ExposureState` 개편
+  - 제거: `ShadowA`, `ShadowB`, `ShadowC`, `ShadowD`
+  - 추가: `Shadow` (단일 그림자 상태)
+  - 최종 순서: `Dark=0 / Shadow=1 / Lit=2 / ExposedSight=3 / ExposedClose=4`
+- `SuspicionManager.cs` — `Rates[]` 8개 → 5개로 축소
+  - `Dark=-6f / Shadow=0f / Lit=+8f / ExposedSight=+20f / ExposedClose=+20f`
+  - 그림자 안에서는 의심도 변화 없음(0f)
+- `ShadowZone.cs` — grade 필드·`SetGrade()`·`Grade` 프로퍼티 완전 제거
+  - 단순 마커 컴포넌트로 축소
+  - `PolygonCollider2D` 기즈모 지원 추가 (이전 미구현 상태였음)
+- `ShadowSystem.cs` — 대폭 단순화
+  - `IsUnstable()` / `StabilityThresholds` / `_npcs` 캐시 제거
+  - `Physics2D.OverlapPoint` (단일 히트 버그) → `Physics2D.OverlapPointNonAlloc` 교체
+  - 커버리지 ≥ 3/5 인 ShadowZone 존재 시 `inShadow=true` 전달
+- `PlayerExposureTracker.cs` — `SetShadow(ExposureState)` → `SetShadow(bool)` 단순화
+  - `IsInShadow` public 프로퍼티 추가 (NPCController 참조용)
+- `ChandelierObject.cs` — `SetGrade(ShadowD/B)` 전환 → `SetActive(false/true)` 전환
+  - 흔들리는 동안: ShadowZone 비활성 (그림자 판정 없음)
+  - 멈춘 동안: ShadowZone 활성 (그림자 판정 적용) → `stillDuration` 후 자동 복귀
+
+---
+
+### [완료] ShadowProjector — 동적 ShadowZone 자동 생성
+
+- **방식**: ShadowProjector가 생성하는 `_Shadow` GameObject에 판정 콜라이더 자동 부착
+- `ShadowProjector.cs` 확장
+  - `_Shadow` GO에 `Rigidbody2D(Kinematic)` + `BoxCollider2D(trigger)` + `ShadowZone` 자동 추가
+  - 레이어를 "Shadow"로 자동 설정 (레이어 미존재 시 조용히 스킵)
+  - 콜라이더 크기: 원본 오브젝트의 `BoxCollider2D` 복사. 없으면 스프라이트 bounds 기준
+  - `LateUpdate`에서 `_shadowRb.position = newPos` 로 물리 콜라이더 동기화
+- **효과**: 오브젝트를 밀거나 당기면 시각적 그림자와 판정 영역이 함께 이동
+
+---
+
+### [완료] NPC 그림자 인식 — 그림자 안 플레이어 시야 차단
+
+- **문제**: NPC가 그림자 안 플레이어를 발견해도 의심도가 상승하고 추격을 지속
+- **원인 1**: `NPCController.CanSeePlayer()`가 그림자 여부를 확인하지 않음
+- **원인 2**: `PlayerExposureTracker.Evaluate()` 우선순위가 `EXPOSED > SHADOW`라서
+  NPC가 Alert/Chase 상태면 그림자 안에 있어도 ExposedSight로 판정
+- `NPCController.cs` — `CanSeePlayer()` 최상단에 그림자 차단 추가
+  - `_tracker.IsInShadow == true` 이면 즉시 `false` 반환
+- `PlayerExposureTracker.cs` — 우선순위 변경: `SHADOW > EXPOSED > LIT > DARK`
+  - 그림자 안에 있으면 NPC 위협 여부와 무관하게 Shadow 상태 적용
+- **플레이 흐름**:
+  1. NPC가 플레이어 발견 → Chase
+  2. 플레이어가 그림자 진입 → 의심도 즉시 정지 / NPC `IsSeeingPlayer = false`
+  3. NPC가 마지막 목격 위치로 `sightLoseDelay(2s)` 동안 계속 이동
+  4. 2초 후 Search 상태 전환 → `searchDuration(5s)` 후 순찰 복귀
