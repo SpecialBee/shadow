@@ -9,14 +9,14 @@ namespace ShadowSeller.Core
 
         [SerializeField] private TMP_FontAsset hintFont;
 
-        private InputReader     _input;
-        private IInteractable   _nearbyCarry;
-        private IUsable         _nearbyUsable;
-        private CarryableObject _carried;
-        private GameObject      _hintFGo;
-        private TextMeshPro     _hintFTmp;
-        private GameObject      _hintEGo;
-        private TextMeshPro     _hintETmp;
+        private InputReader _input;
+        private IInteractable _nearbyCarry;
+        private IUsable       _nearbyUsable;
+        private BringObject   _brought;
+        private GameObject    _hintFGo;
+        private TextMeshPro   _hintFTmp;
+        private GameObject    _hintEGo;
+        private TextMeshPro   _hintETmp;
 
         private void Awake()
         {
@@ -44,7 +44,7 @@ namespace ShadowSeller.Core
 
         private void BuildHints()
         {
-            _hintFGo  = BuildLabel("HintF", "F 이동", 0.85f);
+            _hintFGo  = BuildLabel("HintF", "F 들기", 0.85f);
             _hintFTmp = _hintFGo.GetComponent<TextMeshPro>();
             _hintEGo  = BuildLabel("HintE", "E 상호작용", 1.4f);
             _hintETmp = _hintEGo.GetComponent<TextMeshPro>();
@@ -73,7 +73,7 @@ namespace ShadowSeller.Core
             return go;
         }
 
-        // ── CarryableObject (F키) 등록 ────────────────────────────────────────
+        // ── BringObject (F키) 등록 ────────────────────────────────────────────
 
         public void SetNearby(IInteractable interactable)
         {
@@ -103,14 +103,15 @@ namespace ShadowSeller.Core
 
         private void RefreshFHint()
         {
-            bool show = _carried != null || _nearbyCarry != null;
-            _hintFTmp.text = _carried != null ? "F 내려놓기" : "F 이동";
+            bool show = _brought != null || _nearbyCarry != null;
+            _hintFTmp.text = _brought != null ? "F 놓기" : "F 들기";
             _hintFGo.SetActive(show);
         }
 
         private void RefreshEHint()
         {
-            bool show = _nearbyUsable != null;
+            // BringObject 들고 있는 동안 E 힌트 숨김
+            bool show = _nearbyUsable != null && _brought == null;
             if (show) _hintETmp.text = _nearbyUsable.UseHint;
             _hintEGo.SetActive(show);
         }
@@ -119,24 +120,25 @@ namespace ShadowSeller.Core
 
         public void Tick()
         {
-            // F키 — 들기/내려놓기
+            // F키 — 들기/놓기
             if (_input.PickupPressed)
             {
-                if (_carried != null)
+                if (_brought != null)
                 {
-                    _carried.OnDrop();
-                    _carried = null;
+                    _brought.OnDrop();
+                    _brought = null;
                 }
-                else if (_nearbyCarry is CarryableObject carryable)
+                else if (_nearbyCarry is BringObject bring)
                 {
-                    carryable.OnPickup(transform);
-                    _carried = carryable;
+                    bring.OnPickup(transform);
+                    _brought = bring;
                 }
                 RefreshFHint();
+                RefreshEHint();
             }
 
-            // E키 — 오브젝트 상호작용
-            if (_input.InteractPressed && _nearbyUsable != null)
+            // E키 — 오브젝트 상호작용 (BringObject 들고 있으면 막힘)
+            if (_input.InteractPressed && _nearbyUsable != null && _brought == null)
             {
                 var player = GetComponent<PlayerController>();
                 _nearbyUsable.OnUse(player);

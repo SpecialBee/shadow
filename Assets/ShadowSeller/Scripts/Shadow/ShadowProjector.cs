@@ -7,15 +7,17 @@ namespace ShadowSeller.Core
     //   - 그림자 방향 : 가장 가까운 LightSource 위치 기준으로 반대 방향 투영
     //   - 그림자 길이 : 광원 가장자리에 가까울수록 길어짐 (Lerp 0.6~1.5)
     //   - _Shadow GO 안에 ShadowZone 포함 → 그림자 숨기 판정도 함께 이동
+    //   - BringObject가 붙어있고 IsCarried=true 이면 그림자 강제 숨김
     public class ShadowProjector : MonoBehaviour
     {
         [SerializeField] private float shadowDistance = 0.8f;
         [SerializeField] private float shadowAlpha    = 0.45f;
 
-        private Transform     _shadowTransform;
+        private Transform      _shadowTransform;
         private SpriteRenderer _shadowSR;
-        private Rigidbody2D   _shadowRb;
+        private Rigidbody2D    _shadowRb;
         private LightSource[]  _lights = System.Array.Empty<LightSource>();
+        private BringObject    _bring;   // 들기 상태 확인용
 
         private void Awake()
         {
@@ -30,7 +32,10 @@ namespace ShadowSeller.Core
 
             _shadowTransform = go.transform;
 
-            // 시각 — Unlit 재질로 Light2D 영향 차단, LightSource range로만 표시 제어
+            var shader = Shader.Find("Sprites/Default");
+            var mat    = new Material(shader != null ? shader : Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default"));
+            mat.color  = new Color(0f, 0f, 0f, shadowAlpha);
+
             _shadowSR                = go.AddComponent<SpriteRenderer>();
             _shadowSR.sprite         = sr.sprite;
             _shadowSR.color          = new Color(0f, 0f, 0f, shadowAlpha);
@@ -40,7 +45,6 @@ namespace ShadowSeller.Core
             if (unlitShader != null)
                 _shadowSR.material = new Material(unlitShader);
 
-            // 판정 — Kinematic RB + Collider + ShadowZone
             int shadowLayer = LayerMask.NameToLayer("Shadow");
             if (shadowLayer >= 0)
             {
@@ -57,7 +61,7 @@ namespace ShadowSeller.Core
                 go.AddComponent<ShadowZone>();
             }
 
-            go.SetActive(false);   // LightSource 범위 진입 전까지 숨김
+            go.SetActive(false);
         }
 
         private Collider2D BuildCollider(GameObject go, SpriteRenderer sr)
@@ -79,13 +83,20 @@ namespace ShadowSeller.Core
         private void Start()
         {
             _lights = Object.FindObjectsByType<LightSource>(FindObjectsInactive.Exclude);
+            _bring  = GetComponent<BringObject>();
         }
 
         private void LateUpdate()
         {
             if (_shadowSR == null) return;
 
-            // range 안에 있는 광원 중 가장 가까운 것 선택
+            // 들고 있는 중이면 그림자 강제 숨김
+            if (_bring != null && _bring.IsCarried)
+            {
+                _shadowTransform.gameObject.SetActive(false);
+                return;
+            }
+
             LightSource nearest = null;
             float       minDist = float.MaxValue;
 
@@ -93,23 +104,20 @@ namespace ShadowSeller.Core
             {
                 if (l == null || !l.gameObject.activeInHierarchy) continue;
                 float d = Vector2.Distance(transform.position, l.transform.position);
-                if (d > l.Range) continue;                      // 범위 밖 → 무시
-                if (l.WallBlocks(transform.position)) continue; // 벽으로 막힘 → 무시
+                if (d > l.Range) continue;
+                if (l.WallBlocks(transform.position)) continue;
                 if (d < minDist) { minDist = d; nearest = l; }
             }
 
             if (nearest == null)
             {
-                // 어느 광원 범위에도 없음 → 그림자 GO 전체 숨김 (SR + ShadowZone 콜라이더 동시)
                 _shadowTransform.gameObject.SetActive(false);
                 return;
             }
 
             _shadowTransform.gameObject.SetActive(true);
 
-            // 광원 중심 → 오브젝트 방향의 반대가 그림자 방향
             Vector2 dir  = ((Vector2)transform.position - (Vector2)nearest.transform.position).normalized;
-            // range 가장자리일수록 그림자가 길어짐
             float   dist = shadowDistance * Mathf.Lerp(0.6f, 1.5f, Mathf.Clamp01(minDist / nearest.Range));
             Vector2 pos  = (Vector2)transform.position + dir * dist;
 
