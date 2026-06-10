@@ -6,12 +6,18 @@ namespace ShadowSeller.Core
     //   - LightSource range 안에 있을 때만 _Shadow GO 활성화 (범위 밖이면 SetActive false)
     //   - 그림자 방향 : 가장 가까운 LightSource 위치 기준으로 반대 방향 투영
     //   - 그림자 길이 : 광원 가장자리에 가까울수록 길어짐 (Lerp 0.6~1.5)
-    //   - _Shadow GO 안에 ShadowZone 포함 → 그림자 숨기 판정도 함께 이동
+    //   - _Shadow GO 안에 ShadowZone 포함 → 그림자 숨기 판정도 함께 이동 (createHidingZone=true 시)
+    //   - createHidingZone=false : 시각 전용 그림자 (NPC 등에 사용, ShadowZone 미생성)
     //   - BringObject가 붙어있고 IsCarried=true 이면 그림자 강제 숨김
     public class ShadowProjector : MonoBehaviour
     {
-        [SerializeField] private float shadowDistance = 0.8f;
-        [SerializeField] private float shadowAlpha    = 0.45f;
+        [SerializeField] private float shadowDistance   = 0.8f;
+        [SerializeField] private float shadowAlpha     = 0.45f;
+        [SerializeField] private bool  createHidingZone = true;
+
+        [Header("발 기준 그림자")]
+        [SerializeField] private float footOffset    = 0.3f;   // 스프라이트 중심 아래 발 위치
+        [SerializeField] private float shadowFlat    = 0.25f;  // 그림자 두께 (작을수록 납작)
 
         private Transform      _shadowTransform;
         private SpriteRenderer _shadowSR;
@@ -46,7 +52,7 @@ namespace ShadowSeller.Core
                 _shadowSR.material = new Material(unlitShader);
 
             int shadowLayer = LayerMask.NameToLayer("Shadow");
-            if (shadowLayer >= 0)
+            if (shadowLayer >= 0 && createHidingZone)
             {
                 go.layer = shadowLayer;
 
@@ -117,14 +123,31 @@ namespace ShadowSeller.Core
 
             _shadowTransform.gameObject.SetActive(true);
 
-            Vector2 dir  = ((Vector2)transform.position - (Vector2)nearest.transform.position).normalized;
-            float   dist = shadowDistance * Mathf.Lerp(0.6f, 1.5f, Mathf.Clamp01(minDist / nearest.Range));
-            Vector2 pos  = (Vector2)transform.position + dir * dist;
+            // 발 위치 (스프라이트 중심에서 footOffset만큼 아래)
+            Vector2 footPos = (Vector2)transform.position - new Vector2(0f, footOffset);
 
-            _shadowTransform.position = pos;
+            // 광원 반대 방향 (그림자가 뻗어나갈 방향)
+            Vector2 dir = (footPos - (Vector2)nearest.transform.position).normalized;
+
+            // 광원 가장자리에 가까울수록 그림자 길어짐
+            float t      = Mathf.Clamp01(minDist / nearest.Range);
+            float length = shadowDistance * Mathf.Lerp(0.6f, 1.5f, t);
+
+            // 그림자 중심 = 발에서 방향으로 length/2 이동 (발이 그림자의 시작점)
+            Vector2 shadowCenter = footPos + dir * (length * 0.5f);
+
+            // dir 방향으로 회전 (스프라이트 Y축 → dir 방향)
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+
+            _shadowTransform.position   = shadowCenter;
+            _shadowTransform.rotation   = Quaternion.Euler(0f, 0f, angle);
+            _shadowTransform.localScale = new Vector3(shadowFlat, length, 1f);
 
             if (_shadowRb != null)
-                _shadowRb.position = pos;
+            {
+                _shadowRb.position = shadowCenter;
+                _shadowRb.rotation = angle;
+            }
         }
 
         private void OnDestroy()

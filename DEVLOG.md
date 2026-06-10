@@ -226,3 +226,101 @@
   2. 플레이어가 그림자 진입 → 의심도 즉시 정지 / NPC `IsSeeingPlayer = false`
   3. NPC가 마지막 목격 위치로 `sightLoseDelay(2s)` 동안 계속 이동
   4. 2초 후 Search 상태 전환 → `searchDuration(5s)` 후 순찰 복귀
+
+---
+
+## 2026-06-10
+
+### [완료] InteractableObject 버그 수정 & 성능 개선
+
+- **pull overshoot 수정**: `pullDistance`가 플레이어-오브젝트 거리를 초과하지 않도록 clamp
+  - `clampedDist = Mathf.Min(pullDistance, Mathf.Max(0f, distToPlayer - holdOffset))`
+- **null carrier 방지**: `DoCarry()`에서 `_carrier = _nearbyPlayer ?? _player` 로 안전 할당
+- **슬라이드 중 클릭 차단**: `Update()` 상단에 `if (_isSliding) return;` 추가
+- **성능**: `Vector2.Distance` → `sqrMagnitude` 비교로 sqrt 연산 제거
+- **EventSystem UI 가드**: UI 위 클릭 시 월드 오브젝트 오동작 방지
+  - `EventSystem.current.IsPointerOverGameObject()` 체크 추가
+
+---
+
+### [완료] 상호작용 버튼 UI — 월드 스페이스 → Canvas UI 전환
+
+- **문제**: 월드 좌표 기반 버튼(SpriteRenderer+TMP)이 해상도 및 Z-order 오류 유발
+- **InteractionPanel.cs** 신규 작성 (`ShadowSeller.UI` 네임스페이스)
+  - 싱글턴 패턴, UICanvas에 컴포넌트로 부착
+  - `Show(List<(string, Action)>)` / `Hide()` API
+  - 버튼 수에 따라 패널 높이를 자동 계산 (`BtnH=38, Spacing=4, PadY=10`)
+  - 버튼 위치: Canvas 상 고정 위치 (런타임에 world→canvas 변환 없음)
+  - `[SerializeField] TMP_FontAsset font` — Inspector에서 폰트 지정 가능
+  - Overlay(반투명 배경) 클릭 시 패널 자동 닫힘
+- **InteractableObject.cs** — 월드 스페이스 버튼 코드 전면 제거
+  - `s_panelOwner` static 필드로 동시에 열린 패널 단 1개 보장
+  - `ShowPanel()` → `InteractionPanel.Instance?.Show(CollectActions())`
+  - `HidePanel()` → 본인이 오너일 때만 닫음
+
+---
+
+### [완료] UICanvas 단일 통합 & HUDPanel 구조 개편
+
+- **기존 문제**: 씬에 UICanvas / SuspicionCanvas / InventoryCanvas / InteractionCanvas 분산 → 관리 복잡
+- **통합 결과**: 단일 `UICanvas` (ScreenSpaceOverlay, sortOrder=100, ScaleWithScreenSize 1920×1080)
+- **최종 계층 구조**:
+  ```
+  UICanvas
+  ├── HUDPanel [Image, InventoryUI, SuspicionUI, HUDToggle]
+  │     ├── Bar_BG [SuspicionUI] — 우상단 앵커
+  │     ├── InventoryPanel [GridLayoutGroup] — 좌하단 앵커
+  │     │     └── Slot_0..9 [Image] → Icon [Image]
+  │     ├── MiniMapPanel
+  │     ├── DialoguePanel
+  │     └── Button  ← HUD 토글 버튼
+  ├── Overlay [Image, Button]  ← 상호작용 패널 배경
+  ├── InteractionButtonPanel [Image]
+  │     └── ButtonContainer [VerticalLayoutGroup]
+  ├── DefeatPanel
+  └── VictoryPanel
+  ```
+- **EventSystem** — `InputSystemUIInputModule` 포함 (New Input System 전용) 씬에 배치
+
+---
+
+### [완료] 인벤토리 5행×2열 그리드 리디자인
+
+- **InventoryPanel** — `GridLayoutGroup` 추가
+  - cellSize `(60, 60)`, spacing `(6, 6)`, 2열(constraintCount=2)
+  - 채우기 순서: 위→아래, 왼→오른쪽
+- **InventoryUI.cs** — `Image[] slotIcons` 배열로 Inspector 연결 방식으로 개편
+- **Slot_0..9** — 각 슬롯에 `Image` (배경) + 자식 `Icon [Image]` 구조
+
+---
+
+### [완료] HUDToggle — HUD 전체 ON/OFF 버튼
+
+- **HUDToggle.cs** 신규 작성
+  - HUDPanel에 부착, `[SerializeField] Button toggleButton` Inspector 연결
+  - 버튼 클릭 시 HUDPanel의 자식 중 버튼 자신을 제외한 모든 오브젝트 SetActive 토글
+  - 버튼 본체는 항상 표시
+
+---
+
+### [완료] 인벤토리 슬롯 클릭 → 아이템 드롭
+
+- **InventoryManager.cs** 확장
+  - `public static event System.Action<int> OnItemRemoved` 추가
+  - `public ItemData? RemoveItem(int index)` — 슬롯 비우기 + 이벤트 발행
+- **InventoryUI.cs** 전면 재작성
+  - `Start()`에서 각 Slot GO에 `Button` 컴포넌트 런타임 추가
+  - `OnItemAdded` / `OnItemRemoved` 이벤트 구독으로 아이콘 갱신
+  - 슬롯 클릭 → `RemoveItem()` → `SpawnDroppedItem()`
+  - `SpawnDroppedItem()`: `SpriteRenderer + BoxCollider2D + InteractableObject` 조합의 GO를 플레이어 이동 방향 1u 앞에 생성
+- **InteractableObject.cs** — `SetupAsDroppedPickup(string)` 추가
+  - 드롭된 아이템 GO에 `canInventory=true, itemName=...` 자동 설정
+
+---
+
+### [완료] 버그 수정 — 슬롯 버튼 미반응
+
+- **원인**: EventSystem이 씬 저장 누락으로 소실 → UI 클릭 전혀 처리 안 됨
+- **수정 1**: EventSystem + `InputSystemUIInputModule` 재생성 및 씬 저장
+- **수정 2**: `InventoryUI.Start()`에서 `slotIcons[i].raycastTarget = false` 추가
+  - 아이콘 Image가 부모 Button의 레이캐스트를 가로막는 문제 해소

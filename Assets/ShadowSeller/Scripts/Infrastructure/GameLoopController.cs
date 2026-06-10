@@ -13,6 +13,8 @@ namespace ShadowSeller.Core
         private readonly SortedDictionary<int, List<ITickable>> _phases =
             new SortedDictionary<int, List<ITickable>>();
 
+        private readonly List<ITickable> _tickBuffer = new List<ITickable>();
+
         private void Awake()
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -43,8 +45,12 @@ namespace ShadowSeller.Core
         private void Update()
         {
             foreach (var list in _phases.Values)
-                foreach (var t in list)
+            {
+                _tickBuffer.Clear();
+                _tickBuffer.AddRange(list);
+                foreach (var t in _tickBuffer)
                     t.Tick();
+            }
         }
     }
 }

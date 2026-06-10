@@ -20,6 +20,7 @@ namespace ShadowSeller.Core
         private bool _inShadow;
         private int  _litCount;
         private readonly HashSet<NPCController> _threateningNpcs = new HashSet<NPCController>();
+        private readonly HashSet<NPCController> _softThreatNpcs  = new HashSet<NPCController>();
 
         // ── 그림자 판정용 ─────────────────────────────────────────────────────
 
@@ -92,19 +93,22 @@ namespace ShadowSeller.Core
 
         // ── NPC 위협 등록 ─────────────────────────────────────────────────────
 
-        public void RegisterNpcThreat(NPCController npc)   { _threateningNpcs.Add(npc);    Evaluate(); }
-        public void UnregisterNpcThreat(NPCController npc) { _threateningNpcs.Remove(npc); Evaluate(); }
+        public void RegisterNpcThreat(NPCController npc)    { _threateningNpcs.Add(npc);    Evaluate(); }
+        public void UnregisterNpcThreat(NPCController npc)  { _threateningNpcs.Remove(npc); Evaluate(); }
 
-        // ── 우선순위 판정: SHADOW > ExposedSight > Lit > Dark ────────────────
+        public void RegisterSoftThreat(NPCController npc)   { _softThreatNpcs.Add(npc);    Evaluate(); }
+        public void UnregisterSoftThreat(NPCController npc) { _softThreatNpcs.Remove(npc); Evaluate(); }
+
+        // ── 우선순위 판정: Shadow > ExposedSight > ExposedClose > Dark ──────
 
         public void Evaluate()
         {
             ExposureState state;
 
-            if (_inShadow)                      state = ExposureState.Shadow;
-            else if (_threateningNpcs.Count > 0) state = ExposureState.ExposedSight;
-            else if (_litCount > 0)              state = ExposureState.Lit;
-            else                                 state = ExposureState.Dark;
+            if (_inShadow)                          state = ExposureState.Shadow;
+            else if (_threateningNpcs.Count > 0)    state = ExposureState.ExposedSight;
+            else if (_softThreatNpcs.Count > 0)     state = ExposureState.ExposedClose;
+            else                                     state = ExposureState.Dark;
 
             SuspicionManager.Instance?.SetExposureState(state);
         }

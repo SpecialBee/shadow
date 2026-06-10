@@ -13,6 +13,7 @@ TagManager:
   - LeverObject
   - Light
   - wall
+  - NPC
   layers:
   - Default
   - TransparentFX

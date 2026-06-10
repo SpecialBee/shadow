@@ -31,10 +31,12 @@ namespace ShadowSeller.Core
         private Transform             _player;
         private PlayerExposureTracker _tracker;
         private Rigidbody2D           _rb;
+        private SpeechBubble          _speechBubble;
 
         private void Awake()
         {
-            _rb = GetComponent<Rigidbody2D>();
+            _rb           = GetComponent<Rigidbody2D>();
+            _speechBubble = GetComponent<SpeechBubble>();
             var playerGo = GameObject.FindWithTag("Player");
             if (playerGo != null)
             {
@@ -210,12 +212,43 @@ namespace ShadowSeller.Core
 
         private void MoveToward(Vector2 target, float speed)
         {
-            var next = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            var desired = target - (Vector2)transform.position;
+            if (desired.sqrMagnitude < 0.01f) return;
+
+            Vector2 dir = AvoidWalls(desired.normalized);
+
+            var next = (Vector2)transform.position + dir * speed * Time.deltaTime;
             if (_rb != null) _rb.MovePosition(next);
             else              transform.position = next;
 
-            var dir = target - (Vector2)transform.position;
             if (dir.sqrMagnitude > 0.01f) _facingDir = dir.normalized;
+        }
+
+        private Vector2 AvoidWalls(Vector2 desired)
+        {
+            if ((int)obstacleLayer == 0) return desired;
+
+            const float checkDist = 0.5f;
+            const float radius    = 0.2f;
+
+            if (!Physics2D.CircleCast(transform.position, radius, desired, checkDist, obstacleLayer))
+                return desired;
+
+            // 22.5° 단위로 좌우 교대 탐색 (최대 ±180°)
+            for (int i = 1; i <= 8; i++)
+            {
+                float a = i * 22.5f;
+
+                var left = RotateVec(desired, a);
+                if (!Physics2D.CircleCast(transform.position, radius, left, checkDist, obstacleLayer))
+                    return left;
+
+                var right = RotateVec(desired, -a);
+                if (!Physics2D.CircleCast(transform.position, radius, right, checkDist, obstacleLayer))
+                    return right;
+            }
+
+            return desired;
         }
 
         private void UpdateFacing()
@@ -228,16 +261,36 @@ namespace ShadowSeller.Core
         {
             if (CurrentState == next) return;
 
-            bool wasThreating = CurrentState == NpcState.Alert || CurrentState == NpcState.Chase;
-            bool willThreaten = next           == NpcState.Alert || next           == NpcState.Chase;
+            bool wasSuspicious = CurrentState == NpcState.Suspicious;
+            bool willSuspicious = next        == NpcState.Suspicious;
+            bool wasThreating  = CurrentState == NpcState.Alert || CurrentState == NpcState.Chase;
+            bool willThreaten  = next         == NpcState.Alert || next         == NpcState.Chase;
+
+            if (wasSuspicious && !willSuspicious) _tracker?.UnregisterSoftThreat(this);
+            if (!wasSuspicious && willSuspicious)  _tracker?.RegisterSoftThreat(this);
 
             if (wasThreating && !willThreaten) _tracker?.UnregisterNpcThreat(this);
             if (!wasThreating && willThreaten)  _tracker?.RegisterNpcThreat(this);
 
             CurrentState = next;
 
-            if (next == NpcState.Chase)  { _sightLoseTimer = 0f; _arrestTimer = 0f; }
-            if (next == NpcState.Search) { _searchTimer = 0f; }
+            if (next == NpcState.Chase)                            { _sightLoseTimer = 0f; _arrestTimer = 0f; }
+            if (next == NpcState.Search)                           { _searchTimer    = 0f; }
+            if (next == NpcState.Patrol || next == NpcState.Idle)  { _suspicion      = 0f; }
+
+            if (_speechBubble != null)
+            {
+                switch (next)
+                {
+                    case NpcState.Suspicious: _speechBubble.Show("음...?");         break;
+                    case NpcState.Alert:      _speechBubble.Show("거기 누구야?!");  break;
+                    case NpcState.Chase:      _speechBubble.Show("잡아라!");        break;
+                    case NpcState.Search:     _speechBubble.Show("어디 갔지...");   break;
+                    case NpcState.Patrol:
+                    case NpcState.Idle:
+                        if (wasThreating) _speechBubble.Show("...착각이었나");      break;
+                }
+            }
         }
 
         // ── Gizmos ───────────────────────────────────────────────────────────

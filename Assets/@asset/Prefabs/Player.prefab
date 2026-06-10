@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6303696019212763589}
   - component: {fileID: 5550460014231545010}
   - component: {fileID: 4531582928301122073}
-  - component: {fileID: 279379215408536400}
   - component: {fileID: 2962838977717124426}
   m_Layer: 0
   m_Name: Player
@@ -188,19 +187,6 @@ MonoBehaviour:
   moveSpeed: 4
   bodyRenderer: {fileID: 0}
   spawnPoint: {fileID: 0}
---- !u!114 &279379215408536400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7557222670227259033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c613a0816ab65a640b2527e4d92b113b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.PlayerInteraction
-  hintFont: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
 --- !u!114 &2962838977717124426
 MonoBehaviour:
   m_ObjectHideFlags: 0
