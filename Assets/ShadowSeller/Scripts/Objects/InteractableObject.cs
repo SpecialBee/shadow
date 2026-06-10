@@ -50,6 +50,7 @@ namespace ShadowSeller.Core
         // ── 내부 상태 ─────────────────────────────────────────────────────────────
         private SpriteRenderer   _sr;
         private Color            _originalColor;
+        private PlayerController _player;        // 씬 내 플레이어 (Start에서 캐시)
         private PlayerController _nearbyPlayer;
         private PlayerController _carrier;
         private bool             _playerNearby;
@@ -88,11 +89,6 @@ namespace ShadowSeller.Core
 
             if (isDoor) ApplyDoorState(startOpen);
 
-            // 접근 감지용 trigger 동적 추가
-            var trigger       = gameObject.AddComponent<CircleCollider2D>();
-            trigger.radius    = approachRadius;
-            trigger.isTrigger = true;
-
             LoadFont();
         }
 
@@ -104,6 +100,11 @@ namespace ShadowSeller.Core
                 s_carried = null;
                 IsCarried = false;
             }
+        }
+
+        private void Start()
+        {
+            _player = Object.FindAnyObjectByType<PlayerController>();
         }
 
         private void LoadFont()
@@ -119,25 +120,22 @@ namespace ShadowSeller.Core
         }
 
         // ────────────────────────────────────────────────────────────────────────
-        //  접근 감지 & 하이라이트
+        //  접근 감지 & 하이라이트  (trigger 없이 거리 기반)
         // ────────────────────────────────────────────────────────────────────────
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void UpdateApproach()
         {
-            var player = other.GetComponent<PlayerController>();
-            if (player == null) return;
-            _nearbyPlayer = player;
-            _playerNearby = true;
-            SetHighlight(true);
-        }
+            if (_player == null) return;
 
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.GetComponent<PlayerController>() == null) return;
-            _nearbyPlayer = null;
-            _playerNearby = false;
-            SetHighlight(false);
-            HidePanel();
+            float dist   = Vector2.Distance(transform.position, _player.transform.position);
+            bool  nearby = dist <= approachRadius;
+
+            if (nearby == _playerNearby) return;
+
+            _playerNearby = nearby;
+            _nearbyPlayer = nearby ? _player : null;
+            SetHighlight(nearby);
+            if (!nearby) HidePanel();
         }
 
         private void SetHighlight(bool on)
@@ -168,6 +166,8 @@ namespace ShadowSeller.Core
 
         private void Update()
         {
+            UpdateApproach();
+
             if (_panelGo == null || !_panelGo.activeSelf) return;
 
             bool mouseDown;
