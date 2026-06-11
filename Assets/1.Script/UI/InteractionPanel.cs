@@ -95,7 +95,7 @@ namespace ShadowSeller.UI
             tmp.fontSize           = 14f;
             tmp.color              = Color.white;
             tmp.alignment          = TextAlignmentOptions.Center;
-            tmp.enableWordWrapping = false;
+            tmp.textWrappingMode = TextWrappingModes.NoWrap;
             if (font != null) tmp.font = font;
 
             return go;

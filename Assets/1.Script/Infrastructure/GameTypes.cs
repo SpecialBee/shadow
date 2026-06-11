@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // GameTypes — 게임 전역 열거형 정의.
-//   ExposureState : 플레이어 노출 상태. 의심도 변화율(Rates[])의 인덱스로 사용됨.
-//   NpcKind       : NPC 종류 구분 (현재 미사용, 확장 예약).
+//   ExposureState : 플레이어 노출 상태.
+//   NpcType       : NPC 종류 (Guard=기존 FSM, Civilian=의심도 구간 반응).
 //   NpcState      : NPC 행동 상태 FSM 레이블.
 // ─────────────────────────────────────────────────────────────────────────────
 namespace ShadowSeller.Core
@@ -15,7 +15,9 @@ namespace ShadowSeller.Core
         ExposedClose = 4,
     }
 
-    public enum NpcKind  { Guest, Guard, Target }
+    public enum NpcType  { Guard, Civilian }
+
+    public enum GameOverReason { SuspicionFull, Arrested }
 
     public enum NpcState { Idle, Patrol, Suspicious, Alert, Chase, Search }
 }

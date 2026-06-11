@@ -1,0 +1,162 @@
+================================================================
+  ShadowSeller — 개발 로그 (Devlog)
+================================================================
+
+[ 형식 ]
+  날짜 / 작업 내용 / 비고
+
+================================================================
+  2026-06-11  (세션 1) — NPC 시스템 설계 및 구현
+================================================================
+
+  ── 빛/그림자 의심도 연동 수정 ──────────────────────────────
+  · 플레이어가 빛 근처에 있어도 의심도가 오르지 않던 버그 수정.
+    원인: PlayerExposureTracker.Evaluate()에 Lit 분기 누락.
+    수정: _litCount > 0 조건 추가, rateLit = 8f SerializeField 공개.
+
+  ── NPC 이중 구조 구현 ──────────────────────────────────────
+  · NpcType 열거형 추가 (Guard / Civilian).
+  · Guard: 기존 FSM 유지 (Idle→Patrol→Suspicious→Alert→Chase→Search).
+  · Civilian: 전역 의심도 4구간 반응 시스템 신규 구현.
+      구간 1 — 조용히 감시 (말풍선 없음)
+      구간 2 — "?" 말풍선
+      구간 3 — "뭐지?" + 추격
+      구간 4 — "그림자가 없다!" + 빠른 추격
+  · Civilian 시야 내 의심도 상승률(civilianSightRate) Inspector 공개.
+  · Civilian 추격 중에도 AddSuspicion 유지 (이전 버그: 50에서 멈춤).
+
+  ── 충돌 기반 체포 시스템 ───────────────────────────────────
+  · 기존 타이머 기반 체포 → OnCollisionEnter2D / OnTriggerEnter2D 방식으로 변경.
+  · Chase 상태 NPC가 Player 태그 오브젝트와 충돌 시 즉시 TriggerArrest().
+  · GameOverReason 열거형 추가 (SuspicionFull / Arrested).
+  · GameOverUI에 원인 텍스트 표시 ("NPC에게 발각되었습니다" / "의심도가 최대에 달했습니다").
+
+  ── 고도화 시스템 A/B/D 구현 ────────────────────────────────
+  A. 정보 전파 (Alert Spreading)
+     Guard Alert/Chase 진입 → 반경 내 Guard에 lastKnown 공유 + Suspicious 진입.
+     Civilian tier 3/4 진입 → 반경 내 Civilian의 tier +1 상승 (시야 중일 때만).
+
+  B. 복합 승수 (Crowd Multiplier)
+     동시 감시 Civilian 수에 따라 의심도 상승률 배율 (×1.0 ~ ×2.0).
+     PlayerExposureTracker에서 카운트 관리.
+
+  D. 전역 경계 레벨 (AlertManager)
+     AlertManager 싱글턴 신규 생성.
+     Guard Alert 진입 +2pt / 고의심도(70+) 10초 지속 +1pt.
+     레벨 1~4, 한 번 오르면 내려가지 않음.
+     레벨별 NPC 속도/시야/감소율 변화 적용.
+
+  ── 기타 버그 수정 ──────────────────────────────────────────
+  · Civilian이 플레이어에게 밀리는 현상 수정 (Rigidbody2D → Kinematic).
+  · VisionCone 매 프레임 GC 할당 제거 (배열 캐시).
+  · TMP enableWordWrapping deprecated 경고 수정 (textWrappingMode로 교체).
+  · NpcKindData 불필요 kind 필드 제거.
+
+================================================================
+  2026-06-11  (세션 2) — 플레이어 피드백 시스템 + 버그 수정
+================================================================
+
+  ── 플레이어 피드백 시스템 5종 신규 구현 ────────────────────
+
+  1. 경계 레벨 HUD (AlertLevelUI.cs)
+     · UI 우측 상단에 경계 레벨 아이콘 상시 표시 (색상: 흰→노랑→주황→빨강).
+     · 레벨 상승 시 화면 중앙에 알림 텍스트 2.5초 표시 후 페이드아웃.
+     · 레벨 상승 순간 화면 플래시 (0.35초).
+
+  2. Civilian 감시 아이콘
+     · tier 1 (조용한 감시) 구간에서 NPC 머리 위 "◉" 아이콘 표시.
+     · tier 2 이상 진입 시 말풍선으로 교체되며 아이콘 숨김.
+
+  3. 의심도 바 맥동 (SuspicionUI.cs)
+     · 동시에 감시 중인 Civilian 수에 비례해 fill bar가 깜빡임.
+     · 감시 인원이 많을수록 주기 빠름 (2~5 Hz).
+
+  4. Guard 전파 수신 말풍선 차별화 (NPCController.cs)
+     · 경보 전파를 받은 Guard가 Suspicious 진입 시 "어디야?!" 표시.
+     · 직접 발각 시 기존 "음...?" 유지.
+
+  5. 화면 비네팅 (VignetteController.cs)
+     · 경계 레벨 3: 약한 비네팅 (intensity 0.28).
+     · 경계 레벨 4: 강한 비네팅 (intensity 0.48).
+     · URP Global Volume + Vignette 오버라이드로 구현.
+
+  ── 폰트 적용 ───────────────────────────────────────────────
+  · DungGeunMo SDF 폰트 전역 적용.
+    대상: 씬 내 모든 TextMeshProUGUI (13개) + SpeechBubble (2개).
+    TMP_Settings 기본 폰트도 변경 → 런타임 생성 TMP 자동 적용.
+
+  ── 버그 수정 ────────────────────────────────────────────────
+  · [수정] Civilian이 경계 레벨에 기여하지 못하는 문제.
+    Civilian tier 3/4 진입 시 AlertManager.RegisterCivilianAlert() +1pt 호출.
+    단, 같은 NPC가 30초 내 중복 기여 불가 (_alertPointCooldown 쿨다운).
+
+  · [수정] Guard 의심도 완전 초기화 문제 (기억상실).
+    Search→Patrol 복귀 시 _suspicion = 0 → alertThreshold × 0.3 (=12) 잔류.
+    재발각 시 Alert까지 1.33초 → 0.93초로 단축.
+
+  · [수정] Guard 초기 시선 방향 고정 문제.
+    Start()에서 첫 번째 순찰 포인트 방향으로 _facingDir 초기화.
+    씬 배치 방향과 실제 시야 방향 일치.
+
+  · [정리] NpcKindData 에셋 중복 삭제.
+    Assets/2.Asset/Player&NPC/NpcKindData_Guard.asset 삭제 (미참조).
+    활성 에셋: Guard → 5.ScriptableObjects/NpcKindData_Guard.asset
+              Civilian → 2.Asset/Player&NPC/NpcKindData_citizen.asset
+
+================================================================
+  2026-06-11  (세션 3) — 타원형 그림자 시스템 + 미니맵
+================================================================
+
+  ── 그림자 시스템 전면 교체 (EllipseShadow) ──────────────────
+
+  · [구조 변경] ShadowProjector: 스프라이트 복사 방식 → 타원형 그라데이션으로 교체.
+    이전: 원본 오브젝트 스프라이트를 그대로 복사한 _Shadow GO (판정 범위가 오브젝트
+          모양 그대로라 직관적이지 않음).
+    변경: 중심→가장자리 그라데이션 원형 스프라이트 사용. localScale(shadowFlat, length)
+          으로 타원형 스케일 → 시각적으로 자연스러운 땅 그림자 표현.
+
+  · [신규] EllipseShadow.cs 컴포넌트 제작.
+    - 수학적 타원 방정식으로 플레이어 은신 판정 (Physics2D 콜라이더 불필요).
+    - ContainsPoint(): (lx/rx)² + (ly/ry)² ≤ 1, transform.rotation 반영.
+    - createVisual=true  (독립 배치): radiusX/radiusY로 크기 지정, 비주얼 자동 생성.
+    - createVisual=false (ShadowProjector 연동): lossyScale/2를 반경으로 자동 사용.
+      → ShadowProjector가 매 프레임 _Shadow GO 크기를 조정하면 판정도 자동 동기화.
+    - OnEnable/OnDisable: EllipseShadow.All 정적 리스트에 등록/해제.
+
+  · [수정] PlayerExposureTracker.cs: Physics2D 기반 감지 → EllipseShadow.All 순회로 교체.
+    - shadowLayer LayerMask / _hitBuffer / _zoneCounts / ContactFilter2D 필드 제거.
+    - Tick(): 5점 샘플 각각을 EllipseShadow.All 순회 → 3점 이상 포함 시 Shadow 판정.
+
+  · [수정] ShadowProjector.cs: ShadowZone + Rigidbody2D + Collider2D 생성 코드 제거.
+    createHidingZone=true 시 EllipseShadow(createVisual=false) 자동 부착.
+    그라데이션 스프라이트 PPU를 원본 스프라이트 월드 크기에 맞춰 역산
+    (gradPPU = 64 / srcMax) → 시각적 크기가 기존과 동일하게 유지.
+
+  ── 그림자 시각 품질 개선 ────────────────────────────────────
+
+  · 그라데이션 공식 변경: (1-t)² → 1-t²
+    이전: 중심에서 빠르게 감쇠 → 전체적으로 흐릿하게 보임.
+    변경: 중심 면적을 넓게 유지하고 가장자리만 부드럽게 페이드
+          → 더 진하고 명확한 그림자.
+
+  · shadowAlpha 기본값 상향: 0.45 → 0.75
+    씬 내 기존 ShadowProjector 122개 Inspector 값 일괄 업데이트.
+
+  ── 미니맵 시스템 신규 구현 (MinimapController.cs) ───────────
+
+  · Tilemap 범위 자동 감지 → 전체 맵을 커버하는 Orthographic 카메라 생성.
+    카메라 위치: 맵 중심 (8.5, -70.5, -100), orthographicSize=48.5, aspect=1.33.
+
+  · RenderTexture (512×386) → MiniMapPanel 하위 RawImage(_MapView)에 출력.
+    패널 가로세로 비율에 맞춰 RT 크기 자동 계산.
+
+  · 플레이어/NPC 위치 아이콘 실시간 오버레이 (_IconRoot).
+    아이콘 좌표: Camera.WorldToViewportPoint() → 패널 anchoredPosition 변환.
+      - 플레이어  : 흰색 원형 아이콘
+      - Guard     : 붉은색 / Alert·Chase 상태 시 밝은 빨강으로 변화
+      - Civilian  : 파란색
+    RectMask2D로 패널 경계 밖 아이콘 자동 클리핑.
+
+  · NPCController에 public NpcKind 프로퍼티 추가 (npcType 외부 노출용).
+
+================================================================

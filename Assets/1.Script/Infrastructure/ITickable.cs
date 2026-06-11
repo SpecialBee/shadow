@@ -15,6 +15,7 @@ namespace ShadowSeller.Core
         NpcAI           = 40,
         ShadowUpdate    = 45,
         SuspicionUpdate = 50,
+        AlertUpdate     = 60,
     }
 
     public interface ITickable

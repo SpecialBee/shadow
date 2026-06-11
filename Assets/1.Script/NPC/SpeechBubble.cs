@@ -68,7 +68,7 @@ namespace ShadowSeller.Core
             _tmp.fontSize           = 2.6f;
             _tmp.color              = new Color(0.1f, 0.1f, 0.1f, 1f);
             _tmp.alignment          = TextAlignmentOptions.Center;
-            _tmp.enableWordWrapping = true;
+            _tmp.textWrappingMode = TMPro.TextWrappingModes.Normal;
             _tmp.overflowMode       = TextOverflowModes.Overflow;
             _tmp.sortingOrder       = 12;
             _tmp.rectTransform.sizeDelta = new Vector2(maxWidth, 2f);

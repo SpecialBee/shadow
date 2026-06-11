@@ -8,8 +8,6 @@ namespace ShadowSeller.Core
     [CreateAssetMenu(menuName = "ShadowSell/NPC Kind Data", fileName = "NpcKindData_Guard")]
     public class NpcKindData : ScriptableObject
     {
-        public NpcKind kind = NpcKind.Guard;
-
         [Header("Vision")]
         public float viewAngle = 90f;
         public float viewRange = 6f;

@@ -15,6 +15,9 @@ namespace ShadowSeller.Core
         private NPCController _npc;
         private Mesh          _mesh;
 
+        private readonly Vector3[] _verts = new Vector3[Segments + 2];
+        private readonly int[]     _tris  = new int[Segments * 3];
+
         private static readonly Color ColIdle       = new Color(1.0f, 1.0f, 0.4f, 0.18f);
         private static readonly Color ColSuspicious = new Color(1.0f, 0.75f, 0.0f, 0.28f);
         private static readonly Color ColAlert      = new Color(1.0f, 0.4f,  0.0f, 0.35f);
@@ -45,11 +48,7 @@ namespace ShadowSeller.Core
 
         private void RebuildMesh(Vector2 facing, float angleDeg, float range)
         {
-            int vCount = Segments + 2;
-            var verts  = new Vector3[vCount];
-            var tris   = new int[Segments * 3];
-
-            verts[0] = Vector3.zero;
+            _verts[0] = Vector3.zero;
 
             float half = angleDeg * 0.5f;
             for (int i = 0; i <= Segments; i++)
@@ -57,19 +56,19 @@ namespace ShadowSeller.Core
                 float t   = (float)i / Segments;
                 float deg = Mathf.Lerp(-half, half, t);
                 var   dir = RotateVec(facing, deg);
-                verts[i + 1] = new Vector3(dir.x * range, dir.y * range, 0f);
+                _verts[i + 1] = new Vector3(dir.x * range, dir.y * range, 0f);
             }
 
             for (int i = 0; i < Segments; i++)
             {
-                tris[i * 3]     = 0;
-                tris[i * 3 + 1] = i + 1;
-                tris[i * 3 + 2] = i + 2;
+                _tris[i * 3]     = 0;
+                _tris[i * 3 + 1] = i + 1;
+                _tris[i * 3 + 2] = i + 2;
             }
 
             _mesh.Clear();
-            _mesh.vertices  = verts;
-            _mesh.triangles = tris;
+            _mesh.vertices  = _verts;
+            _mesh.triangles = _tris;
             _mesh.RecalculateNormals();
         }
 

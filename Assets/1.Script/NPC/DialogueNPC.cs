@@ -36,7 +36,7 @@ namespace ShadowSeller.Core
             _hintTmp.fontSize           = 3f;
             _hintTmp.color              = Color.white;
             _hintTmp.alignment          = TMPro.TextAlignmentOptions.Center;
-            _hintTmp.enableWordWrapping = false;
+            _hintTmp.textWrappingMode = TMPro.TextWrappingModes.NoWrap;
             _hintTmp.sortingOrder       = 10;
             if (font != null) _hintTmp.font = font;
 

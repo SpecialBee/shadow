@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b911f14d6f70ad64a99e6e9d46ac3073, type: 3}
+  m_Name: NpcKindData_citizen
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.NpcKindData
+  kind: 0
+  viewAngle: 120
+  viewRange: 3
+  suspicionGainRate: 30
+  suspicionDecayRate: 8
+  alertThreshold: 40
+  chaseThreshold: 75
+  patrolSpeed: 2
+  chaseSpeed: 4
+  arrestTime: 3
+  sightLoseDelay: 2
+  searchDuration: 5
+  closeRange: 2
