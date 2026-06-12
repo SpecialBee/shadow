@@ -370,6 +370,7 @@ namespace ShadowSeller.Core
 
             foreach (var (npc, rt, img) in _npcs)
             {
+                if (rt == null) continue;
                 if (npc == null || !npc.gameObject.activeSelf)
                 {
                     rt.gameObject.SetActive(false);

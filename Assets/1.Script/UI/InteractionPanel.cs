@@ -5,32 +5,28 @@ using TMPro;
 
 namespace ShadowSeller.UI
 {
+    public enum InteractionType { Carry, Push, Pull, Door, Light, Pickup, Talk }
+
     public class InteractionPanel : MonoBehaviour
     {
         public static InteractionPanel Instance { get; private set; }
 
-        [SerializeField] private RectTransform   panel;
-        [SerializeField] private RectTransform   btnContainer;
-        [SerializeField] private GameObject      overlay;
-        [SerializeField] private TMP_FontAsset   font;
+        [Header("버튼 슬롯 (Inspector에서 연결)")]
+        [SerializeField] private Button carryBtn;
+        [SerializeField] private Button pushBtn;
+        [SerializeField] private Button pullBtn;
+        [SerializeField] private Button doorBtn;
+        [SerializeField] private Button lightBtn;
+        [SerializeField] private Button pickupBtn;
+        [SerializeField] private Button talkBtn;
 
-        public bool IsVisible => panel != null && panel.gameObject.activeSelf;
-
-        private readonly List<GameObject> _btnGos = new List<GameObject>();
-
-        private const float BtnH    = 38f;
-        private const float Spacing = 4f;
-        private const float PadY    = 10f;
-        private const float PanelW  = 150f;
+        public bool IsVisible { get; private set; }
 
         private void Awake()
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
-            var overlayBtn = overlay.GetComponent<Button>();
-            if (overlayBtn != null) overlayBtn.onClick.AddListener(Hide);
-            panel.gameObject.SetActive(false);
-            overlay.SetActive(false);
+            DeactivateAll();
         }
 
         private void OnDestroy()
@@ -38,67 +34,62 @@ namespace ShadowSeller.UI
             if (Instance == this) Instance = null;
         }
 
-        public void Show(List<(string label, System.Action callback)> actions)
+        public void Show(List<(InteractionType type, string label, System.Action callback)> actions)
         {
-            Hide();
+            DeactivateAll();
             if (actions == null || actions.Count == 0) return;
 
-            foreach (var (label, cb) in actions)
+            foreach (var (type, label, cb) in actions)
             {
+                var btn = GetBtn(type);
+                if (btn == null) continue;
+
+                btn.gameObject.SetActive(true);
+
+                var tmp = btn.GetComponentInChildren<TextMeshProUGUI>();
+                if (tmp != null) tmp.text = label;
+
+                btn.onClick.RemoveAllListeners();
                 var capturedCb = cb;
-                var btnGo = CreateButtonGO(label, () => { capturedCb.Invoke(); Hide(); }, font);
-                btnGo.transform.SetParent(btnContainer, false);
-                _btnGos.Add(btnGo);
+                btn.onClick.AddListener(() => capturedCb?.Invoke());
             }
 
-            float panelH = PadY + actions.Count * BtnH + (actions.Count - 1) * Spacing + PadY;
-            panel.sizeDelta = new Vector2(PanelW, panelH);
-
-            overlay.SetActive(true);
-            panel.gameObject.SetActive(true);
+            IsVisible = true;
         }
 
         public void Hide()
         {
-            foreach (var go in _btnGos) Destroy(go);
-            _btnGos.Clear();
-            if (panel != null) panel.gameObject.SetActive(false);
-            if (overlay != null) overlay.SetActive(false);
+            DeactivateAll();
+            IsVisible = false;
         }
 
-        private static GameObject CreateButtonGO(string label, System.Action onClick, TMP_FontAsset font = null)
+        private void DeactivateAll()
         {
-            var go = new GameObject("Btn_" + label, typeof(RectTransform));
+            foreach (var btn in AllBtns())
+                if (btn != null) btn.gameObject.SetActive(false);
+        }
 
-            var img   = go.AddComponent<Image>();
-            img.color = new Color(0.1f, 0.1f, 0.1f, 0.92f);
+        private Button GetBtn(InteractionType t) => t switch
+        {
+            InteractionType.Carry  => carryBtn,
+            InteractionType.Push   => pushBtn,
+            InteractionType.Pull   => pullBtn,
+            InteractionType.Door   => doorBtn,
+            InteractionType.Light  => lightBtn,
+            InteractionType.Pickup => pickupBtn,
+            InteractionType.Talk   => talkBtn,
+            _                      => null,
+        };
 
-            var btn = go.AddComponent<Button>();
-            btn.targetGraphic = img;
-            var colors              = btn.colors;
-            colors.highlightedColor = new Color(0.28f, 0.28f, 0.28f, 1f);
-            colors.pressedColor     = new Color(0.45f, 0.45f, 0.45f, 1f);
-            btn.colors = colors;
-            btn.onClick.AddListener(() => onClick.Invoke());
-
-            go.GetComponent<RectTransform>().sizeDelta = new Vector2(PanelW - 20f, BtnH);
-
-            var txtGo = new GameObject("Label", typeof(RectTransform));
-            txtGo.transform.SetParent(go.transform, false);
-            var txtRt       = txtGo.GetComponent<RectTransform>();
-            txtRt.anchorMin = Vector2.zero;
-            txtRt.anchorMax = Vector2.one;
-            txtRt.sizeDelta = Vector2.zero;
-
-            var tmp = txtGo.AddComponent<TextMeshProUGUI>();
-            tmp.text               = label;
-            tmp.fontSize           = 14f;
-            tmp.color              = Color.white;
-            tmp.alignment          = TextAlignmentOptions.Center;
-            tmp.textWrappingMode = TextWrappingModes.NoWrap;
-            if (font != null) tmp.font = font;
-
-            return go;
+        private IEnumerable<Button> AllBtns()
+        {
+            yield return carryBtn;
+            yield return pushBtn;
+            yield return pullBtn;
+            yield return doorBtn;
+            yield return lightBtn;
+            yield return pickupBtn;
+            yield return talkBtn;
         }
     }
 }

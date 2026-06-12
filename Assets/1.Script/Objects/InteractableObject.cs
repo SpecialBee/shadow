@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM
-using UnityEngine.InputSystem;
-#endif
+using ShadowSeller.UI;
 
 namespace ShadowSeller.Core
 {
@@ -50,6 +48,10 @@ namespace ShadowSeller.Core
         [SerializeField][Range(0f, 1f)] private float highlightAlpha = 1f;
         [SerializeField] private float approachRadius = 2f;
 
+        [Header("방향 지시자 (선택)")]
+        [Tooltip("비워두면 Push/Pull 오브젝트에 자동 생성됩니다")]
+        [SerializeField] private TMPro.TextMeshPro dirArrow;
+
         public bool IsCarried { get; private set; }
 
         private SpriteRenderer   _sr;
@@ -80,6 +82,8 @@ namespace ShadowSeller.Core
             if (canToggleLight && controlledSources != null
                 && controlledSources.Length > 0 && controlledSources[0] != null)
                 _lightsOn = controlledSources[0].gameObject.activeSelf;
+
+            EnsureDirArrow();
         }
 
         private void OnDestroy()
@@ -100,7 +104,11 @@ namespace ShadowSeller.Core
             _playerNearby = nearby;
             _nearbyPlayer = nearby ? _player : null;
             SetHighlight(nearby);
-            if (!nearby) HidePanel();
+
+            if (nearby)
+                ShowPanel();
+            else
+                HidePanel();
         }
 
         private void SetHighlight(bool on)
@@ -111,44 +119,14 @@ namespace ShadowSeller.Core
                 : _originalColor;
         }
 
-        // ── 클릭 감지 ────────────────────────────────────────────────────────────
+        // ── 업데이트 ─────────────────────────────────────────────────────────────
 
         private void Update()
         {
             UpdateApproach();
-            if (_isSliding) return;
 
-#if ENABLE_INPUT_SYSTEM
-            if (Mouse.current == null) return;
-            bool    mouseDown = Mouse.current.leftButton.wasPressedThisFrame;
-            Vector2 screenPos = Mouse.current.position.ReadValue();
-#else
-            bool    mouseDown = Input.GetMouseButtonDown(0);
-            Vector2 screenPos = Input.mousePosition;
-#endif
-            if (!mouseDown) return;
-
-            // UI가 클릭을 처리하면 월드 클릭 무시
-            if (UnityEngine.EventSystems.EventSystem.current != null &&
-                UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;
-
-            if (!_playerNearby && !IsCarried) return;
-
-            Vector3 wp3 = Camera.main.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, 0f));
-            wp3.z = 0f;
-            Vector2 wp = wp3;
-
-            bool hitBody = false;
-            foreach (var col in GetComponents<Collider2D>())
-            {
-                if (col.isTrigger) continue;
-                if (col.OverlapPoint(wp)) { hitBody = true; break; }
-            }
-            if (!hitBody && _sr != null)
-                hitBody = _sr.bounds.Contains(wp3);
-            if (!hitBody) return;
-
-            ShowPanel();
+            if (_playerNearby && (canPush || canPull))
+                UpdateDirArrow();
         }
 
         private void LateUpdate()
@@ -161,46 +139,79 @@ namespace ShadowSeller.Core
 
         private void ShowPanel()
         {
+            if (_isSliding) return;
             s_panelOwner = this;
-            ShadowSeller.UI.InteractionPanel.Instance?.Show(CollectActions());
+            InteractionPanel.Instance?.Show(CollectActions());
+
+            if ((canPush || canPull) && dirArrow != null)
+            {
+                UpdateDirArrow();
+                dirArrow.gameObject.SetActive(true);
+            }
         }
 
         private void HidePanel()
         {
             if (s_panelOwner != this) return;
             s_panelOwner = null;
-            ShadowSeller.UI.InteractionPanel.Instance?.Hide();
+            InteractionPanel.Instance?.Hide();
+
+            if (dirArrow != null) dirArrow.gameObject.SetActive(false);
         }
 
         // ── 액션 목록 ────────────────────────────────────────────────────────────
 
-        private List<(string, System.Action)> CollectActions()
+        private List<(InteractionType, string, System.Action)> CollectActions()
         {
-            var list = new List<(string, System.Action)>();
+            var list = new List<(InteractionType, string, System.Action)>();
 
-            if (IsCarried) { list.Add(("내려놓기", DoDrop)); return list; }
+            if (IsCarried)
+            {
+                list.Add((InteractionType.Carry, "내려놓기", DoDrop));
+                return list;
+            }
 
-            if (canCarry) list.Add(("들기", DoCarry));
-            if (canPush)
-            {
-                string arr = _nearbyPlayer != null ? DirToArrow(GetSnapDir(_nearbyPlayer, false)) + " " : "";
-                list.Add((arr + "밀기", DoPushAction));
-            }
-            if (canPull)
-            {
-                string arr = _nearbyPlayer != null ? DirToArrow(GetSnapDir(_nearbyPlayer, true)) + " " : "";
-                list.Add((arr + "당기기", DoPullAction));
-            }
-            if (isDoor)         list.Add((_isOpen ? "닫기" : "열기",   DoToggleDoor));
-            if (canToggleLight) list.Add((_lightsOn ? "끄기" : "켜기", DoToggleLight));
-            if (canInventory)   list.Add(("줍기",                      DoAddToInventory));
+            if (canCarry)        list.Add((InteractionType.Carry,  "들기",                       DoCarry));
+            if (canPush)         list.Add((InteractionType.Push,   "밀기",                       DoPushAction));
+            if (canPull)         list.Add((InteractionType.Pull,   "당기기",                     DoPullAction));
+            if (isDoor)          list.Add((InteractionType.Door,   _isOpen ? "닫기" : "열기",    DoToggleDoor));
+            if (canToggleLight)  list.Add((InteractionType.Light,  _lightsOn ? "끄기" : "켜기",  DoToggleLight));
+            if (canInventory)    list.Add((InteractionType.Pickup, "줍기",                       DoAddToInventory));
             if (isTarget)
             {
                 bool done = ObjectiveManager.Instance != null && ObjectiveManager.Instance.IsComplete;
-                list.Add((done ? "완료됨" : "대화", DoTarget));
+                list.Add((InteractionType.Talk, done ? "완료됨" : "대화", DoTarget));
             }
 
             return list;
+        }
+
+        // ── 방향 지시자 ──────────────────────────────────────────────────────────
+
+        private void EnsureDirArrow()
+        {
+            if (dirArrow != null || (!canPush && !canPull)) return;
+
+            var go = new GameObject("_DirectionArrow");
+            go.transform.SetParent(transform);
+            go.transform.localPosition = Vector3.up * 0.75f;
+            go.transform.localScale    = Vector3.one;
+
+            dirArrow               = go.AddComponent<TMPro.TextMeshPro>();
+            dirArrow.fontSize      = 4f;
+            dirArrow.alignment     = TMPro.TextAlignmentOptions.Center;
+            dirArrow.color         = new Color(1f, 0.95f, 0.2f);
+            dirArrow.sortingOrder  = 10;
+
+            go.SetActive(false);
+        }
+
+        private void UpdateDirArrow()
+        {
+            if (dirArrow == null || _nearbyPlayer == null) return;
+            bool usePull = !canPush && canPull;
+            Vector2 dir  = GetSnapDir(_nearbyPlayer, fromPlayer: usePull);
+            dirArrow.text = DirToArrow(dir);
         }
 
         private static string DirToArrow(Vector2 dir)
@@ -216,7 +227,6 @@ namespace ShadowSeller.Core
 
         private void DoCarry()
         {
-            HidePanel();
             if (s_carried != null) s_carried.DoDrop();
 
             IsCarried = true;
@@ -228,11 +238,12 @@ namespace ShadowSeller.Core
 
             var shadow = transform.Find("_Shadow");
             if (shadow != null) shadow.gameObject.SetActive(false);
+
+            ShowPanel();
         }
 
         private void DoDrop()
         {
-            HidePanel();
             if (_carrier != null)
                 transform.position = (Vector2)_carrier.transform.position + _carrier.LastMoveDir * holdOffset;
 
@@ -245,13 +256,14 @@ namespace ShadowSeller.Core
 
             var shadow = transform.Find("_Shadow");
             if (shadow != null) shadow.gameObject.SetActive(true);
+
+            ShowPanel();
         }
 
         // ── 밀기 / 당기기 ────────────────────────────────────────────────────────
 
         private void DoPushAction()
         {
-            HidePanel();
             if (_isSliding || _nearbyPlayer == null) return;
             Vector2 dir = GetSnapDir(_nearbyPlayer, fromPlayer: false);
             if (!IsMoveBlocked(dir, pushDistance))
@@ -260,7 +272,6 @@ namespace ShadowSeller.Core
 
         private void DoPullAction()
         {
-            HidePanel();
             if (_isSliding || _nearbyPlayer == null) return;
             Vector2 dir = GetSnapDir(_nearbyPlayer, fromPlayer: true);
             float distToPlayer = Vector2.Distance(transform.position, _nearbyPlayer.transform.position);
@@ -284,6 +295,8 @@ namespace ShadowSeller.Core
         {
             _isSliding      = true;
             player.IsLocked = true;
+            InteractionPanel.Instance?.Hide();
+            if (dirArrow != null) dirArrow.gameObject.SetActive(false);
 
             Vector2 start    = transform.position;
             Vector2 end      = start + dir * distance;
@@ -301,6 +314,7 @@ namespace ShadowSeller.Core
             transform.position = end;
             player.IsLocked    = false;
             _isSliding         = false;
+            _playerNearby      = false;
         }
 
         private bool IsMoveBlocked(Vector2 dir, float distance)
@@ -317,8 +331,8 @@ namespace ShadowSeller.Core
 
         private void DoToggleDoor()
         {
-            HidePanel();
             ApplyDoorState(!_isOpen);
+            ShowPanel();
         }
 
         private void ApplyDoorState(bool open)
@@ -338,23 +352,24 @@ namespace ShadowSeller.Core
 
         private void DoToggleLight()
         {
-            HidePanel();
             _lightsOn = !_lightsOn;
-            if (controlledSources == null) return;
-            foreach (var src in controlledSources)
-                if (src != null) src.gameObject.SetActive(_lightsOn);
+            if (controlledSources != null)
+                foreach (var src in controlledSources)
+                    if (src != null) src.gameObject.SetActive(_lightsOn);
+
+            ShowPanel();
         }
 
         // ── 인벤토리에 줍기 ──────────────────────────────────────────────────────
 
         private void DoAddToInventory()
         {
-            HidePanel();
             if (InventoryManager.Instance == null) { Debug.LogWarning("[InteractableObject] InventoryManager 없음"); return; }
             var    sprite = _sr != null ? _sr.sprite : null;
             string name   = string.IsNullOrEmpty(itemName) ? gameObject.name : itemName;
             if (InventoryManager.Instance.TryAddItem(sprite, name, this))
             {
+                HidePanel();
                 SetHighlight(false);
                 _playerNearby = false;
                 gameObject.SetActive(false);
@@ -363,7 +378,6 @@ namespace ShadowSeller.Core
                 Debug.Log("[InteractableObject] 인벤토리가 가득 찼습니다");
         }
 
-        // ── 런타임 초기화 (인벤토리에서 드롭 시 사용) ───────────────────────────
         public void SetupAsDroppedPickup(string droppedItemName)
         {
             canInventory = true;
