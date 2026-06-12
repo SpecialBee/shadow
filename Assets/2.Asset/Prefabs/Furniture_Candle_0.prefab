@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8360532537578828606, guid: c86d4da12480d4547bb751251f384d03, type: 3}
+  m_Sprite: {fileID: 5446185315798606630, guid: 871da4ca2a55c8740ba72032f0637978, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,6 +143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
   range: 3
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &5863122070359324598
 MonoBehaviour:
   m_ObjectHideFlags: 0
