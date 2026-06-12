@@ -14,7 +14,6 @@ namespace ShadowSeller.Core
         public static DialogueSystem Instance { get; private set; }
 
         [Header("UI 슬롯")]
-        [SerializeField] private GameObject      dialoguePanel;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private GameObject      nextIndicator;
@@ -35,7 +34,7 @@ namespace ShadowSeller.Core
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
-            dialoguePanel?.SetActive(false);
+            HideTexts();
         }
 
         private void Start()
@@ -57,7 +56,7 @@ namespace ShadowSeller.Core
 
             if (_player != null) _player.IsLocked = true;
 
-            dialoguePanel?.SetActive(true);
+            ShowTexts();
             ShowLine(_lines[_index]);
         }
 
@@ -80,6 +79,20 @@ namespace ShadowSeller.Core
         }
 
         // ── 내부 처리 ─────────────────────────────────────────────────────────
+
+        private void ShowTexts()
+        {
+            nameText?.gameObject.SetActive(true);
+            dialogueText?.gameObject.SetActive(true);
+            nextIndicator?.SetActive(false);
+        }
+
+        private void HideTexts()
+        {
+            nameText?.gameObject.SetActive(false);
+            dialogueText?.gameObject.SetActive(false);
+            nextIndicator?.SetActive(false);
+        }
 
         private void ShowLine(DialogueLine line)
         {
@@ -111,7 +124,7 @@ namespace ShadowSeller.Core
 
             if (_typeRoutine != null) { StopCoroutine(_typeRoutine); _typeRoutine = null; }
 
-            dialoguePanel?.SetActive(false);
+            HideTexts();
             if (_player != null) _player.IsLocked = false;
 
             var cb = _onComplete;
