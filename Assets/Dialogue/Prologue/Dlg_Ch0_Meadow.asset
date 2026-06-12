@@ -1,0 +1,45 @@
+﻿%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43af71a745db8cf49984c234f252689c, type: 3}
+  m_Name: Dlg_Ch0_Meadow
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.DialogueData
+  lines:
+  - speakerName: 
+    text: "1812\uB144 11\uC6D4 21\uC77C"
+  - speakerName: 
+    text: "\uD398\uD130 \uC290\uB808\uBC00\uC740 \uC7A5\uAE30 \uCD9C\uC7A5 \uC911,
+      \uD68C\uC0C9 \uC637\uC744 \uC785\uC740 \uB0A8\uC790\uB97C \uB9CC\uB0AC\uB2E4."
+  - speakerName: 
+    text: "\uADF8 \uB0A8\uC790\uB294 \uD398\uD130\uC5D0\uAC8C\uC11C \uBB34\uC5B8\uAC00\uB97C
+      \uBCF8 \uB4EF \uADF8\uB97C \uB530\uB77C\uB098\uC640 \uBD80\uB4DC\uB7FD\uAC8C
+      \uC18D\uC0AD\uC600\uB2E4."
+  - speakerName: "\uD68C\uC0C9 \uB0A8\uC790"
+    text: "\uB2F9\uC2E0\uC758 \uADF8\uB9BC\uC790\uB97C \uB118\uACA8\uC8FC\uBA74,
+      \uAE08\uD654\uAC00 \uB05D\uC5C6\uC774 \uC3DF\uC544\uC9C0\uB294 \uD589\uC6B4\uC758
+      \uB9C8\uC220 \uC8FC\uBA38\uB2C8\uB97C \uB4DC\uB9AC\uACA0\uC2B5\uB2C8\uB2E4."
+  - speakerName: "\uD68C\uC0C9 \uB0A8\uC790"
+    text: "\uB2F9\uC2E0\uC774 \uC6D0\uD558\uB294 \uAC74 \uBB50\uB4E0 \uC190\uC5D0
+      \uB123\uC744 \uC218\uAC00 \uC788\uACA0\uC8E0."
+  - speakerName: "\uD68C\uC0C9 \uB0A8\uC790"
+    text: "\uC5B4\uB5A0\uC2ED\uB2C8\uAE4C? \uADF8\uC800 \uB2F9\uC2E0\uC758 \uADF8\uB9BC\uC790...
+      \uADF8\uAC83 \uD558\uB098\uBA74 \uB429\uB2C8\uB2E4."
+  - speakerName: 
+    text: "\uD398\uD130\uB294 \uB9DD\uC124\uC784 \uC5C6\uC774 \uC790\uC2E0\uC758
+      \uADF8\uB9BC\uC790\uB97C \uD68C\uC0C9 \uB0A8\uC790\uC5D0\uAC8C \uD314\uC558\uB2E4."
+  - speakerName: 
+    text: "\uD68C\uC0C9 \uB0A8\uC790\uB294 \uB9C8\uCE58 \uB3D7\uC790\uB9AC\uB97C
+      \uC811\uB4EF \uD5C8\uB9AC\uB97C \uAD7D\uD600 \uD398\uD130\uC758 \uADF8\uB9BC\uC790\uB97C
+      \uC7A1\uACE0 \uB3CC\uB3CC \uB9D0\uC544 \uC811\uC5C8\uB2E4."
+  - speakerName: 
+    text: "\uAE30\uBD84 \uB098\uC05C \uC6C3\uC74C\uC18C\uB9AC\uC640 \uD568\uAED8
+      \uD68C\uC0C9 \uB0A8\uC790\uB294 \uC791\uC740 \uC8FC\uBA38\uB2C8\uB97C \uD398\uD130\uC5D0\uAC8C
+      \uAC74\uB124\uACE0 \uB4F1\uC744 \uB3CC\uB824 \uC0AC\uB77C\uC84C\uB2E4."

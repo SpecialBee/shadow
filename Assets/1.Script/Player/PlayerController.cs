@@ -22,6 +22,16 @@ namespace ShadowSeller.Core
         // 이동 잠금 — true이면 속도 0 고정 (PushObject 슬라이딩 중 사용)
         public bool IsLocked { get; set; } = false;
 
+        private Vector2?      _walkTarget      = null;
+        private System.Action _onWalkComplete  = null;
+
+        // 목표 지점까지 걸어서 이동 (IsLocked 상태에서도 작동)
+        public void WalkTo(Vector2 destination, System.Action onComplete = null)
+        {
+            _walkTarget     = destination;
+            _onWalkComplete = onComplete;
+        }
+
         private void Awake()
         {
             _rb    = GetComponent<Rigidbody2D>();
@@ -52,6 +62,29 @@ namespace ShadowSeller.Core
 
         public void Tick()
         {
+            if (_walkTarget.HasValue)
+            {
+                Vector2 dest = _walkTarget.Value;
+                Vector2 delta = dest - (Vector2)transform.position;
+
+                if (delta.magnitude <= 0.06f)
+                {
+                    _rb.linearVelocity = Vector2.zero;
+                    _rb.position       = dest;
+                    _walkTarget        = null;
+                    var cb = _onWalkComplete;
+                    _onWalkComplete = null;
+                    cb?.Invoke();
+                }
+                else
+                {
+                    Vector2 dir = delta.normalized;
+                    _rb.linearVelocity = dir * moveSpeed;
+                    LastMoveDir        = dir;
+                }
+                return;
+            }
+
             if (IsLocked)
             {
                 _rb.linearVelocity = Vector2.zero;
