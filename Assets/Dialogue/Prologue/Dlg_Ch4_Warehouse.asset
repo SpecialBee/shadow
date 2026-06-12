@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
@@ -73,8 +73,8 @@ MonoBehaviour:
   - speakerName: 
     text: "\uADF8\uB294 \uAC00\uB9CC\uD788 \uAE30\uB984\uB4F1\uC744 \uC751\uC2DC\uD588\uB2E4."
   - speakerName: "\uB098"
-    text: "... \uC801\uC5B4\uB3C4 \uB0B4 \uC5BC\uAD74\uC744 \uC544\uB294
-      \uC774\uB4E4\uC740 \uC5C6\uB098\uBCF4\uAD70."
+    text: "... \uC801\uC5B4\uB3C4 \uB0B4 \uC5BC\uAD74\uC744 \uC544\uB294 \uC774\uB4E4\uC740
+      \uC5C6\uB098\uBCF4\uAD70."
   - speakerName: "\uB098"
     text: "\uADF8\uB807\uB2E4\uBA74 \uC637\uB9CC \uC870\uAE08 \uAC08\uC544 \uC785\uACE0
       \uADF8\uB9BC\uC790\uAC00 \uC5C6\uB294 \uAC83\uB9CC \uB4E4\uD0A4\uC9C0 \uC54A\uB294\uB2E4\uBA74...."
