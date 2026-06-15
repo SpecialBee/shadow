@@ -11,10 +11,6 @@ namespace ShadowSeller.Core
         private void Awake()
         {
             GetComponent<Collider2D>().isTrigger = true;
-
-            // SpriteRenderer가 이미 있으면(ShadowProjector 생성 등) 시각 자동 생성 스킵
-            if (GetComponent<SpriteRenderer>() == null)
-                CreateVisual();
         }
 
         private void CreateVisual()

@@ -14,6 +14,7 @@ namespace ShadowSeller.Core
         [SerializeField] private bool isDoor;
         [SerializeField] private bool canToggleLight;
         [SerializeField] private bool canInventory;
+        [SerializeField] private bool canTalk;
         [SerializeField] private bool isTarget;
 
         [Header("들기 설정")]
@@ -40,7 +41,18 @@ namespace ShadowSeller.Core
         [Header("인벤토리 설정")]
         [SerializeField] private string itemName = "";
 
-        [Header("대화 설정")]
+        [Header("NPC 대화 설정")]
+        [SerializeField] private DialogueData npcDialogue;
+        [SerializeField] private SpeechBubble speechBubble;
+
+        [Header("아이템 지급 (NPC 대화 후)")]
+        [SerializeField] private bool         giveItemAfterTalk  = false;
+        [SerializeField] private string       rewardItemName     = "";
+        [SerializeField] private Sprite       rewardItemSprite;
+        [SerializeField] private bool         giveItemOnce       = true;
+        [SerializeField] private DialogueData rewardedDialogue;
+
+        [Header("목표 대화 설정")]
         [SerializeField] private DialogueData dialogue;
 
         [Header("확인하기 설정")]
@@ -57,11 +69,12 @@ namespace ShadowSeller.Core
         [SerializeField] private LayerMask wallLayer;
 
         [Header("방향 지시자 (선택)")]
-        [Tooltip("비워두면 Push/Pull 오브젝트에 자동 생성됩니다")]
+        [Tooltip("비워두면 밀기/당기기 오브젝트에 자동 생성됩니다")]
         [SerializeField] private TMPro.TextMeshPro dirArrow;
 
         public bool IsCarried { get; private set; }
 
+        private string           _stableID;  // 씬 내 고유 경로 — 체크포인트 추적용
         private SpriteRenderer   _sr;
         private Color            _originalColor;
         private PlayerController _player;
@@ -81,13 +94,30 @@ namespace ShadowSeller.Core
 
         private void Awake()
         {
+            _stableID = BuildStableID();
             _sr = GetComponent<SpriteRenderer>();
             if (_sr != null) _originalColor = _sr.color;
             if (isDoor) ApplyDoorState(startOpen);
         }
 
+        private string BuildStableID()
+        {
+            var sb = new System.Text.StringBuilder(gameObject.name);
+            var t  = transform.parent;
+            while (t != null) { sb.Insert(0, t.name + "/"); t = t.parent; }
+            return sb.ToString();
+        }
+
         private void Start()
         {
+            // 이미 줍힌 아이템은 씬 로드 시 비활성화
+            if (canInventory && CheckpointManager.Instance != null
+                && CheckpointManager.Instance.IsCollected(_stableID))
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+
             _player = Object.FindAnyObjectByType<PlayerController>();
             if (canToggleLight && controlledSources != null
                 && controlledSources.Length > 0 && controlledSources[0] != null)
@@ -282,6 +312,8 @@ namespace ShadowSeller.Core
             if (canInventory)   list.Add((InteractionType.Pickup,  "줍기",                      DoAddToInventory));
             if (canExamine && examineSprite != null)
                                 list.Add((InteractionType.Examine, "확인하기",                   DoExamine));
+            if (canTalk && npcDialogue != null)
+                                list.Add((InteractionType.Talk,    "대화",                       DoTalk));
             if (isTarget)
             {
                 bool done = ObjectiveManager.Instance != null && ObjectiveManager.Instance.IsComplete;
@@ -475,6 +507,7 @@ namespace ShadowSeller.Core
             string name   = string.IsNullOrEmpty(itemName) ? gameObject.name : itemName;
             if (InventoryManager.Instance.TryAddItem(sprite, name, this))
             {
+                CheckpointManager.Instance?.RegisterCollected(_stableID);
                 SetHighlight(false);
                 ReleaseOwnership();
                 gameObject.SetActive(false);
@@ -494,6 +527,44 @@ namespace ShadowSeller.Core
         private void DoExamine()
         {
             ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite);
+        }
+
+        // ── 일반 NPC 대화 ────────────────────────────────────────────────────────
+
+        private void DoTalk()
+        {
+            ReleaseOwnership();
+            if (speechBubble != null) speechBubble.Hide();
+            if (DialogueSystem.Instance == null) return;
+
+            // 아이템 지급 여부 확인
+            string rewardID    = _stableID + "_reward";
+            bool   alreadyGave = giveItemOnce
+                                 && CheckpointManager.Instance != null
+                                 && CheckpointManager.Instance.IsCollected(rewardID);
+
+            // 지급 완료 상태면 rewardedDialogue 사용 (없으면 npcDialogue 그대로)
+            if (alreadyGave)
+            {
+                var after = rewardedDialogue != null ? rewardedDialogue : npcDialogue;
+                if (after != null) DialogueSystem.Instance.StartDialogue(after);
+                return;
+            }
+
+            // 최초 대화 — 완료 콜백으로 아이템 지급
+            System.Action onComplete = null;
+            if (giveItemAfterTalk && !string.IsNullOrEmpty(rewardItemName))
+            {
+                onComplete = () =>
+                {
+                    InventoryManager.Instance?.TryAddItem(rewardItemSprite, rewardItemName);
+                    if (giveItemOnce)
+                        CheckpointManager.Instance?.RegisterCollected(rewardID);
+                };
+            }
+
+            if (npcDialogue != null)
+                DialogueSystem.Instance.StartDialogue(npcDialogue, onComplete);
         }
 
         // ── 목표 대화 ────────────────────────────────────────────────────────────

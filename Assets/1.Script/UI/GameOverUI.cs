@@ -13,6 +13,7 @@ namespace ShadowSeller.UI
         [SerializeField] private GameObject       defeatPanel;
         [SerializeField] private GameObject       victoryPanel;
         [SerializeField] private Button           defeatRestartBtn;
+        [SerializeField] private Button           continueBtn;
         [SerializeField] private Button           victoryRestartBtn;
         [SerializeField] private TextMeshProUGUI  defeatReasonText;
 
@@ -38,6 +39,7 @@ namespace ShadowSeller.UI
         {
             defeatRestartBtn?.onClick.AddListener(Restart);
             victoryRestartBtn?.onClick.AddListener(Restart);
+            continueBtn?.onClick.AddListener(Continue);
         }
 
         private void ShowDefeat(ShadowSeller.Core.GameOverReason reason)
@@ -51,6 +53,10 @@ namespace ShadowSeller.UI
                     _                                               => string.Empty,
                 };
             }
+
+            bool hasCheckpoint = ShadowSeller.Core.CheckpointManager.Instance?.HasCheckpoint ?? false;
+            continueBtn?.gameObject.SetActive(hasCheckpoint);
+
             defeatPanel?.SetActive(true);
             LockInput();
         }
@@ -65,6 +71,12 @@ namespace ShadowSeller.UI
         {
             var reader = FindAnyObjectByType<ShadowSeller.Core.InputReader>();
             if (reader != null) reader.enabled = false;
+        }
+
+        private void Continue()
+        {
+            defeatPanel?.SetActive(false);
+            ShadowSeller.Core.CheckpointManager.Instance?.Respawn();
         }
 
         private void Restart()

@@ -19,6 +19,10 @@ namespace ShadowSeller.Core
         [SerializeField] private Color shadowColor  = new Color(0f, 0f, 0f, 0.55f);
         [SerializeField] private int   sortingOrder = -1;
 
+        // ShadowProjector가 자동 설정. createVisual=false 전용.
+        // 판정 반경 = lossyScale * 이 값.  0.5 = 비주얼 내접, 1.0 = lossyScale 전체.
+        [HideInInspector] public float detectionRadiusMultiplier = 0.5f;
+
         public static readonly List<EllipseShadow> All = new List<EllipseShadow>();
 
         private void OnEnable()  => All.Add(this);
@@ -41,8 +45,8 @@ namespace ShadowSeller.Core
             }
             else
             {
-                rx = Mathf.Abs(transform.lossyScale.x) * 0.5f;
-                ry = Mathf.Abs(transform.lossyScale.y) * 0.5f;
+                rx = Mathf.Abs(transform.lossyScale.x) * detectionRadiusMultiplier;
+                ry = Mathf.Abs(transform.lossyScale.y) * detectionRadiusMultiplier;
             }
             if (rx < 0.001f || ry < 0.001f) return false;
 

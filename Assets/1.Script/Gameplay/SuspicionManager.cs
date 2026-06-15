@@ -105,6 +105,15 @@ namespace ShadowSeller.Core
             OnGameOver?.Invoke(GameOverReason.Arrested);
         }
 
+        public void ResetForRespawn()
+        {
+            CurrentSuspicion = 0f;
+            CurrentExposure  = ExposureState.Dark;
+            _spikeArmed      = true;
+            _gameOver        = false;
+            OnSuspicionChanged?.Invoke(CurrentSuspicion);
+        }
+
         private static bool IsExposed(ExposureState s) =>
             s == ExposureState.ExposedSight || s == ExposureState.ExposedClose;
     }

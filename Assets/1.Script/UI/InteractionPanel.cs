@@ -11,7 +11,7 @@ namespace ShadowSeller.UI
     {
         public static InteractionPanel Instance { get; private set; }
 
-        [Header("버튼 슬롯 (Inspector에서 연결)")]
+        [Header("버튼 슬롯")]
         [SerializeField] private Button carryBtn;
         [SerializeField] private Button pushBtn;
         [SerializeField] private Button pullBtn;

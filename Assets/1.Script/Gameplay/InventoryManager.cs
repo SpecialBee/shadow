@@ -57,5 +57,21 @@ namespace ShadowSeller.Core
             OnItemRemoved?.Invoke(index);
             return item;
         }
+
+        public void RestoreFromSave(System.Collections.Generic.List<ItemData> items)
+        {
+            for (int i = 0; i < MaxSlots; i++)
+            {
+                if (_slots[i] == null) continue;
+                _slots[i] = null;
+                OnItemRemoved?.Invoke(i);
+            }
+            if (items == null) return;
+            for (int i = 0; i < items.Count && i < MaxSlots; i++)
+            {
+                _slots[i] = items[i];
+                OnItemAdded?.Invoke(i, items[i]);
+            }
+        }
     }
 }

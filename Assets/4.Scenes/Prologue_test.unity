@@ -11077,7 +11077,7 @@ MonoBehaviour:
       waitSeconds: 0
     autoAdvance: 0
     fadeDuration: 1
-  nextSceneName: SampleScene
+  nextSceneName: Stage1_TEST
   fadeImage: {fileID: 974910630}
   sfxSource: {fileID: 0}
 --- !u!4 &1115034596
@@ -11253,7 +11253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b648d37ab123bdb4fa58e4f7286b88f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.DialogueSystem
-  dialoguePanel: {fileID: 1115453133}
   nameText: {fileID: 943907190}
   dialogueText: {fileID: 1797868291}
   nextIndicator: {fileID: 927137008}
