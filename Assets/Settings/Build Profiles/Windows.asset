@@ -27,8 +27,11 @@ MonoBehaviour:
     m_path: Assets/4.Scenes/Prologue_test.unity
     m_guid: dfe6645039cd754469f015e4d144f8a0
   - m_enabled: 1
-    m_path: Assets/4.Scenes/Stage1_TEST.unity
+    m_path: Assets/4.Scenes/Stage1_Real.unity
     m_guid: b978f17a577454f4cbaea5f670f9d48e
+  - m_enabled: 1
+    m_path: Assets/4.Scenes/Prologue_real.unity
+    m_guid: 999e1904e0266564da9a0be57d85f129
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

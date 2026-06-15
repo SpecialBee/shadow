@@ -743,11 +743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &41372593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -899,11 +899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &44223512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1055,11 +1055,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &53249279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1287,11 +1287,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &66709995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1443,11 +1443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &69383011
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1674,11 +1674,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &121519928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,11 +1953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &165520771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2319,11 +2319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &204659984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2475,11 +2475,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &210399853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2631,11 +2631,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &220283673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2969,11 +2969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &248426443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3125,11 +3125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &269162556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3312,11 +3312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &270026759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3653,6 +3653,7 @@ MonoBehaviour:
   defeatPanel: {fileID: 1829451499}
   victoryPanel: {fileID: 1050306842}
   defeatRestartBtn: {fileID: 1838664361}
+  continueBtn: {fileID: 0}
   victoryRestartBtn: {fileID: 1981864175}
   defeatReasonText: {fileID: 1543402515}
 --- !u!114 &305013505
@@ -3791,11 +3792,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &318251693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4103,11 +4104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!61 &358915292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4167,12 +4168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -4381,11 +4381,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &391474799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4811,11 +4811,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &399421159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4967,11 +4967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &401850566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5123,11 +5123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &405767111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5279,11 +5279,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &414511795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5510,11 +5510,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &420048895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5666,11 +5666,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &434960508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5879,11 +5879,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &442495970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6156,11 +6156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &458080067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6630,11 +6630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &498143697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7018,11 +7018,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &525006521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7174,11 +7174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &541009493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7630,11 +7630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &600573393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7961,11 +7961,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &620532462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8640,11 +8640,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!61 &636270566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8704,12 +8704,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -8884,11 +8883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &640568571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9115,11 +9114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &669144574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9304,11 +9303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &674880106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9535,11 +9534,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &699112180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9691,11 +9690,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &702138865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9847,11 +9846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &711991423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10079,11 +10078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &720026397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10235,11 +10234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &731172885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10512,11 +10511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &748136069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10876,11 +10875,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &764193694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11032,11 +11031,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &773725516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11188,11 +11187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &793970639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11344,11 +11343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &800792100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11566,11 +11565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &840610519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11722,11 +11721,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &842210155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11878,11 +11877,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &846018237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12034,11 +12033,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &847877489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12464,11 +12463,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &885769899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12620,11 +12619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &903080680
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12776,11 +12775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &910076725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12932,11 +12931,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &911989534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13377,11 +13376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &928648250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13533,11 +13532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &928875298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13689,11 +13688,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &929556957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14012,11 +14011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &958642893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14270,6 +14269,7 @@ MonoBehaviour:
   isDoor: 0
   canToggleLight: 0
   canInventory: 0
+  canTalk: 0
   isTarget: 1
   holdOffset: 0.7
   pushDistance: 2
@@ -14283,6 +14283,13 @@ MonoBehaviour:
   startOpen: 0
   controlledSources: []
   itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
   canExamine: 0
   examineSprite: {fileID: 0}
@@ -14305,11 +14312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!1 &970360421
 GameObject:
   m_ObjectHideFlags: 0
@@ -14344,11 +14351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!61 &970360423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14408,12 +14415,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -14576,11 +14582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!61 &1023870866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14640,12 +14646,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -14851,11 +14856,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1027469358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15052,11 +15057,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1030946219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15208,11 +15213,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1032108009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16704,12 +16709,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -16771,11 +16775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!1 &1044640697
 GameObject:
   m_ObjectHideFlags: 0
@@ -16913,11 +16917,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1047356293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17314,11 +17318,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1082777540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17470,11 +17474,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1087923787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17911,11 +17915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.85
-  shadowFlat: 1
 --- !u!114 &1102840223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17934,6 +17938,7 @@ MonoBehaviour:
   isDoor: 0
   canToggleLight: 1
   canInventory: 1
+  canTalk: 0
   isTarget: 0
   holdOffset: 0.7
   pushDistance: 2
@@ -17948,6 +17953,13 @@ MonoBehaviour:
   controlledSources:
   - {fileID: 1294362642}
   itemName: "\uAC00\uBC29"
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
   canExamine: 1
   examineSprite: {fileID: -4302551862180157501, guid: 6deb149da6472ec42bd2719f9016acb3, type: 3}
@@ -18004,11 +18016,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1103110111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18160,11 +18172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1103633897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18453,11 +18465,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1110288911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18689,11 +18701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1127731197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18845,11 +18857,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1128838004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19001,11 +19013,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1144864483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19256,11 +19268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1160712816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19555,11 +19567,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1212814905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19711,11 +19723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1224819330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80717,6 +80729,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.VignetteController
   lerpSpeed: 2
+  shadowIntensity: 0.55
+  shadowColor: {r: 0.05, g: 0.1, b: 0.25, a: 1}
+  alertLevel3Extra: 0.2
+  alertLevel4Extra: 0.4
+  alertColor: {r: 0.18, g: 0.04, b: 0.04, a: 1}
 --- !u!114 &1264617427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81607,11 +81624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1320421548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81839,11 +81856,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1356322136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82132,11 +82149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1367027440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82288,11 +82305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1380280673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82527,11 +82544,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1417821280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82820,11 +82837,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1469718242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83325,11 +83342,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1521644856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83618,11 +83635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1529544490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83911,11 +83928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1546327539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84477,11 +84494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1594627137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84829,11 +84846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1627813271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85031,11 +85048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1656916769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85187,11 +85204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1689856013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85499,11 +85516,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
-  footOffset: 0.8
-  shadowFlat: 1.2
 --- !u!61 &1713396477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85563,12 +85580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  tailSprite: {fileID: 0}
+  xOffset: 0
   yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
-  tailSize: 0.22
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
@@ -85743,11 +85759,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1716255862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85891,6 +85907,7 @@ MonoBehaviour:
   isDoor: 0
   canToggleLight: 1
   canInventory: 1
+  canTalk: 0
   isTarget: 0
   holdOffset: 0.7
   pushDistance: 2
@@ -85905,6 +85922,13 @@ MonoBehaviour:
   controlledSources:
   - {fileID: 1294362642}
   itemName: "\uAC00\uBC29"
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
   canExamine: 0
   examineSprite: {fileID: 0}
@@ -85927,11 +85951,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.85
-  shadowFlat: 1
 --- !u!58 &1748669884
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -86088,11 +86112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1755814065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89321,11 +89345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1787327507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89477,11 +89501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1808991523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89633,11 +89657,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1810513935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89789,11 +89813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1818415644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89945,11 +89969,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1821711121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90206,11 +90230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!1 &1829451499
 GameObject:
   m_ObjectHideFlags: 0
@@ -90456,11 +90480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1841101446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90673,11 +90697,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1846048807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90829,11 +90853,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1849177575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90985,11 +91009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1853962198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91141,11 +91165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1865928100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91297,11 +91321,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1881125211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91453,11 +91477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1883237931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91609,11 +91633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1892180065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91810,11 +91834,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1903060155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91966,11 +91990,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1917319621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92274,11 +92298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1942431078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92430,11 +92454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1950375105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -92783,11 +92807,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1972052396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93135,11 +93159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1985705666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93291,11 +93315,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &1998743647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93447,11 +93471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2007354731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93745,11 +93769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2043952123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93901,11 +93925,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2052558571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94285,11 +94309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2059084636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94662,11 +94686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2072997110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94818,11 +94842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2085209035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95050,11 +95074,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2109545554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95464,11 +95488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2132247573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95620,11 +95644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowDistance: 0.8
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
-  footOffset: 0.3
-  shadowFlat: 0.25
 --- !u!61 &2146055445
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 41372592}
   m_Layer: 9
   m_Name: Wall (58)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -945,10 +945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &41372593
 BoxCollider2D:
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 44223511}
   m_Layer: 9
   m_Name: Wall (51)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1101,10 +1101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &44223512
 BoxCollider2D:
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 53249278}
   m_Layer: 9
   m_Name: Wall (13)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1567,10 +1567,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &53249279
 BoxCollider2D:
@@ -2001,7 +2001,7 @@ GameObject:
   - component: {fileID: 66709994}
   m_Layer: 9
   m_Name: Wall (105)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2033,10 +2033,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &66709995
 BoxCollider2D:
@@ -2157,7 +2157,7 @@ GameObject:
   - component: {fileID: 69383010}
   m_Layer: 9
   m_Name: Wall (62)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2189,10 +2189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &69383011
 BoxCollider2D:
@@ -2989,7 +2989,7 @@ GameObject:
   - component: {fileID: 121519927}
   m_Layer: 9
   m_Name: Wall (65)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3021,10 +3021,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &121519928
 BoxCollider2D:
@@ -3573,7 +3573,7 @@ GameObject:
   - component: {fileID: 165520770}
   m_Layer: 9
   m_Name: Wall (45)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3605,10 +3605,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &165520771
 BoxCollider2D:
@@ -4341,7 +4341,7 @@ GameObject:
   - component: {fileID: 204659983}
   m_Layer: 9
   m_Name: Wall (41)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4373,10 +4373,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &204659984
 BoxCollider2D:
@@ -4574,7 +4574,7 @@ GameObject:
   - component: {fileID: 210399852}
   m_Layer: 9
   m_Name: Wall (85)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4606,10 +4606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &210399853
 BoxCollider2D:
@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 220283672}
   m_Layer: 9
   m_Name: Wall (24)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4918,10 +4918,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &220283673
 BoxCollider2D:
@@ -5028,37 +5028,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &222543524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 222543525}
-  m_Layer: 0
-  m_Name: ------------------------------checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &222543525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222543524}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.90975, y: -0.17897, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223294424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5443,7 +5412,7 @@ GameObject:
   - component: {fileID: 248426442}
   m_Layer: 9
   m_Name: Wall (72)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5475,10 +5444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &248426443
 BoxCollider2D:
@@ -6221,7 +6190,7 @@ GameObject:
   - component: {fileID: 269162555}
   m_Layer: 9
   m_Name: Wall (22)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6253,10 +6222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &269162556
 BoxCollider2D:
@@ -6408,7 +6377,7 @@ GameObject:
   - component: {fileID: 270026758}
   m_Layer: 9
   m_Name: Wall (74)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6440,10 +6409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &270026759
 BoxCollider2D:
@@ -6561,8 +6530,8 @@ GameObject:
   - component: {fileID: 272181013}
   - component: {fileID: 272181012}
   - component: {fileID: 272181011}
+  - component: {fileID: 272181010}
   - component: {fileID: 272181014}
-  - component: {fileID: 272181015}
   m_Layer: 0
   m_Name: NPC_Mina
   m_TagString: NPC
@@ -6570,6 +6539,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &272181010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272181009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee2294bb7bde674db0a69ea55626339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.DialogueNPC
+  dialogueData: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
+  detectionRadius: 1
+  font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
 --- !u!58 &272181011
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6697,55 +6681,6 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
---- !u!114 &272181015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272181009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
-  canCarry: 0
-  canPush: 0
-  canPull: 0
-  isDoor: 0
-  canToggleLight: 0
-  canInventory: 0
-  canTalk: 1
-  isTarget: 0
-  holdOffset: 0.7
-  pushDistance: 2
-  pushSpeed: 4
-  pullDistance: 2
-  pullSpeed: 4
-  doorCollider: {fileID: 0}
-  doorRenderer: {fileID: 0}
-  openSprite: {fileID: 0}
-  closedSprite: {fileID: 0}
-  startOpen: 0
-  controlledSources: []
-  itemName: 
-  npcDialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
-  speechBubble: {fileID: 0}
-  giveItemAfterTalk: 0
-  rewardItemName: 
-  rewardItemSprite: {fileID: 0}
-  giveItemOnce: 1
-  rewardedDialogue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
-  canExamine: 0
-  examineSprite: {fileID: 0}
-  highlightColor: {r: 0.19122785, g: 1, b: 0, a: 1}
-  highlightAlpha: 1
-  approachRadius: 2
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  dirArrow: {fileID: 0}
 --- !u!1 &276149862
 GameObject:
   m_ObjectHideFlags: 0
@@ -7862,7 +7797,7 @@ GameObject:
   - component: {fileID: 318251692}
   m_Layer: 9
   m_Name: Wall (3)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7894,10 +7829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &318251693
 BoxCollider2D:
@@ -8328,7 +8263,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &353016681
+--- !u!1 &358915290
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8336,28 +8271,228 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 353016682}
+  - component: {fileID: 358915297}
+  - component: {fileID: 358915296}
+  - component: {fileID: 358915295}
+  - component: {fileID: 358915294}
+  - component: {fileID: 358915293}
+  - component: {fileID: 358915292}
+  - component: {fileID: 358915291}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: NPC_Guard_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &353016682
+--- !u!114 &358915291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
+  shadowAlpha: 0.75
+  createHidingZone: 0
+--- !u!61 &358915292
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.92, y: 11.93}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.92, y: 11.93}
+  m_EdgeRadius: 0
+--- !u!114 &358915293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a7911b0e7d3594aae68e085fe3e618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
+  bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
+  xOffset: 0
+  yOffset: 1.2
+  paddingX: 0.35
+  paddingY: 0.25
+  maxWidth: 3.5
+  duration: 2
+  fadeTime: 0.4
+  font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
+--- !u!114 &358915294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095e6b23bd825004198c3610cd8b3902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.NPCController
+  data: {fileID: 11400000, guid: 402ab50ad891d704faab728908647bb4, type: 2}
+  patrolPoints: []
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  npcType: 1
+  civilianTier2At: 25
+  civilianTier3At: 50
+  civilianTier4At: 75
+  civilianFastMult: 1.6
+  civilianSightRate: 3
+  alertBroadcastRadius: 5
+--- !u!50 &358915295
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!212 &358915296
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358915290}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &358915297
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353016681}
+  m_GameObject: {fileID: 358915290}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.64, y: -102.62, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.09, y: -95.4, z: 0}
+  m_LocalScale: {x: 0.15910898, y: 0.170672, z: 0.21334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1082868674}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366390337
 GameObject:
@@ -8815,7 +8950,7 @@ GameObject:
   - component: {fileID: 391474798}
   m_Layer: 9
   m_Name: Wall (59)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8847,10 +8982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &391474799
 BoxCollider2D:
@@ -8971,7 +9106,7 @@ GameObject:
   - component: {fileID: 399421158}
   m_Layer: 9
   m_Name: Wall (91)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9003,10 +9138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &399421159
 BoxCollider2D:
@@ -9127,7 +9262,7 @@ GameObject:
   - component: {fileID: 401850565}
   m_Layer: 9
   m_Name: Wall (75)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9159,10 +9294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &401850566
 BoxCollider2D:
@@ -9452,7 +9587,7 @@ GameObject:
   - component: {fileID: 405767110}
   m_Layer: 9
   m_Name: Wall (79)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9484,10 +9619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &405767111
 BoxCollider2D:
@@ -9672,58 +9807,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3660953, y: 1.6396871}
   m_EdgeRadius: 0
---- !u!1 &409997836
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 409997838}
-  - component: {fileID: 409997837}
-  m_Layer: 0
-  m_Name: CinematicBars
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &409997837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409997836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559119f3ff1ef5e499f59aa025d2e50a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.CinematicBars
-  barHeightRatio: 0.12
-  animDuration: 0.45
-  hudObjects:
-  - {fileID: 1285495381}
-  - {fileID: 2130930474}
-  - {fileID: 527515124}
-  - {fileID: 1264617425}
-  - {fileID: 1406280332}
---- !u!4 &409997838
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409997836}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414119608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9816,7 +9899,7 @@ GameObject:
   - component: {fileID: 414511794}
   m_Layer: 9
   m_Name: Wall (52)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9848,10 +9931,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &414511795
 BoxCollider2D:
@@ -10050,7 +10133,7 @@ GameObject:
   - component: {fileID: 420048894}
   m_Layer: 9
   m_Name: Wall (19)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10082,10 +10165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &420048895
 BoxCollider2D:
@@ -10440,7 +10523,7 @@ GameObject:
   - component: {fileID: 434960507}
   m_Layer: 9
   m_Name: Wall (35)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10472,10 +10555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &434960508
 BoxCollider2D:
@@ -10752,7 +10835,7 @@ GameObject:
   - component: {fileID: 442495969}
   m_Layer: 9
   m_Name: Wall (17)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10784,10 +10867,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &442495970
 BoxCollider2D:
@@ -10986,7 +11069,7 @@ GameObject:
   - component: {fileID: 458080066}
   m_Layer: 9
   m_Name: Wall (25)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11018,10 +11101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &458080067
 BoxCollider2D:
@@ -11823,7 +11906,7 @@ GameObject:
   - component: {fileID: 498143696}
   m_Layer: 9
   m_Name: Wall (99)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11855,10 +11938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &498143697
 BoxCollider2D:
@@ -12387,7 +12470,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -12503,7 +12586,7 @@ GameObject:
   - component: {fileID: 525006520}
   m_Layer: 9
   m_Name: Wall (96)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12535,10 +12618,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &525006521
 BoxCollider2D:
@@ -13209,7 +13292,7 @@ GameObject:
   - component: {fileID: 541009492}
   m_Layer: 9
   m_Name: Wall (36)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13241,10 +13324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &541009493
 BoxCollider2D:
@@ -14823,7 +14906,7 @@ GameObject:
   - component: {fileID: 600573392}
   m_Layer: 9
   m_Name: Wall (110)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14855,10 +14938,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &600573393
 BoxCollider2D:
@@ -15354,7 +15437,7 @@ GameObject:
   - component: {fileID: 620532461}
   m_Layer: 9
   m_Name: Wall (93)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15386,10 +15469,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &620532462
 BoxCollider2D:
@@ -16317,8 +16400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  xOffset: -5
-  yOffset: 7
+  xOffset: 0
+  yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
@@ -16620,7 +16703,7 @@ GameObject:
   - component: {fileID: 640568570}
   m_Layer: 9
   m_Name: Wall (69)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16652,10 +16735,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &640568571
 BoxCollider2D:
@@ -17010,7 +17093,7 @@ GameObject:
   - component: {fileID: 669144573}
   m_Layer: 9
   m_Name: Wall (78)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17042,10 +17125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &669144574
 BoxCollider2D:
@@ -17199,7 +17282,7 @@ GameObject:
   - component: {fileID: 674880105}
   m_Layer: 9
   m_Name: Wall (26)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17231,10 +17314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &674880106
 BoxCollider2D:
@@ -18113,7 +18196,7 @@ GameObject:
   - component: {fileID: 699112179}
   m_Layer: 9
   m_Name: Wall (1)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18145,10 +18228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &699112180
 BoxCollider2D:
@@ -18269,7 +18352,7 @@ GameObject:
   - component: {fileID: 702138864}
   m_Layer: 9
   m_Name: Wall (100)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18301,10 +18384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &702138865
 BoxCollider2D:
@@ -18425,7 +18508,7 @@ GameObject:
   - component: {fileID: 711991422}
   m_Layer: 9
   m_Name: Wall (20)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18457,10 +18540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &711991423
 BoxCollider2D:
@@ -18581,7 +18664,7 @@ GameObject:
   - component: {fileID: 720026396}
   m_Layer: 9
   m_Name: Wall (61)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18613,10 +18696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &720026397
 BoxCollider2D:
@@ -19108,7 +19191,7 @@ GameObject:
   - component: {fileID: 731172884}
   m_Layer: 9
   m_Name: Wall (64)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19140,10 +19223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &731172885
 BoxCollider2D:
@@ -19963,7 +20046,7 @@ GameObject:
   - component: {fileID: 748136068}
   m_Layer: 9
   m_Name: Wall (7)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19995,10 +20078,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &748136069
 BoxCollider2D:
@@ -20327,7 +20410,7 @@ GameObject:
   - component: {fileID: 764193693}
   m_Layer: 9
   m_Name: Wall (43)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20359,10 +20442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &764193694
 BoxCollider2D:
@@ -20620,7 +20703,7 @@ GameObject:
   - component: {fileID: 773725515}
   m_Layer: 9
   m_Name: Wall (94)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20652,10 +20735,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &773725516
 BoxCollider2D:
@@ -21226,7 +21309,7 @@ GameObject:
   - component: {fileID: 793970638}
   m_Layer: 9
   m_Name: Wall (5)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21258,10 +21341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &793970639
 BoxCollider2D:
@@ -21535,7 +21618,7 @@ GameObject:
   - component: {fileID: 800792099}
   m_Layer: 9
   m_Name: Wall (32)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21567,10 +21650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &800792100
 BoxCollider2D:
@@ -21834,127 +21917,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1294362641}
   m_SourcePrefab: {fileID: 100100000, guid: e50e84691a7fe4249ba9b84b07d8c1d3, type: 3}
---- !u!1 &812330885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 812330886}
-  - component: {fileID: 812330888}
-  - component: {fileID: 812330887}
-  - component: {fileID: 812330889}
-  m_Layer: 0
-  m_Name: ContinueButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &812330886
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812330885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1505828475}
-  m_Father: {fileID: 1758841226}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.35, y: 0.35}
-  m_AnchorMax: {x: 0.65, y: 0.48}
-  m_AnchoredPosition: {x: 0, y: -10}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &812330887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812330885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 0.9}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &812330888
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812330885}
-  m_CullTransparentMesh: 1
---- !u!114 &812330889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812330885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 812330887}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &818386948
 GameObject:
   m_ObjectHideFlags: 0
@@ -22197,37 +22159,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.2762205, y: 2.13633}
   m_EdgeRadius: 0
---- !u!1 &823862089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 823862090}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &823862090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823862089}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.78, y: -102, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1082868674}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823961756
 GameObject:
   m_ObjectHideFlags: 0
@@ -22749,7 +22680,7 @@ GameObject:
   - component: {fileID: 840610518}
   m_Layer: 9
   m_Name: Wall (77)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22781,10 +22712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &840610519
 BoxCollider2D:
@@ -22905,7 +22836,7 @@ GameObject:
   - component: {fileID: 842210154}
   m_Layer: 9
   m_Name: Wall (44)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22937,10 +22868,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &842210155
 BoxCollider2D:
@@ -23061,7 +22992,7 @@ GameObject:
   - component: {fileID: 846018236}
   m_Layer: 9
   m_Name: Wall (53)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23093,10 +23024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &846018237
 BoxCollider2D:
@@ -23295,7 +23226,7 @@ GameObject:
   - component: {fileID: 847877488}
   m_Layer: 9
   m_Name: Wall (95)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23327,10 +23258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &847877489
 BoxCollider2D:
@@ -23978,7 +23909,7 @@ GameObject:
   - component: {fileID: 885769898}
   m_Layer: 9
   m_Name: Wall (31)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24010,10 +23941,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &885769899
 BoxCollider2D:
@@ -24290,7 +24221,7 @@ GameObject:
   - component: {fileID: 903080679}
   m_Layer: 9
   m_Name: Wall (54)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24322,10 +24253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &903080680
 BoxCollider2D:
@@ -24524,7 +24455,7 @@ GameObject:
   - component: {fileID: 910076724}
   m_Layer: 9
   m_Name: Wall (112)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24556,10 +24487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &910076725
 BoxCollider2D:
@@ -24758,7 +24689,7 @@ GameObject:
   - component: {fileID: 911989533}
   m_Layer: 9
   m_Name: Wall (14)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24790,10 +24721,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &911989534
 BoxCollider2D:
@@ -25070,7 +25001,7 @@ GameObject:
   - component: {fileID: 928648249}
   m_Layer: 9
   m_Name: Wall (50)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25102,10 +25033,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &928648250
 BoxCollider2D:
@@ -25226,7 +25157,7 @@ GameObject:
   - component: {fileID: 928875297}
   m_Layer: 9
   m_Name: Wall (97)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25258,10 +25189,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &928875298
 BoxCollider2D:
@@ -25382,7 +25313,7 @@ GameObject:
   - component: {fileID: 929556956}
   m_Layer: 9
   m_Name: Wall (34)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25414,10 +25345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &929556957
 BoxCollider2D:
@@ -26108,7 +26039,7 @@ GameObject:
   - component: {fileID: 958642892}
   m_Layer: 9
   m_Name: Wall (48)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26140,10 +26071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &958642893
 BoxCollider2D:
@@ -26769,10 +26700,10 @@ GameObject:
   - component: {fileID: 970360428}
   - component: {fileID: 970360427}
   - component: {fileID: 970360426}
+  - component: {fileID: 970360425}
   - component: {fileID: 970360424}
   - component: {fileID: 970360423}
   - component: {fileID: 970360422}
-  - component: {fileID: 970360429}
   m_Layer: 0
   m_Name: NPC_Guard_2 (3)
   m_TagString: Untagged
@@ -26856,14 +26787,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  xOffset: -5
-  yOffset: 7
+  xOffset: 0
+  yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
   duration: 2
   fadeTime: 0.4
   font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
+--- !u!114 &970360425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970360421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095e6b23bd825004198c3610cd8b3902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.NPCController
+  data: {fileID: 11400000, guid: 402ab50ad891d704faab728908647bb4, type: 2}
+  patrolPoints: []
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  npcType: 1
+  civilianTier2At: 25
+  civilianTier3At: 50
+  civilianTier4At: 75
+  civilianFastMult: 1.6
+  civilianSightRate: 3
+  alertBroadcastRadius: 5
 --- !u!50 &970360426
 Rigidbody2D:
   serializedVersion: 5
@@ -26965,20 +26920,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &970360429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970360421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5cbd9da449ead4ba53de4020c1fd4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.SpeechBubbleArea
-  triggerRadius: 1
-  bubbleText: "\uC548\uB155\uD558\uC138\uC694!"
 --- !u!1 &975728076
 GameObject:
   m_ObjectHideFlags: 0
@@ -28329,8 +28270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  xOffset: -5
-  yOffset: 7
+  xOffset: 0
+  yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
@@ -28456,7 +28397,7 @@ Transform:
   m_GameObject: {fileID: 1023870864}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.59, y: -102.06, z: 0}
+  m_LocalPosition: {x: 6.62, y: -95.4, z: 0}
   m_LocalScale: {x: 0.15910898, y: 0.170672, z: 0.21334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28507,7 +28448,7 @@ GameObject:
   - component: {fileID: 1027469357}
   m_Layer: 9
   m_Name: Wall (10)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28539,10 +28480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1027469358
 BoxCollider2D:
@@ -28786,7 +28727,7 @@ GameObject:
   - component: {fileID: 1030946218}
   m_Layer: 9
   m_Name: Wall (49)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28818,10 +28759,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1030946219
 BoxCollider2D:
@@ -29020,7 +28961,7 @@ GameObject:
   - component: {fileID: 1032108008}
   m_Layer: 9
   m_Name: Wall (60)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29052,10 +28993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1032108009
 BoxCollider2D:
@@ -50727,7 +50668,7 @@ Transform:
   m_GameObject: {fileID: 1039487836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: -100.77, z: 0}
+  m_LocalPosition: {x: -0.65, y: -98.8, z: 0}
   m_LocalScale: {x: 0.15910898, y: 0.170672, z: 0.21334}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50858,8 +50799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
   bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
-  xOffset: -5
-  yOffset: 7
+  xOffset: 0
+  yOffset: 1.2
   paddingX: 0.35
   paddingY: 0.25
   maxWidth: 3.5
@@ -51190,7 +51131,7 @@ GameObject:
   - component: {fileID: 1047356292}
   m_Layer: 9
   m_Name: Wall (68)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51222,10 +51163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1047356293
 BoxCollider2D:
@@ -52014,7 +51955,7 @@ GameObject:
   - component: {fileID: 1082777539}
   m_Layer: 9
   m_Name: Wall (81)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52046,10 +51987,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1082777540
 BoxCollider2D:
@@ -52156,40 +52097,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1082868673
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1082868674}
-  m_Layer: 0
-  m_Name: ------------------------------Cutscene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1082868674
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082868673}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.90975, y: -0.17897, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2118924504}
-  - {fileID: 353016682}
-  - {fileID: 823862090}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084951772
 GameObject:
   m_ObjectHideFlags: 0
@@ -52282,7 +52189,7 @@ GameObject:
   - component: {fileID: 1087923786}
   m_Layer: 9
   m_Name: Wall (106)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52314,10 +52221,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1087923787
 BoxCollider2D:
@@ -52961,7 +52868,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7601823556192269420, guid: d75de1a9ac42a614a8552e35092d1a4d, type: 3}
+  m_Sprite: {fileID: 7601823556192269420, guid: b91c56457907b55489c64bd0f931a243, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -53052,7 +52959,7 @@ GameObject:
   - component: {fileID: 1103110110}
   m_Layer: 9
   m_Name: Wall (6)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53084,10 +52991,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1103110111
 BoxCollider2D:
@@ -53208,7 +53115,7 @@ GameObject:
   - component: {fileID: 1103633896}
   m_Layer: 9
   m_Name: Wall (30)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53240,10 +53147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1103633897
 BoxCollider2D:
@@ -53364,7 +53271,7 @@ GameObject:
   - component: {fileID: 1110288910}
   m_Layer: 9
   m_Name: Wall (27)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53396,10 +53303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1110288911
 BoxCollider2D:
@@ -53844,7 +53751,7 @@ GameObject:
   - component: {fileID: 1127731196}
   m_Layer: 9
   m_Name: Wall (86)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53876,10 +53783,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1127731197
 BoxCollider2D:
@@ -54078,7 +53985,7 @@ GameObject:
   - component: {fileID: 1128838003}
   m_Layer: 9
   m_Name: Wall (16)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54110,10 +54017,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1128838004
 BoxCollider2D:
@@ -54390,7 +54297,7 @@ GameObject:
   - component: {fileID: 1144864482}
   m_Layer: 9
   m_Name: Wall (109)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54422,10 +54329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1144864483
 BoxCollider2D:
@@ -54774,7 +54681,7 @@ GameObject:
   - component: {fileID: 1160712815}
   m_Layer: 9
   m_Name: Wall (23)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54806,10 +54713,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1160712816
 BoxCollider2D:
@@ -55169,113 +55076,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1177999222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1177999225}
-  - component: {fileID: 1177999224}
-  - component: {fileID: 1177999223}
-  m_Layer: 0
-  m_Name: Checkpoint_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1177999223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177999222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205935e6f02565548ba10f3885fab9a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.Checkpoint
-  radius: 1.5
-  inactiveColor: {r: 0.5, g: 0.5, b: 1, a: 0.4}
-  activeColor: {r: 0.3, g: 1, b: 0.4, a: 0.7}
---- !u!212 &1177999224
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177999222}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 1749269043}
-  m_Color: {r: 0.5, g: 0.5, b: 1, a: 0.6}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &1177999225
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177999222}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.58, y: -102.59, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179323027
 GameObject:
   m_ObjectHideFlags: 0
@@ -55364,7 +55164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187282081}
   - component: {fileID: 1187282080}
-  - component: {fileID: 1187282082}
+  - component: {fileID: 1187282079}
   m_Layer: 0
   m_Name: DefaultShadow
   m_TagString: Untagged
@@ -55372,6 +55172,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1187282079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187282078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d975520379a40354d82b1d7fcc9265ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.ShadowZone
 --- !u!61 &1187282080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55402,7 +55214,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -55428,29 +55240,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14.759, y: 2.7829971, z: 0}
-  m_LocalScale: {x: 1.0354, y: 1.0354, z: 1.0354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1127088335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187282082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187282078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b7df1a7c4a0424a911761a6656cdaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.EllipseShadow
-  radiusX: 1.2
-  radiusY: 0.6
-  createVisual: 1
-  shadowColor: {r: 0, g: 0, b: 0, a: 0.55}
-  sortingOrder: -1
-  detectionRadiusMultiplier: 0.5
 --- !u!1001 &1190487306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56008,7 +55802,7 @@ GameObject:
   - component: {fileID: 1212814904}
   m_Layer: 9
   m_Name: Wall (104)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56040,10 +55834,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1212814905
 BoxCollider2D:
@@ -56376,7 +56170,7 @@ GameObject:
   - component: {fileID: 1224819329}
   m_Layer: 9
   m_Name: Wall (90)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56408,10 +56202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1224819330
 BoxCollider2D:
@@ -118037,6 +117831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264617428}
+  - component: {fileID: 1264617427}
   - component: {fileID: 1264617426}
   m_Layer: 0
   m_Name: GlobalPostProcess
@@ -118058,11 +117853,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.VignetteController
   lerpSpeed: 2
-  shadowIntensity: 0.7
-  shadowColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
-  alertLevel3Extra: 0.7
-  alertLevel4Extra: 7
+  shadowIntensity: 0.55
+  shadowColor: {r: 0.05, g: 0.1, b: 0.25, a: 1}
+  alertLevel3Extra: 0.2
+  alertLevel4Extra: 0.4
   alertColor: {r: 0.18, g: 0.04, b: 0.04, a: 1}
+--- !u!114 &1264617427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264617425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 0}
 --- !u!4 &1264617428
 Transform:
   m_ObjectHideFlags: 0
@@ -122484,7 +122296,7 @@ GameObject:
   - component: {fileID: 1320421547}
   m_Layer: 9
   m_Name: Wall (18)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122516,10 +122328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1320421548
 BoxCollider2D:
@@ -123056,7 +122868,7 @@ GameObject:
   - component: {fileID: 1356322135}
   m_Layer: 9
   m_Name: Wall (37)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123088,10 +122900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1356322136
 BoxCollider2D:
@@ -123441,7 +123253,7 @@ GameObject:
   - component: {fileID: 1367027439}
   m_Layer: 9
   m_Name: Wall (88)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123473,10 +123285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1367027440
 BoxCollider2D:
@@ -123736,7 +123548,7 @@ GameObject:
   - component: {fileID: 1380280672}
   m_Layer: 9
   m_Name: Wall (103)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123768,10 +123580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1380280673
 BoxCollider2D:
@@ -124622,7 +124434,7 @@ GameObject:
   - component: {fileID: 1417821279}
   m_Layer: 9
   m_Name: Wall (21)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124654,10 +124466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1417821280
 BoxCollider2D:
@@ -125445,79 +125257,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.46206975, y: 1.0220337}
   m_EdgeRadius: 0
---- !u!1 &1440086715
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1440086717}
-  - component: {fileID: 1440086716}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1440086716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440086715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a9d5617408dec42a8c778b1533c2eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.AudioManager
-  bgmMainMenu: {fileID: 0}
-  bgmPrologue: {fileID: 0}
-  bgmStageAmbient: {fileID: 0}
-  bgmStageAlertL2: {fileID: 0}
-  bgmStageAlertL3: {fileID: 0}
-  bgmStageAlertL4: {fileID: 0}
-  sfxFootstep: {fileID: 0}
-  sfxCarryPickup: {fileID: 0}
-  sfxCarryDrop: {fileID: 0}
-  sfxItemPickup: {fileID: 0}
-  sfxItemReceive: {fileID: 0}
-  sfxDoorOpen: {fileID: 0}
-  sfxDoorClose: {fileID: 0}
-  sfxLightOn: {fileID: 0}
-  sfxLightOff: {fileID: 0}
-  sfxObjectSlide: {fileID: 0}
-  sfxNpcSuspicious: {fileID: 0}
-  sfxNpcAlert: {fileID: 0}
-  sfxNpcSearch: {fileID: 0}
-  sfxNpcArrest: {fileID: 0}
-  sfxCheckpointSave: {fileID: 0}
-  sfxAlertLevelUp: {fileID: 0}
-  sfxSuspicionSpike: {fileID: 0}
-  sfxDialogueNext: {fileID: 0}
-  sfxUIClick: {fileID: 0}
-  sfxCutsceneLetterbox: {fileID: 0}
-  defaultBGMVolume: 0.7
-  defaultSFXVolume: 1
-  fadeDuration: 0.8
---- !u!4 &1440086717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440086715}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441617304
 GameObject:
   m_ObjectHideFlags: 0
@@ -126008,7 +125747,7 @@ GameObject:
   - component: {fileID: 1469718241}
   m_Layer: 9
   m_Name: Wall (12)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126040,10 +125779,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1469718242
 BoxCollider2D:
@@ -126886,143 +126625,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0169166, y: 1.6764295}
   m_EdgeRadius: 0
---- !u!1 &1505828474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1505828475}
-  - component: {fileID: 1505828477}
-  - component: {fileID: 1505828476}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1505828475
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505828474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 812330886}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1505828476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505828474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: "\uACC4\uC18D\uD558\uAE30"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
-  m_sharedMaterial: {fileID: -6168767152312784534, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1505828477
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505828474}
-  m_CullTransparentMesh: 1
 --- !u!1 &1506308704
 GameObject:
   m_ObjectHideFlags: 0
@@ -127408,7 +127010,7 @@ GameObject:
   - component: {fileID: 1521644855}
   m_Layer: 9
   m_Name: Wall (66)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127440,10 +127042,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1521644856
 BoxCollider2D:
@@ -127642,7 +127244,7 @@ GameObject:
   - component: {fileID: 1529544489}
   m_Layer: 9
   m_Name: Wall (4)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127674,10 +127276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1529544490
 BoxCollider2D:
@@ -127889,7 +127491,7 @@ GameObject:
   - component: {fileID: 1546327538}
   m_Layer: 9
   m_Name: Wall (102)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127921,10 +127523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1546327539
 BoxCollider2D:
@@ -128493,7 +128095,7 @@ MonoBehaviour:
   defeatPanel: {fileID: 1758841225}
   victoryPanel: {fileID: 209823915}
   defeatRestartBtn: {fileID: 1218252287}
-  continueBtn: {fileID: 812330889}
+  continueBtn: {fileID: 0}
   victoryRestartBtn: {fileID: 2058600547}
   defeatReasonText: {fileID: 2016756946}
 --- !u!114 &1577570570
@@ -129087,7 +128689,7 @@ GameObject:
   - component: {fileID: 1594627136}
   m_Layer: 9
   m_Name: Wall (39)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129119,10 +128721,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1594627137
 BoxCollider2D:
@@ -129652,7 +129254,7 @@ GameObject:
   - component: {fileID: 1627813270}
   m_Layer: 9
   m_Name: Wall (63)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129684,10 +129286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1627813271
 BoxCollider2D:
@@ -130237,7 +129839,7 @@ GameObject:
   - component: {fileID: 1656916768}
   m_Layer: 9
   m_Name: Wall (2)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130269,10 +129871,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1656916769
 BoxCollider2D:
@@ -130842,7 +130444,7 @@ GameObject:
   - component: {fileID: 1689856012}
   m_Layer: 9
   m_Name: Wall (33)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130874,10 +130476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1689856013
 BoxCollider2D:
@@ -131539,6 +131141,237 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1713396475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713396482}
+  - component: {fileID: 1713396481}
+  - component: {fileID: 1713396480}
+  - component: {fileID: 1713396479}
+  - component: {fileID: 1713396478}
+  - component: {fileID: 1713396477}
+  - component: {fileID: 1713396476}
+  m_Layer: 0
+  m_Name: NPC_Guard_2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1713396476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
+  shadowAlpha: 0.75
+  createHidingZone: 0
+--- !u!61 &1713396477
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.92, y: 11.93}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.92, y: 11.93}
+  m_EdgeRadius: 0
+--- !u!114 &1713396478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a7911b0e7d3594aae68e085fe3e618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
+  bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
+  xOffset: 0
+  yOffset: 1.2
+  paddingX: 0.35
+  paddingY: 0.25
+  maxWidth: 3.5
+  duration: 2
+  fadeTime: 0.4
+  font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
+--- !u!114 &1713396479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095e6b23bd825004198c3610cd8b3902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.NPCController
+  data: {fileID: 11400000, guid: 402ab50ad891d704faab728908647bb4, type: 2}
+  patrolPoints: []
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  npcType: 1
+  civilianTier2At: 25
+  civilianTier3At: 50
+  civilianTier4At: 75
+  civilianFastMult: 1.6
+  civilianSightRate: 3
+  alertBroadcastRadius: 5
+--- !u!50 &1713396480
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!212 &1713396481
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &1713396482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713396475}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.33, y: -98.8, z: 0}
+  m_LocalScale: {x: 0.15910898, y: 0.170672, z: 0.21334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713950503
 GameObject:
   m_ObjectHideFlags: 0
@@ -131631,7 +131464,7 @@ GameObject:
   - component: {fileID: 1716255861}
   m_Layer: 9
   m_Name: Wall (70)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131663,10 +131496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1716255862
 BoxCollider2D:
@@ -131851,50 +131684,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1720140831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1720140832}
-  - component: {fileID: 1720140833}
-  m_Layer: 0
-  m_Name: CutsceneDirector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1720140832
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720140831}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.90975, y: -0.17897, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1720140833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720140831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be076aba5e4f134090d2126f3c8407c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.CutsceneDirector
 --- !u!1 &1731138316
 GameObject:
   m_ObjectHideFlags: 0
@@ -132127,216 +131916,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746118920}
   m_CullTransparentMesh: 1
---- !u!213 &1749269043
-Sprite:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Rect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 32
-    height: 32
-  m_Offset: {x: 0, y: 0}
-  m_Border: {x: 0, y: 0, z: 0, w: 0}
-  m_PixelsToUnits: 32
-  m_Pivot: {x: 0.5, y: 0.5}
-  m_Extrude: 0
-  m_IsPolygon: 0
-  m_PackingTag: 
-  m_RenderDataKey:
-    00000000000000000000000000000000: 0
-  m_AtlasTags: []
-  m_SpriteAtlas: {fileID: 0}
-  m_RD:
-    serializedVersion: 3
-    texture: {fileID: 1828407012}
-    alphaTexture: {fileID: 0}
-    secondaryTextures: []
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 21
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 9
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 080007000500060005000700040005000600030005000400000003000400010003000000020001000000
-    m_VertexData:
-      serializedVersion: 3
-      m_VertexCount: 9
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 184
-      _typelessdata: 0000903e0000003f000000000000003f000080be000000000000003f0000903e000000000000903e000000bf00000000000060be0000003f00000000000090be000000bf000000000000f0be0000903e00000000000000bf0000000000000000000000bf000040be00000000000000000000483f0000803f0000803f0000803e0000803f0000483f0000483f000000000000903e0000803f0000603e000000000000003d0000483f000000000000003f000000000000a03e
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 0.036285043
-      y: 0.036285043
-      width: 31.963715
-      height: 31.963715
-    textureRectOffset: {x: 0.036285043, y: 0.036285043}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 32, y: 16, z: 32, w: 16}
-    downscaleMultiplier: 1
-  m_AtlasRD:
-    serializedVersion: 3
-    texture: {fileID: 1828407012}
-    alphaTexture: {fileID: 0}
-    secondaryTextures: []
-    m_SubMeshes:
-    - serializedVersion: 2
-      firstByte: 0
-      indexCount: 21
-      topology: 0
-      baseVertex: 0
-      firstVertex: 0
-      vertexCount: 9
-      localAABB:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 080007000500060005000700040005000600030005000400000003000400010003000000020001000000
-    m_VertexData:
-      serializedVersion: 3
-      m_VertexCount: 9
-      m_Channels:
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 3
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 1
-        offset: 0
-        format: 0
-        dimension: 2
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      - stream: 0
-        offset: 0
-        format: 0
-        dimension: 0
-      m_DataSize: 184
-      _typelessdata: 0000903e0000003f000000000000003f000080be000000000000003f0000903e000000000000903e000000bf00000000000060be0000003f00000000000090be000000bf000000000000f0be0000903e00000000000000bf0000000000000000000000bf000040be00000000000000000000483f0000803f0000803f0000803e0000803f0000483f0000483f000000000000903e0000803f0000603e000000000000003d0000483f000000000000003f000000000000a03e
-    m_Bindpose: []
-    textureRect:
-      serializedVersion: 2
-      x: 0.036285043
-      y: 0.036285043
-      width: 31.963715
-      height: 31.963715
-    textureRectOffset: {x: 0.036285043, y: 0.036285043}
-    atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
-    uvTransform: {x: 32, y: 16, z: 32, w: 16}
-    downscaleMultiplier: 1
-  m_PhysicsShape: []
-  m_Bones: []
-  m_ScriptableObjects: []
-  m_SpriteID: 
 --- !u!1 &1750268725
 GameObject:
   m_ObjectHideFlags: 0
@@ -132429,7 +132008,7 @@ GameObject:
   - component: {fileID: 1755814064}
   m_Layer: 9
   m_Name: Wall (40)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132461,10 +132040,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1755814065
 BoxCollider2D:
@@ -132679,7 +132258,6 @@ RectTransform:
   - {fileID: 678562418}
   - {fileID: 1218252284}
   - {fileID: 2016756948}
-  - {fileID: 812330886}
   m_Father: {fileID: 1577570573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -139461,7 +139039,7 @@ GameObject:
   - component: {fileID: 1787327506}
   m_Layer: 9
   m_Name: Wall (89)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139493,10 +139071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1787327507
 BoxCollider2D:
@@ -140082,7 +139660,7 @@ GameObject:
   - component: {fileID: 1808991522}
   m_Layer: 9
   m_Name: Wall (73)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140114,10 +139692,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1808991523
 BoxCollider2D:
@@ -140238,7 +139816,7 @@ GameObject:
   - component: {fileID: 1810513934}
   m_Layer: 9
   m_Name: Wall (42)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140270,10 +139848,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1810513935
 BoxCollider2D:
@@ -140550,7 +140128,7 @@ GameObject:
   - component: {fileID: 1818415643}
   m_Layer: 9
   m_Name: Wall (111)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140582,10 +140160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1818415644
 BoxCollider2D:
@@ -140706,7 +140284,7 @@ GameObject:
   - component: {fileID: 1821711120}
   m_Layer: 9
   m_Name: Wall (57)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140738,10 +140316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1821711121
 BoxCollider2D:
@@ -140862,7 +140440,7 @@ GameObject:
   - component: {fileID: 1822546169}
   m_Layer: 9
   m_Name: Wall
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140999,57 +140577,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
---- !u!28 &1828407012
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 4
-  m_Width: 32
-  m_Height: 32
-  m_CompleteImageSize: 4096
-  m_MipsStripped: 0
-  m_TextureFormat: 4
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IsPreProcessed: 0
-  m_IgnoreMipmapLimit: 1
-  m_MipmapLimitGroupName: 
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_VTOnly: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  m_PlatformBlob: 
-  image data: 4096
-  _typelessdata: ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff33ffffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300ffff3300
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1830798345
 GameObject:
   m_ObjectHideFlags: 0
@@ -141376,7 +140908,7 @@ GameObject:
   - component: {fileID: 1841101445}
   m_Layer: 9
   m_Name: Wall (107)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141408,10 +140940,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1841101446
 BoxCollider2D:
@@ -141777,7 +141309,7 @@ GameObject:
   - component: {fileID: 1846048806}
   m_Layer: 9
   m_Name: Wall (108)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141809,10 +141341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1846048807
 BoxCollider2D:
@@ -141933,7 +141465,7 @@ GameObject:
   - component: {fileID: 1849177574}
   m_Layer: 9
   m_Name: Wall (92)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141965,10 +141497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1849177575
 BoxCollider2D:
@@ -142089,7 +141621,7 @@ GameObject:
   - component: {fileID: 1853962197}
   m_Layer: 9
   m_Name: Wall (46)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142121,10 +141653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1853962198
 BoxCollider2D:
@@ -142231,51 +141763,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1856905161
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1856905163}
-  - component: {fileID: 1856905162}
-  m_Layer: 0
-  m_Name: SceneBGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1856905162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856905161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9768c83157c8ef14c9a001a129f3d601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.SceneBGM
-  track: 3
---- !u!4 &1856905163
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856905161}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857367113
 GameObject:
   m_ObjectHideFlags: 0
@@ -142459,7 +141946,7 @@ GameObject:
   - component: {fileID: 1865928099}
   m_Layer: 9
   m_Name: Wall (38)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142491,10 +141978,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1865928100
 BoxCollider2D:
@@ -142849,7 +142336,7 @@ GameObject:
   - component: {fileID: 1881125210}
   m_Layer: 9
   m_Name: Wall (71)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142881,10 +142368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1881125211
 BoxCollider2D:
@@ -143005,7 +142492,7 @@ GameObject:
   - component: {fileID: 1883237930}
   m_Layer: 9
   m_Name: Wall (11)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143037,10 +142524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1883237931
 BoxCollider2D:
@@ -143239,7 +142726,7 @@ GameObject:
   - component: {fileID: 1892180064}
   m_Layer: 9
   m_Name: Wall (28)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143271,10 +142758,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1892180065
 BoxCollider2D:
@@ -143518,7 +143005,7 @@ GameObject:
   - component: {fileID: 1903060154}
   m_Layer: 9
   m_Name: Wall (29)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143550,10 +143037,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1903060155
 BoxCollider2D:
@@ -143830,7 +143317,7 @@ GameObject:
   - component: {fileID: 1917319620}
   m_Layer: 9
   m_Name: Wall (101)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143862,10 +143349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1917319621
 BoxCollider2D:
@@ -144603,7 +144090,7 @@ GameObject:
   - component: {fileID: 1942431077}
   m_Layer: 9
   m_Name: Wall (83)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144635,10 +144122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1942431078
 BoxCollider2D:
@@ -144759,7 +144246,7 @@ GameObject:
   - component: {fileID: 1950375104}
   m_Layer: 9
   m_Name: Wall (55)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144791,10 +144278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1950375105
 BoxCollider2D:
@@ -145272,7 +144759,7 @@ GameObject:
   - component: {fileID: 1972052395}
   m_Layer: 9
   m_Name: Wall (8)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145304,10 +144791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1972052396
 BoxCollider2D:
@@ -145799,7 +145286,7 @@ GameObject:
   - component: {fileID: 1985705665}
   m_Layer: 9
   m_Name: Wall (87)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145831,10 +145318,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1985705666
 BoxCollider2D:
@@ -146033,7 +145520,7 @@ GameObject:
   - component: {fileID: 1998743646}
   m_Layer: 9
   m_Name: Wall (82)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146065,10 +145552,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &1998743647
 BoxCollider2D:
@@ -146264,7 +145751,7 @@ GameObject:
   - component: {fileID: 2007354730}
   m_Layer: 9
   m_Name: Wall (56)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146296,10 +145783,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2007354731
 BoxCollider2D:
@@ -146934,7 +146421,7 @@ GameObject:
   - component: {fileID: 2043952122}
   m_Layer: 9
   m_Name: Wall (67)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146966,10 +146453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2043952123
 BoxCollider2D:
@@ -147286,9 +146773,6 @@ GameObject:
   - component: {fileID: 2051675303}
   - component: {fileID: 2051675305}
   - component: {fileID: 2051675304}
-  - component: {fileID: 2051675306}
-  - component: {fileID: 2051675308}
-  - component: {fileID: 2051675307}
   m_Layer: 0
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -147356,63 +146840,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051675302}
   m_CullTransparentMesh: 1
---- !u!114 &2051675306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051675302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b648d37ab123bdb4fa58e4f7286b88f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.DialogueSystem
-  nameText: {fileID: 512527219}
-  dialogueText: {fileID: 1093285668}
-  nextIndicator: {fileID: 1472349356}
-  typeSpeed: 0.04
---- !u!114 &2051675307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051675302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!223 &2051675308
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051675302}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 9999
-  m_TargetDisplay: 0
 --- !u!1 &2052301074
 GameObject:
   m_ObjectHideFlags: 0
@@ -147505,7 +146932,7 @@ GameObject:
   - component: {fileID: 2052558570}
   m_Layer: 9
   m_Name: Wall (47)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147537,10 +146964,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2052558571
 BoxCollider2D:
@@ -147953,7 +147380,7 @@ GameObject:
   - component: {fileID: 2059084635}
   m_Layer: 9
   m_Name: Wall (84)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147985,10 +147412,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2059084636
 BoxCollider2D:
@@ -148392,7 +147819,7 @@ GameObject:
   - component: {fileID: 2072997109}
   m_Layer: 9
   m_Name: Wall (9)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148424,10 +147851,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2072997110
 BoxCollider2D:
@@ -148660,7 +148087,7 @@ GameObject:
   - component: {fileID: 2085209034}
   m_Layer: 9
   m_Name: Wall (76)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148692,10 +148119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2085209035
 BoxCollider2D:
@@ -149128,7 +148555,7 @@ GameObject:
   - component: {fileID: 2109545553}
   m_Layer: 9
   m_Name: Wall (15)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149160,10 +148587,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2109545554
 BoxCollider2D:
@@ -149348,189 +148775,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5978061, y: 0.9471128}
   m_EdgeRadius: 0
---- !u!1 &2118924503
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2118924504}
-  - component: {fileID: 2118924506}
-  - component: {fileID: 2118924505}
-  - component: {fileID: 2118924507}
-  m_Layer: 0
-  m_Name: scenetrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2118924504
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118924503}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.42, y: -102.2746, z: 0}
-  m_LocalScale: {x: 1, y: 2.9092, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1082868674}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2118924505
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118924503}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!212 &2118924506
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118924503}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &2118924507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118924503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c632c63ac439c540bbefc5ae0e2f7e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.CutsceneTrigger
-  mode: 0
-  oneShot: 1
-  approachRadius: 2
-  steps:
-  - type: 0
-    waitForComplete: 1
-    dialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
-    objectToMove: {fileID: 0}
-    moveTo: {fileID: 0}
-    moveDuration: 0
-    smoothMove: 0
-    cameraTarget: {fileID: 0}
-    cameraDuration: 0
-    cameraFollowAfter: 0
-    waitSeconds: 0
-    fadeOut: 0
-    fadeDuration: 0
-  - type: 1
-    waitForComplete: 0
-    dialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
-    objectToMove: {fileID: 0}
-    moveTo: {fileID: 353016682}
-    moveDuration: 0
-    smoothMove: 0
-    cameraTarget: {fileID: 0}
-    cameraDuration: 0
-    cameraFollowAfter: 0
-    waitSeconds: 0
-    fadeOut: 0
-    fadeDuration: 0
-  overridePlayerSpawn: 1
-  spawnPoint: {fileID: 823862090}
 --- !u!1 &2124392364
 GameObject:
   m_ObjectHideFlags: 0
@@ -149771,7 +149015,7 @@ GameObject:
   - component: {fileID: 2132247572}
   m_Layer: 9
   m_Name: Wall (80)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149803,10 +149047,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2132247573
 BoxCollider2D:
@@ -149981,64 +149225,6 @@ MonoBehaviour:
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 1
   m_ConstraintCount: 3
---- !u!1 &2138309556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2138309559}
-  - component: {fileID: 2138309558}
-  - component: {fileID: 2138309557}
-  m_Layer: 0
-  m_Name: CheckpointManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2138309557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138309556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f1aa4a1d988264b969430001acb3c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.SceneFader
-  fadeDuration: 1
---- !u!114 &2138309558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138309556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f331a79bf9cae1f48a29d0b15a1dfcb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.CheckpointManager
---- !u!4 &2138309559
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138309556}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143642129
 GameObject:
   m_ObjectHideFlags: 0
@@ -150337,7 +149523,7 @@ GameObject:
   - component: {fileID: 2146055444}
   m_Layer: 9
   m_Name: Wall (98)
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150369,10 +149555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
-  shadowExtend: 0
+  shadowExtend: 0.25
   lightOffsetStrength: 0.12
   detectionScale: 1
-  shadowAlpha: 0
+  shadowAlpha: 0.75
   createHidingZone: 1
 --- !u!61 &2146055445
 BoxCollider2D:
@@ -150493,15 +149679,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3444680069781725466, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_Size.y
-      value: 1.9433209
+      value: 0.9336179
       objectReference: {fileID: 0}
     - target: {fileID: 3444680069781725466, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0067100874
+      value: 0.0067100273
       objectReference: {fileID: 0}
     - target: {fileID: 3444680069781725466, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_Offset.y
-      value: -4.8015094
+      value: -5.3063655
       objectReference: {fileID: 0}
     - target: {fileID: 3444680069781725466, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_Direction
@@ -150509,11 +149695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.553
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -106.02
+      value: -102.89
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -150786,6 +149972,8 @@ SceneRoots:
   - {fileID: 343691935}
   - {fileID: 1123398761410122745}
   - {fileID: 1039487837}
+  - {fileID: 1713396482}
+  - {fileID: 358915297}
   - {fileID: 1023870871}
   - {fileID: 970360428}
   - {fileID: 636270571}
@@ -150800,9 +149988,6 @@ SceneRoots:
   - {fileID: 1951437168}
   - {fileID: 465657682}
   - {fileID: 502887933}
-  - {fileID: 2138309559}
-  - {fileID: 1720140832}
-  - {fileID: 1856905163}
   - {fileID: 1026758272}
   - {fileID: 1577570573}
   - {fileID: 1264617428}
@@ -150810,8 +149995,3 @@ SceneRoots:
   - {fileID: 101151392}
   - {fileID: 2028591154}
   - {fileID: 1384410917}
-  - {fileID: 222543525}
-  - {fileID: 1177999225}
-  - {fileID: 1082868674}
-  - {fileID: 409997838}
-  - {fileID: 1440086717}

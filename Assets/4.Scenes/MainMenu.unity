@@ -5245,7 +5245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e484514170bfa94cab1c9db7b41c7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.MainMenuUI
-  prologueScene: Prologue_test
+  prologueScene: Prologue_real
   btnNewGame: {fileID: 273814693}
   btnContinue: {fileID: 9769180}
   btnSettings: {fileID: 160659359}
