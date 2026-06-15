@@ -2124,35 +2124,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a9d5617408dec42a8c778b1533c2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.AudioManager
-  bgmMainMenu: {fileID: 0}
-  bgmPrologue: {fileID: 0}
-  bgmStageAmbient: {fileID: 0}
+  bgmMainMenu: {fileID: 8300000, guid: ce9d29e6d962c6140a69eb0ef7341f55, type: 3}
+  bgmPrologue: {fileID: 8300000, guid: ce9d29e6d962c6140a69eb0ef7341f55, type: 3}
+  bgmStageAmbient: {fileID: 8300000, guid: ce9d29e6d962c6140a69eb0ef7341f55, type: 3}
   bgmStageAlertL2: {fileID: 0}
   bgmStageAlertL3: {fileID: 0}
   bgmStageAlertL4: {fileID: 0}
   sfxFootstep: {fileID: 8300000, guid: 6a9d109b1803dba46883d5e087ee5c15, type: 3}
-  sfxCarryPickup: {fileID: 0}
-  sfxCarryDrop: {fileID: 0}
-  sfxItemPickup: {fileID: 0}
-  sfxItemReceive: {fileID: 0}
-  sfxDoorOpen: {fileID: 0}
-  sfxDoorClose: {fileID: 0}
-  sfxLightOn: {fileID: 0}
-  sfxLightOff: {fileID: 0}
-  sfxObjectSlide: {fileID: 0}
+  sfxCarryPickup: {fileID: 8300000, guid: fb2a5aa1a371d2f4b9010b981e6d75bb, type: 3}
+  sfxCarryDrop: {fileID: 8300000, guid: cac47a928c3f3504d828c63ec9b9edf3, type: 3}
+  sfxItemPickup: {fileID: 8300000, guid: 155afd7ffbf9cea43973a73d2491e0e6, type: 3}
+  sfxItemReceive: {fileID: 8300000, guid: a2369471258fbd548ab441b5e50c7d4d, type: 3}
+  sfxDoorOpen: {fileID: 8300000, guid: c70ede94f563cc54399162433c9b00f3, type: 3}
+  sfxDoorClose: {fileID: 8300000, guid: 5f1dbe2c0e872554fb76a9f1cca34e97, type: 3}
+  sfxLightOn: {fileID: 8300000, guid: 94de55724d5904544a6d678729db9e6f, type: 3}
+  sfxLightOff: {fileID: 8300000, guid: d45907f7dbf79124ab58077c32e2de47, type: 3}
+  sfxObjectSlide: {fileID: 8300000, guid: 14416a5713020fe4799060999b77a5e4, type: 3}
   sfxNpcSuspicious: {fileID: 0}
-  sfxNpcAlert: {fileID: 0}
-  sfxNpcSearch: {fileID: 0}
-  sfxNpcArrest: {fileID: 0}
-  sfxCheckpointSave: {fileID: 0}
-  sfxAlertLevelUp: {fileID: 0}
+  sfxNpcAlert: {fileID: 8300000, guid: c268c4e17152c3f489ef670291f73474, type: 3}
+  sfxNpcSearch: {fileID: 8300000, guid: 40a6049ab9a11e648972f66a153a95ef, type: 3}
+  sfxNpcArrest: {fileID: 8300000, guid: 602cdf60aaf41724f9a5588a00e2aea8, type: 3}
+  sfxCheckpointSave: {fileID: 8300000, guid: 2dc34f19ece7c7f41807b889b1e15822, type: 3}
+  sfxAlertLevelUp: {fileID: 8300000, guid: 8871d5b8e055d1d4aa3db8d8aa686e62, type: 3}
   sfxSuspicionSpike: {fileID: 0}
-  sfxDialogueNext: {fileID: 0}
-  sfxUIClick: {fileID: 0}
+  sfxDialogueNext: {fileID: 8300000, guid: 279f84fb2e7d47a498f69d74732598dc, type: 3}
+  sfxUIClick: {fileID: 8300000, guid: e06cd93c49f426b4c9dfca27a8c44df9, type: 3}
   sfxCutsceneLetterbox: {fileID: 0}
   defaultBGMVolume: 0.7
   defaultSFXVolume: 1
-  fadeDuration: 0.8
+  fadeDuration: 2.5
 --- !u!4 &607013537
 Transform:
   m_ObjectHideFlags: 0
@@ -5871,6 +5871,6 @@ SceneRoots:
   - {fileID: 495329882}
   - {fileID: 1436639522}
   - {fileID: 1956463974}
-  - {fileID: 607013537}
   - {fileID: 645781583}
   - {fileID: 2035710812}
+  - {fileID: 607013537}

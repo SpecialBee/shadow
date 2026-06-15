@@ -22,6 +22,9 @@ namespace ShadowSeller.Core
         // 이동 잠금 — true이면 속도 0 고정 (PushObject 슬라이딩 중 사용)
         public bool IsLocked { get; set; } = false;
 
+        [SerializeField] private float footstepInterval = 0.38f;
+        private float         _footstepTimer   = 0f;
+
         private Vector2?      _walkTarget      = null;
         private System.Action _onWalkComplete  = null;
 
@@ -94,7 +97,19 @@ namespace ShadowSeller.Core
             _rb.linearVelocity = _input.MoveInput * moveSpeed;
 
             if (_input.MoveInput.sqrMagnitude > 0.01f)
+            {
                 LastMoveDir = _input.MoveInput.normalized;
+                _footstepTimer -= Time.deltaTime;
+                if (_footstepTimer <= 0f)
+                {
+                    AudioManager.Instance?.PlaySFX(SFXClip.FootStep);
+                    _footstepTimer = footstepInterval;
+                }
+            }
+            else
+            {
+                _footstepTimer = 0f;
+            }
         }
 
         public Vector2 FootPoint => (Vector2)transform.position + Vector2.down * 0.25f;

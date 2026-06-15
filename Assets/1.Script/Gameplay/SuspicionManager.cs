@@ -50,6 +50,7 @@ namespace ShadowSeller.Core
             if (nowExposed && !wasExposed && _spikeArmed)
             {
                 CurrentSuspicion = Mathf.Min(100f, CurrentSuspicion + 15f);
+                AudioManager.Instance?.PlaySFX(SFXClip.SuspicionSpike);
                 _spikeArmed = false;
             }
             else if (!nowExposed)

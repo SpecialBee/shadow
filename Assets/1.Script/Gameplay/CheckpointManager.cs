@@ -63,6 +63,7 @@ namespace ShadowSeller.Core
             _state.collectedIDs = new HashSet<string>(_runtimeCollectedIDs);
 
             SaveToDisk();
+            AudioManager.Instance?.PlaySFX(SFXClip.CheckpointSave);
             Debug.Log($"[CheckpointManager] 저장: pos={playerPos}, 아이템={_state.inventory.Count}, 수집={_state.collectedIDs.Count}");
         }
 

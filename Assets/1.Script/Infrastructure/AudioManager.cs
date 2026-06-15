@@ -142,10 +142,12 @@ namespace ShadowSeller.Core
         public void PlayBGM(BGMTrack track)
         {
             if (_currentTrack == track) return;
-            _currentTrack = track;
+            var clip = GetBGMClip(track);
+            if (clip == null) return;   // 클립 미할당 시 현재 BGM 유지
 
+            _currentTrack = track;
             if (_fadeCoroutine != null) StopCoroutine(_fadeCoroutine);
-            _fadeCoroutine = StartCoroutine(FadeBGM(GetBGMClip(track)));
+            _fadeCoroutine = StartCoroutine(FadeBGM(clip));
         }
 
         public void StopBGM()

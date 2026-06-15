@@ -64,6 +64,8 @@ namespace ShadowSeller.Core
         {
             if (!IsPlaying) return;
 
+            AudioManager.Instance?.PlaySFX(SFXClip.DialogueNext);
+
             if (!_lineComplete)
             {
                 if (_typeRoutine != null) StopCoroutine(_typeRoutine);

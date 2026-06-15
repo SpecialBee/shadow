@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using ShadowSeller.Core;
 
 namespace ShadowSeller.UI
 {
@@ -79,6 +80,7 @@ namespace ShadowSeller.UI
         // 컷씬 시작 — 바 슬라이드인 + HUD 숨김
         public IEnumerator Enter()
         {
+            AudioManager.Instance?.PlaySFX(SFXClip.CutsceneLetterbox);
             _targetHeight = Screen.height * barHeightRatio;
             SetHUD(false);
 

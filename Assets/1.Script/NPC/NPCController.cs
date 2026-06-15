@@ -501,6 +501,13 @@ namespace ShadowSeller.Core
 
             CurrentState = next;
 
+            switch (next)
+            {
+                case NpcState.Suspicious:                       AudioManager.Instance?.PlaySFX(SFXClip.NpcSuspicious); break;
+                case NpcState.Alert: case NpcState.Chase:       AudioManager.Instance?.PlaySFX(SFXClip.NpcAlert);      break;
+                case NpcState.Search:                           AudioManager.Instance?.PlaySFX(SFXClip.NpcSearch);     break;
+            }
+
             if (next == NpcState.Chase)                           { _sightLoseTimer = 0f; }
             if (next == NpcState.Search)                          { _searchTimer    = 0f; }
             // 완전 초기화 대신 alertThreshold 30%를 잔류 — Guard가 이전 조우를 약하게 기억
@@ -529,6 +536,7 @@ namespace ShadowSeller.Core
         {
             if (CurrentState != NpcState.Chase) return;
             if (!col.gameObject.CompareTag("Player")) return;
+            AudioManager.Instance?.PlaySFX(SFXClip.NpcArrest);
             SuspicionManager.Instance?.TriggerArrest();
         }
 
@@ -536,6 +544,7 @@ namespace ShadowSeller.Core
         {
             if (CurrentState != NpcState.Chase) return;
             if (!col.CompareTag("Player")) return;
+            AudioManager.Instance?.PlaySFX(SFXClip.NpcArrest);
             SuspicionManager.Instance?.TriggerArrest();
         }
 

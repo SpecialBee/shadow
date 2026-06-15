@@ -366,6 +366,7 @@ namespace ShadowSeller.Core
         {
             if (s_carried != null) s_carried.DoDrop();
 
+            AudioManager.Instance?.PlaySFX(SFXClip.CarryPickup);
             IsCarried = true;
             s_carried = this;
             _carrier  = _nearbyPlayer ?? _player;
@@ -384,6 +385,7 @@ namespace ShadowSeller.Core
             if (_carrier != null)
                 transform.position = (Vector2)_carrier.transform.position + _carrier.LastMoveDir * holdOffset;
 
+            AudioManager.Instance?.PlaySFX(SFXClip.CarryDrop);
             IsCarried = false;
             s_carried = null;
             _carrier  = null;
@@ -434,6 +436,7 @@ namespace ShadowSeller.Core
             player.IsLocked = true;
             // _isSliding=true → RecalculateOwner에서 제외 → 패널 자동으로 다음 후보로 넘어감
             s_lastRecalcFrame = -1;
+            AudioManager.Instance?.PlaySFX(SFXClip.ObjectSlide);
 
             Vector2 start    = transform.position;
             Vector2 end      = start + dir * distance;
@@ -469,6 +472,7 @@ namespace ShadowSeller.Core
 
         private void DoToggleDoor()
         {
+            AudioManager.Instance?.PlaySFX(!_isOpen ? SFXClip.DoorOpen : SFXClip.DoorClose);
             ApplyDoorState(!_isOpen);
             RefreshPanel();
         }
@@ -491,6 +495,7 @@ namespace ShadowSeller.Core
         private void DoToggleLight()
         {
             _lightsOn = !_lightsOn;
+            AudioManager.Instance?.PlaySFX(_lightsOn ? SFXClip.LightOn : SFXClip.LightOff);
             if (controlledSources != null)
                 foreach (var src in controlledSources)
                     if (src != null) src.gameObject.SetActive(_lightsOn);
@@ -507,6 +512,7 @@ namespace ShadowSeller.Core
             string name   = string.IsNullOrEmpty(itemName) ? gameObject.name : itemName;
             if (InventoryManager.Instance.TryAddItem(sprite, name, this))
             {
+                AudioManager.Instance?.PlaySFX(SFXClip.ItemPickup);
                 CheckpointManager.Instance?.RegisterCollected(_stableID);
                 SetHighlight(false);
                 ReleaseOwnership();
@@ -558,6 +564,7 @@ namespace ShadowSeller.Core
                 onComplete = () =>
                 {
                     InventoryManager.Instance?.TryAddItem(rewardItemSprite, rewardItemName);
+                    AudioManager.Instance?.PlaySFX(SFXClip.ItemReceive);
                     if (giveItemOnce)
                         CheckpointManager.Instance?.RegisterCollected(rewardID);
                 };

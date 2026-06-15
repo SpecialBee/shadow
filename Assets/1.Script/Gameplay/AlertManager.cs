@@ -79,6 +79,7 @@ namespace ShadowSeller.Core
             if (newLevel <= Level) return;
             Level = newLevel;
             OnAlertLevelChanged?.Invoke(Level);
+            AudioManager.Instance?.PlaySFX(SFXClip.AlertLevelUp);
             Debug.Log($"[AlertManager] 경계 레벨 → {Level}");
         }
     }
