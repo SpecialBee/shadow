@@ -43,6 +43,10 @@ namespace ShadowSeller.Core
         [Header("대화 설정")]
         [SerializeField] private DialogueData dialogue;
 
+        [Header("확인하기 설정")]
+        [SerializeField] private bool             canExamine;
+        [SerializeField] private UnityEngine.Sprite examineSprite;
+
         [Header("접근 강조")]
         [SerializeField] private Color highlightColor = new Color(1f, 0.92f, 0.4f);
         [SerializeField][Range(0f, 1f)] private float highlightAlpha = 1f;
@@ -275,7 +279,9 @@ namespace ShadowSeller.Core
             if (canPull)        list.Add((InteractionType.Pull,   "당기기",                    DoPullAction));
             if (isDoor)         list.Add((InteractionType.Door,   _isOpen ? "닫기" : "열기",   DoToggleDoor));
             if (canToggleLight) list.Add((InteractionType.Light,  _lightsOn ? "끄기" : "켜기", DoToggleLight));
-            if (canInventory)   list.Add((InteractionType.Pickup, "줍기",                      DoAddToInventory));
+            if (canInventory)   list.Add((InteractionType.Pickup,  "줍기",                      DoAddToInventory));
+            if (canExamine && examineSprite != null)
+                                list.Add((InteractionType.Examine, "확인하기",                   DoExamine));
             if (isTarget)
             {
                 bool done = ObjectiveManager.Instance != null && ObjectiveManager.Instance.IsComplete;
@@ -481,6 +487,13 @@ namespace ShadowSeller.Core
         {
             canInventory = true;
             itemName     = droppedItemName;
+        }
+
+        // ── 확인하기 ─────────────────────────────────────────────────────────────
+
+        private void DoExamine()
+        {
+            ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite);
         }
 
         // ── 목표 대화 ────────────────────────────────────────────────────────────

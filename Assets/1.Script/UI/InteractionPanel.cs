@@ -5,7 +5,7 @@ using TMPro;
 
 namespace ShadowSeller.UI
 {
-    public enum InteractionType { Carry, Push, Pull, Door, Light, Pickup, Talk }
+    public enum InteractionType { Carry, Push, Pull, Door, Light, Pickup, Talk, Examine }
 
     public class InteractionPanel : MonoBehaviour
     {
@@ -19,6 +19,7 @@ namespace ShadowSeller.UI
         [SerializeField] private Button lightBtn;
         [SerializeField] private Button pickupBtn;
         [SerializeField] private Button talkBtn;
+        [SerializeField] private Button examineBtn;
 
         [Header("투명도")]
         [SerializeField] [Range(0f, 1f)] private float activeAlpha = 1f;
@@ -98,15 +99,16 @@ namespace ShadowSeller.UI
             InteractionType.Door   => doorBtn,
             InteractionType.Light  => lightBtn,
             InteractionType.Pickup => pickupBtn,
-            InteractionType.Talk   => talkBtn,
-            _                      => null,
+            InteractionType.Talk    => talkBtn,
+            InteractionType.Examine => examineBtn,
+            _                       => null,
         };
 
         private IEnumerable<Button> AllBtns()
         {
-            yield return carryBtn; yield return pushBtn; yield return pullBtn;
-            yield return doorBtn;  yield return lightBtn; yield return pickupBtn;
-            yield return talkBtn;
+            yield return carryBtn; yield return pushBtn;   yield return pullBtn;
+            yield return doorBtn;  yield return lightBtn;  yield return pickupBtn;
+            yield return talkBtn;  yield return examineBtn;
         }
     }
 }
