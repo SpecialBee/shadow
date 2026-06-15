@@ -34,6 +34,8 @@ namespace ShadowSeller.Core
         [SerializeField] private Sprite         openSprite;
         [SerializeField] private Sprite         closedSprite;
         [SerializeField] private bool           startOpen;
+        [SerializeField] private int            openSortingOrder  = 0;
+        [SerializeField] private int            closedSortingOrder = 0;
 
         [Header("켜기/끄기 설정")]
         [SerializeField] private LightSource[] controlledSources;
@@ -97,7 +99,12 @@ namespace ShadowSeller.Core
             _stableID = BuildStableID();
             _sr = GetComponent<SpriteRenderer>();
             if (_sr != null) _originalColor = _sr.color;
-            if (isDoor) ApplyDoorState(startOpen);
+            if (isDoor)
+            {
+                if (doorCollider == null) doorCollider = GetComponent<Collider2D>();
+                if (doorRenderer == null) doorRenderer = GetComponent<SpriteRenderer>();
+                ApplyDoorState(startOpen);
+            }
         }
 
         private string BuildStableID()
@@ -483,6 +490,7 @@ namespace ShadowSeller.Core
             if (doorCollider != null) doorCollider.enabled = !open;
             if (doorRenderer != null)
             {
+                doorRenderer.sortingOrder = open ? openSortingOrder : closedSortingOrder;
                 if (openSprite != null && closedSprite != null)
                 { doorRenderer.enabled = true; doorRenderer.sprite = open ? openSprite : closedSprite; }
                 else

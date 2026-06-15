@@ -16,6 +16,7 @@ public class InteractableObjectEditor : Editor
     SerializedProperty _pullDistance, _pullSpeed;
     // 문
     SerializedProperty _doorCollider, _doorRenderer, _openSprite, _closedSprite, _startOpen;
+    SerializedProperty _openSortingOrder, _closedSortingOrder;
     // 조명
     SerializedProperty _controlledSources;
     // 인벤토리
@@ -57,7 +58,9 @@ public class InteractableObjectEditor : Editor
         _doorRenderer    = serializedObject.FindProperty("doorRenderer");
         _openSprite      = serializedObject.FindProperty("openSprite");
         _closedSprite    = serializedObject.FindProperty("closedSprite");
-        _startOpen       = serializedObject.FindProperty("startOpen");
+        _startOpen            = serializedObject.FindProperty("startOpen");
+        _openSortingOrder     = serializedObject.FindProperty("openSortingOrder");
+        _closedSortingOrder   = serializedObject.FindProperty("closedSortingOrder");
 
         _controlledSources = serializedObject.FindProperty("controlledSources");
         _itemName          = serializedObject.FindProperty("itemName");
@@ -125,11 +128,28 @@ public class InteractableObjectEditor : Editor
         if (_isDoor.boolValue)
         {
             Label("문 설정");
-            EditorGUILayout.PropertyField(_doorCollider, C("문 콜라이더"));
-            EditorGUILayout.PropertyField(_doorRenderer, C("문 렌더러"));
-            EditorGUILayout.PropertyField(_openSprite,   C("열린 스프라이트"));
-            EditorGUILayout.PropertyField(_closedSprite, C("닫힌 스프라이트"));
-            EditorGUILayout.PropertyField(_startOpen,    C("시작 시 열려있음"));
+
+            // 자동 설정 버튼 — 같은 오브젝트의 컴포넌트를 자동으로 채워줌
+            if (GUILayout.Button("콜라이더 / 렌더러 자동 설정"))
+            {
+                var t = (InteractableObject)serializedObject.targetObject;
+                if (_doorCollider.objectReferenceValue == null)
+                    _doorCollider.objectReferenceValue = t.GetComponent<Collider2D>();
+                if (_doorRenderer.objectReferenceValue == null)
+                    _doorRenderer.objectReferenceValue = t.GetComponent<SpriteRenderer>();
+            }
+            EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(_doorCollider, C("문 콜라이더",  "비워두면 플레이 시 자동 감지"));
+            EditorGUILayout.PropertyField(_doorRenderer, C("문 렌더러",    "비워두면 플레이 시 자동 감지"));
+            EditorGUI.indentLevel--;
+            EditorGUILayout.Space(2);
+            EditorGUILayout.PropertyField(_openSprite,        C("열린 스프라이트"));
+            EditorGUILayout.PropertyField(_openSortingOrder,  C("열린 상태 Order in Layer"));
+            EditorGUILayout.Space(2);
+            EditorGUILayout.PropertyField(_closedSprite,      C("닫힌 스프라이트"));
+            EditorGUILayout.PropertyField(_closedSortingOrder,C("닫힌 상태 Order in Layer"));
+            EditorGUILayout.Space(2);
+            EditorGUILayout.PropertyField(_startOpen,         C("시작 시 열려있음"));
             Space();
         }
 
