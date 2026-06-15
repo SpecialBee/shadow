@@ -7469,6 +7469,8 @@ MonoBehaviour:
   openSprite: {fileID: 0}
   closedSprite: {fileID: 0}
   startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
   controlledSources: []
   itemName: 
   npcDialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
@@ -27773,6 +27775,8 @@ MonoBehaviour:
   openSprite: {fileID: 0}
   closedSprite: {fileID: 0}
   startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
   controlledSources: []
   itemName: 
   npcDialogue: {fileID: 0}
@@ -54775,6 +54779,8 @@ MonoBehaviour:
   openSprite: {fileID: 0}
   closedSprite: {fileID: 0}
   startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
   controlledSources:
   - {fileID: 1294362642}
   itemName: "\uAC00\uBC29"
@@ -153365,9 +153371,9 @@ MonoBehaviour:
   oneShot: 1
   approachRadius: 2
   steps:
-  - type: 0
+  - type: 3
     waitForComplete: 1
-    dialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
+    dialogue: {fileID: 0}
     objectToMove: {fileID: 0}
     moveTo: {fileID: 0}
     moveDuration: 0
@@ -153378,11 +153384,11 @@ MonoBehaviour:
     waitSeconds: 0
     fadeOut: 0
     fadeDuration: 0
-  - type: 1
-    waitForComplete: 0
-    dialogue: {fileID: 11400000, guid: f5849066e6a3d064bb8c0d467e6a4b92, type: 2}
+  - type: 0
+    waitForComplete: 1
+    dialogue: {fileID: 0}
     objectToMove: {fileID: 0}
-    moveTo: {fileID: 353016682}
+    moveTo: {fileID: 0}
     moveDuration: 0
     smoothMove: 0
     cameraTarget: {fileID: 0}
