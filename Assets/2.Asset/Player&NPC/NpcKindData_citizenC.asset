@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b911f14d6f70ad64a99e6e9d46ac3073, type: 3}
-  m_Name: NpcKindData_citizen
+  m_Name: NpcKindData_citizenC
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.NpcKindData
-  kind: 0
   viewAngle: 120
   viewRange: 3
   suspicionGainRate: 30

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43af71a745db8cf49984c234f252689c, type: 3}
+  m_Name: Dialogue_Mina5
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.DialogueData
+  lines:
+  - speakerName: "\uBBF8\uB098"
+    text: "1\uCE35\uC740 \uC815\uBB38 \uBE7C\uACE0 \uB098\uAC08 \uAE38\uC774 \uC5C6\uC744
+      \uAC70\uC608\uC694. \uD558\uC9C0\uB9CC..."
+  - speakerName: "\uBBF8\uB098"
+    text: "\uC81C\uAC00 \uC54C\uAE30\uB85C 2\uCE35\uC5D0 \uC815\uC6D0\uC774 \uC788\uC5B4\uC694."
+  - speakerName: "\uBBF8\uB098"
+    text: "\uADF8 \uC815\uC6D0\uC73C\uB85C \uB098\uAC04\uB2E4\uBA74 \uBD84\uBA85
+      \uBC16\uC73C\uB85C \uB098\uAC08 \uC218 \uC788\uC744 \uAC70\uC608\uC694."
+  - speakerName: "\uBBF8\uB098"
+    text: "\uD558\uC9C0\uB9CC... 2\uCE35\uC73C\uB85C \uAC00\uB294 \uACC4\uB2E8\uC774
+      \uC790\uBB3C\uC1E0\uB85C \uB9C9\uD600 \uC788\uB294 \uAC78 \uBD24\uC5B4\uC694."
+  - speakerName: "\uBBF8\uB098"
+    text: "2\uCE35\uC73C\uB85C \uAC00\uB294 \uC5F4\uC1E0\uAC00 \uD544\uC694\uD560
+      \uAC83 \uAC19\uC544\uC694."
+  - speakerName: "\uBBF8\uB098"
+    text: "\uC774\uCABD \uBCF5\uB3C4\uB294 \uBC31\uC791\uB2D8 \uBC29\uC774 \uC788\uB294
+      \uACF3\uC774\uB2C8 \uBD84\uBA85 \uC5F4\uC1E0 \uAD00\uB9AC\uD568\uC774 \uC788\uC744
+      \uAC70\uC608\uC694!"
