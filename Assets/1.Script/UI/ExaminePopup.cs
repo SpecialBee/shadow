@@ -24,13 +24,16 @@ namespace ShadowSeller.UI
             if (Instance == this) Instance = null;
         }
 
-        public void Open(Sprite sprite)
+        private System.Action _onClose;
+
+        public void Open(Sprite sprite, System.Action onClose = null)
         {
             if (sprite == null) return;
 
-            examineImage.sprite        = sprite;
+            examineImage.sprite         = sprite;
             examineImage.preserveAspect = true;
             overlay.SetActive(true);
+            _onClose = onClose;
 
             if (closeBtn != null)
             {
@@ -43,6 +46,8 @@ namespace ShadowSeller.UI
         {
             ShadowSeller.Core.DialogueSystem.Instance?.ForceEnd();
             if (overlay != null) overlay.SetActive(false);
+            _onClose?.Invoke();
+            _onClose = null;
         }
 
         private void Update()

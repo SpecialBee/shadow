@@ -30,6 +30,7 @@ public class InteractableObjectEditor : Editor
     SerializedProperty _dialogue;
     // 확인하기
     SerializedProperty _examineSprite, _examineDialogue;
+    SerializedProperty _giveItemAfterExamine, _examineRewardSprite, _examineRewardItemName, _examineGiveItemOnce;
     // 접근
     SerializedProperty _highlightColor, _highlightAlpha, _approachRadius;
     // 벽 감지
@@ -74,8 +75,12 @@ public class InteractableObjectEditor : Editor
         _giveItemOnce         = serializedObject.FindProperty("giveItemOnce");
         _rewardedDialogue     = serializedObject.FindProperty("rewardedDialogue");
         _dialogue             = serializedObject.FindProperty("dialogue");
-        _examineSprite     = serializedObject.FindProperty("examineSprite");
-        _examineDialogue   = serializedObject.FindProperty("examineDialogue");
+        _examineSprite           = serializedObject.FindProperty("examineSprite");
+        _examineDialogue         = serializedObject.FindProperty("examineDialogue");
+        _giveItemAfterExamine    = serializedObject.FindProperty("giveItemAfterExamine");
+        _examineRewardSprite     = serializedObject.FindProperty("examineRewardSprite");
+        _examineRewardItemName   = serializedObject.FindProperty("examineRewardItemName");
+        _examineGiveItemOnce     = serializedObject.FindProperty("examineGiveItemOnce");
 
         _highlightColor  = serializedObject.FindProperty("highlightColor");
         _highlightAlpha  = serializedObject.FindProperty("highlightAlpha");
@@ -178,8 +183,20 @@ public class InteractableObjectEditor : Editor
         if (_canExamine.boolValue)
         {
             Label("확인하기 설정");
-            EditorGUILayout.PropertyField(_examineSprite,    C("확인 이미지 (Sprite)"));
-            EditorGUILayout.PropertyField(_examineDialogue,  C("동시 재생 대사", "이미지와 함께 표시할 DialogueData. 비워두면 대사 없음."));
+            EditorGUILayout.PropertyField(_examineSprite,   C("확인 이미지 (Sprite)"));
+            EditorGUILayout.PropertyField(_examineDialogue, C("동시 재생 대사", "이미지와 함께 표시할 DialogueData. 비워두면 대사 없음."));
+            Space();
+
+            Label("확인하기 — 아이템 지급");
+            EditorGUILayout.PropertyField(_giveItemAfterExamine, C("팝업 닫을 때 아이템 지급"));
+            if (_giveItemAfterExamine.boolValue)
+            {
+                EditorGUI.indentLevel++;
+                EditorGUILayout.PropertyField(_examineRewardSprite,   C("지급할 아이템 아이콘"));
+                EditorGUILayout.PropertyField(_examineRewardItemName,  C("지급할 아이템 이름"));
+                EditorGUILayout.PropertyField(_examineGiveItemOnce,    C("한 번만 지급", "체크 시 처음 닫을 때만 지급. 이후 재확인 시 아이템 없음."));
+                EditorGUI.indentLevel--;
+            }
             Space();
         }
 

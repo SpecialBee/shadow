@@ -14,6 +14,7 @@ namespace ShadowSeller.Core
         Wait,        // waitSeconds만큼 대기
         CameraShake, // 카메라 흔들기
         StopBGM,     // BGM 즉시 정지
+        FadeShadow,  // 플레이어 그림자 페이드 아웃
     }
 
     [Serializable]
@@ -47,6 +48,13 @@ namespace ShadowSeller.Core
 
         [Tooltip("type = StopBGM — true=즉시 정지 / false=페이드 아웃")]
         public bool stopBGMInstant = true;
+
+        [Tooltip("type = FadeShadow — 서서히 사라질 그림자 오브젝트 (SpriteRenderer 필요)")]
+        public GameObject shadowTarget;
+
+        [Tooltip("type = FadeShadow — 그림자가 사라지는 데 걸리는 시간 (초)")]
+        [Range(0.5f, 5f)]
+        public float shadowFadeDuration = 2.5f;
     }
 
     [Serializable]
@@ -284,7 +292,32 @@ namespace ShadowSeller.Core
                     else
                         AudioManager.Instance?.StopBGM();
                     break;
+
+                case PrologueStepType.FadeShadow:
+                    if (step.shadowTarget != null)
+                    {
+                        var sr = step.shadowTarget.GetComponent<SpriteRenderer>();
+                        if (sr != null)
+                            yield return StartCoroutine(FadeSpriteOut(sr, step.shadowFadeDuration));
+                    }
+                    break;
             }
+        }
+
+        private IEnumerator FadeSpriteOut(SpriteRenderer sr, float duration)
+        {
+            float elapsed    = 0f;
+            float startAlpha = sr.color.a;
+            Color c          = sr.color;
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                c.a      = Mathf.Lerp(startAlpha, 0f, elapsed / duration);
+                sr.color = c;
+                yield return null;
+            }
+            c.a = 0f;
+            sr.color = c;
         }
 
         private IEnumerator ShakeCamera(float strength, float duration)

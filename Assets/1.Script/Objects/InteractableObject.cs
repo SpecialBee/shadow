@@ -61,9 +61,15 @@ namespace ShadowSeller.Core
         [SerializeField] private string requiredItemName;
 
         [Header("확인하기 설정")]
-        [SerializeField] private bool              canExamine;
+        [SerializeField] private bool               canExamine;
         [SerializeField] private UnityEngine.Sprite examineSprite;
-        [SerializeField] private DialogueData      examineDialogue;
+        [SerializeField] private DialogueData       examineDialogue;
+
+        [Header("확인하기 — 아이템 지급")]
+        [SerializeField] private bool               giveItemAfterExamine;
+        [SerializeField] private UnityEngine.Sprite examineRewardSprite;
+        [SerializeField] private string             examineRewardItemName;
+        [SerializeField] private bool               examineGiveItemOnce;
 
         [Header("접근 강조")]
         [SerializeField] private Color highlightColor = new Color(1f, 0.92f, 0.4f);
@@ -559,7 +565,28 @@ namespace ShadowSeller.Core
 
         private void DoExamine()
         {
-            ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite);
+            System.Action onClose = null;
+
+            if (giveItemAfterExamine && !string.IsNullOrEmpty(examineRewardItemName))
+            {
+                string rewardID    = _stableID + "_examineReward";
+                bool   alreadyGave = examineGiveItemOnce
+                                     && CheckpointManager.Instance != null
+                                     && CheckpointManager.Instance.IsCollected(rewardID);
+
+                if (!alreadyGave)
+                {
+                    onClose = () =>
+                    {
+                        InventoryManager.Instance?.TryAddItem(examineRewardSprite, examineRewardItemName, droppable: false);
+                        AudioManager.Instance?.PlaySFX(SFXClip.ItemReceive);
+                        if (examineGiveItemOnce)
+                            CheckpointManager.Instance?.RegisterCollected(rewardID);
+                    };
+                }
+            }
+
+            ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite, onClose);
             if (examineDialogue != null)
                 DialogueSystem.Instance?.StartDialogue(examineDialogue);
             GetComponent<QuestTrigger>()?.Fire();

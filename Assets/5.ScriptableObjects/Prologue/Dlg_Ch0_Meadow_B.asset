@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43af71a745db8cf49984c234f252689c, type: 3}
+  m_Name: Dlg_Ch0_Meadow_B
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.DialogueData
+  lines:
+  - speakerName: 
+    text: "\uD68C\uC0C9 \uB0A8\uC790\uB294 \uB9C8\uCE58 \uB3D7\uC790\uB9AC\uB97C
+      \uC811\uB4EF \uD5C8\uB9AC\uB97C \uAD7D\uD600 \uD398\uD130\uC758 \uADF8\uB9BC\uC790\uB97C
+      \uC7A1\uACE0 \uB3CC\uB3CC \uB9D0\uC544 \uC811\uC5C8\uB2E4."

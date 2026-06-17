@@ -142,6 +142,14 @@ namespace ShadowSeller.Core
                 _hidingZone.detectionRadiusMultiplier = 0.5f * detectionScale;
         }
 
+        public float CurrentAlpha => _shadowSR != null ? _shadowSR.color.a : 0f;
+
+        public void SetAlpha(float alpha)
+        {
+            if (_shadowSR != null)
+                _shadowSR.color = new Color(0f, 0f, 0f, Mathf.Clamp01(alpha));
+        }
+
         private void OnDestroy()
         {
             if (_shadowTransform != null)

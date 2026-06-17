@@ -10911,6 +10911,10 @@ MonoBehaviour:
   canExamine: 1
   examineSprite: {fileID: 6114420316687262860, guid: 67bf5fc5af3f6a3468fe4279e9bf37ec, type: 3}
   examineDialogue: {fileID: 11400000, guid: e73059e539ba6cd4ea59cfa149d2f62b, type: 2}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -12351,6 +12355,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 6114420316687262860, guid: 67bf5fc5af3f6a3468fe4279e9bf37ec, type: 3}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 4
@@ -34054,6 +34062,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -60972,6 +60984,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -61769,6 +61785,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 0.27906877, g: 1, b: 0, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -63171,6 +63191,10 @@ MonoBehaviour:
   canExamine: 1
   examineSprite: {fileID: 782696455932138334, guid: 2b0c8f13d2f5b3547bd8a8f7adf72847, type: 3}
   examineDialogue: {fileID: 11400000, guid: 39f86b4ca3f8d1c42afd8004216eda79, type: 2}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 0, g: 1, b: 0.045587063, a: 1}
   highlightAlpha: 1
   approachRadius: 3
@@ -157297,6 +157321,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -158502,6 +158530,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 0, g: 1, b: 0.041554272, a: 1}
   highlightAlpha: 1
   approachRadius: 4
@@ -159773,6 +159805,10 @@ MonoBehaviour:
   canExamine: 1
   examineSprite: {fileID: 6114420316687262860, guid: 67bf5fc5af3f6a3468fe4279e9bf37ec, type: 3}
   examineDialogue: {fileID: 11400000, guid: c0f66828e8d89d44cb9c000dab74ee2c, type: 2}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -162385,6 +162421,10 @@ MonoBehaviour:
   canExamine: 1
   examineSprite: {fileID: 6222578492093646479, guid: 0f01ce650d9740641846a69acd6cf326, type: 3}
   examineDialogue: {fileID: 11400000, guid: 1e7aa634989d04b4a9b10bf74d0b2768, type: 2}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
