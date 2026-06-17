@@ -559,6 +559,7 @@ namespace ShadowSeller.Core
             ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite);
             if (examineDialogue != null)
                 DialogueSystem.Instance?.StartDialogue(examineDialogue);
+            GetComponent<QuestTrigger>()?.Fire();
         }
 
         // ── 일반 NPC 대화 ────────────────────────────────────────────────────────
