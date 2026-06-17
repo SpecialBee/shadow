@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.NpcKindData
   viewAngle: 120
   viewRange: 3
+  initialFacingDeg: 180
   suspicionGainRate: 30
   suspicionDecayRate: 8
   alertThreshold: 40

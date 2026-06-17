@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b911f14d6f70ad64a99e6e9d46ac3073, type: 3}
-  m_Name: NpcKindData_Worker
+  m_Name: NpcKindData_WorkerA
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.NpcKindData
-  viewAngle: 0
-  viewRange: 0
+  viewAngle: 120
+  viewRange: 2
+  initialFacingDeg: 0
   suspicionGainRate: 0
   suspicionDecayRate: 0
   alertThreshold: 0
