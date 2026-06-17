@@ -4549,6 +4549,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!1 &192822795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,6 +6214,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &224376839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19825,6 +19831,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &623062539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31713,6 +31722,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &901744129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33804,8 +33816,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 0
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -60626,8 +60640,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: Middle Corridor Key
   canExamine: 0
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -61260,7 +61276,7 @@ Transform:
   m_GameObject: {fileID: 1102840217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.08, y: -98.04, z: 0}
+  m_LocalPosition: {x: 10.42, y: -98.35, z: 0}
   m_LocalScale: {x: 0.144279, y: 0.144279, z: 0.16031}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61421,8 +61437,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 0
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 0.27906877, g: 1, b: 0, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -62821,8 +62839,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 1
   examineSprite: {fileID: 782696455932138334, guid: 2b0c8f13d2f5b3547bd8a8f7adf72847, type: 3}
+  examineDialogue: {fileID: 11400000, guid: 39f86b4ca3f8d1c42afd8004216eda79, type: 2}
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 3
@@ -133041,6 +133061,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &1348564612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134397,6 +134420,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &1383930341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135129,6 +135155,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!1 &1406280332
 GameObject:
   m_ObjectHideFlags: 0
@@ -138437,6 +138466,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &1515437185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140877,6 +140909,10 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd:
+  - {fileID: 0}
+  meetFlag: 
 --- !u!61 &1599216823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142828,6 +142864,9 @@ MonoBehaviour:
     fadeDuration: 2
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!1 &1700099483
 GameObject:
   m_ObjectHideFlags: 0
@@ -156430,8 +156469,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 0
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -157633,8 +157674,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 0
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 0, g: 1, b: 0.041554272, a: 1}
   highlightAlpha: 1
   approachRadius: 4
@@ -161260,8 +161303,10 @@ MonoBehaviour:
   giveItemOnce: 1
   rewardedDialogue: {fileID: 0}
   dialogue: {fileID: 0}
+  requiredItemName: 
   canExamine: 1
   examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
   approachRadius: 2
@@ -163870,6 +163915,8 @@ MonoBehaviour:
   nameText: {fileID: 512527219}
   dialogueText: {fileID: 1093285668}
   nextIndicator: {fileID: 1472349356}
+  panelGroup: {fileID: 0}
+  panelFadeDuration: 0.2
   typeSpeed: 0.04
 --- !u!114 &2051675307
 MonoBehaviour:
@@ -164386,6 +164433,9 @@ MonoBehaviour:
     fadeDuration: 0
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
+  requiredMeetFlag: 
+  deactivateOnEnd: []
+  meetFlag: 
 --- !u!61 &2055148603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167638,11 +167688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.15
+      value: -10.2
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -69.75
+      value: -66.69
       objectReference: {fileID: 0}
     - target: {fileID: 4333883486659701111, guid: fd53d463ba4e9374da5f78502322cc9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -167927,6 +167977,7 @@ SceneRoots:
   - {fileID: 2138309559}
   - {fileID: 1720140832}
   - {fileID: 1856905163}
+  - {fileID: 1440086717}
   - {fileID: 1026758272}
   - {fileID: 1577570573}
   - {fileID: 1264617428}
@@ -167937,5 +167988,4 @@ SceneRoots:
   - {fileID: 1177999225}
   - {fileID: 1082868674}
   - {fileID: 409997838}
-  - {fileID: 1440086717}
   - {fileID: 678597997}

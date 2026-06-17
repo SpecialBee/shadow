@@ -39,6 +39,9 @@ namespace ShadowSeller.Core
         private IEnumerator HandleBlock(PlayerController player)
         {
             _isBusy = true;
+
+            // PrologueDirector 등이 이미 IsLocked를 제어 중일 수 있으므로 상태 보존
+            bool wasLocked = player.IsLocked;
             player.IsLocked = true;
 
             // 진입 방향의 반대 = 물러날 목표 지점
@@ -47,7 +50,6 @@ namespace ShadowSeller.Core
 
             if (useDialogueSystem && DialogueSystem.Instance != null)
             {
-                // DialogueData를 런타임에 생성해서 한 줄 출력
                 var data  = ScriptableObject.CreateInstance<DialogueData>();
                 data.lines = new DialogueLine[]
                 {
@@ -61,12 +63,20 @@ namespace ShadowSeller.Core
                 Destroy(data);
             }
 
-            // 대사 완료 후 뒤로 이동
-            bool arrived = false;
-            player.WalkTo(pushTarget, () => arrived = true);
-            yield return new WaitUntil(() => arrived);
+            // WalkTo 대신 Rigidbody2D 직접 제어 — PrologueDirector의 WalkTo를 덮어쓰지 않음
+            var rb = player.GetComponent<Rigidbody2D>();
+            player.IsLocked = true;
+            while (((Vector2)player.transform.position - pushTarget).sqrMagnitude > 0.06f * 0.06f)
+            {
+                Vector2 dir = (pushTarget - (Vector2)player.transform.position).normalized;
+                rb.linearVelocity = dir * 3f;
+                yield return null;
+            }
+            rb.linearVelocity = Vector2.zero;
+            rb.position = pushTarget;
 
-            player.IsLocked = false;
+            // 진입 전 상태로 복원
+            player.IsLocked = wasLocked;
             _isBusy = false;
         }
     }

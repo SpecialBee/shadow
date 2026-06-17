@@ -57,9 +57,13 @@ namespace ShadowSeller.Core
         [Header("목표 대화 설정")]
         [SerializeField] private DialogueData dialogue;
 
+        [Header("문 잠금 — 인벤토리에 이 이름의 아이템이 있어야 열림 (비워두면 잠금 없음)")]
+        [SerializeField] private string requiredItemName;
+
         [Header("확인하기 설정")]
-        [SerializeField] private bool             canExamine;
+        [SerializeField] private bool              canExamine;
         [SerializeField] private UnityEngine.Sprite examineSprite;
+        [SerializeField] private DialogueData      examineDialogue;
 
         [Header("접근 강조")]
         [SerializeField] private Color highlightColor = new Color(1f, 0.92f, 0.4f);
@@ -479,6 +483,18 @@ namespace ShadowSeller.Core
 
         private void DoToggleDoor()
         {
+            // 잠긴 문: 열려는 시도일 때만 아이템 확인
+            if (!_isOpen && !string.IsNullOrEmpty(requiredItemName))
+            {
+                if (InventoryManager.Instance == null || !InventoryManager.Instance.HasItem(requiredItemName))
+                {
+                    var data = ScriptableObject.CreateInstance<DialogueData>();
+                    data.lines = new DialogueLine[] { new DialogueLine { speakerName = "", text = "열쇠가 필요하다." } };
+                    DialogueSystem.Instance?.StartDialogue(data, () => Destroy(data));
+                    return;
+                }
+            }
+
             AudioManager.Instance?.PlaySFX(!_isOpen ? SFXClip.DoorOpen : SFXClip.DoorClose);
             ApplyDoorState(!_isOpen);
             RefreshPanel();
@@ -541,6 +557,8 @@ namespace ShadowSeller.Core
         private void DoExamine()
         {
             ShadowSeller.UI.ExaminePopup.Instance?.Open(examineSprite);
+            if (examineDialogue != null)
+                DialogueSystem.Instance?.StartDialogue(examineDialogue);
         }
 
         // ── 일반 NPC 대화 ────────────────────────────────────────────────────────
@@ -571,7 +589,7 @@ namespace ShadowSeller.Core
             {
                 onComplete = () =>
                 {
-                    InventoryManager.Instance?.TryAddItem(rewardItemSprite, rewardItemName);
+                    InventoryManager.Instance?.TryAddItem(rewardItemSprite, rewardItemName, droppable: false);
                     AudioManager.Instance?.PlaySFX(SFXClip.ItemReceive);
                     if (giveItemOnce)
                         CheckpointManager.Instance?.RegisterCollected(rewardID);

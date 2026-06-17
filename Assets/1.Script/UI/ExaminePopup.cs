@@ -28,8 +28,8 @@ namespace ShadowSeller.UI
         {
             if (sprite == null) return;
 
-            examineImage.sprite = sprite;
-            examineImage.SetNativeSize();
+            examineImage.sprite        = sprite;
+            examineImage.preserveAspect = true;
             overlay.SetActive(true);
 
             if (closeBtn != null)
@@ -41,6 +41,7 @@ namespace ShadowSeller.UI
 
         public void Close()
         {
+            ShadowSeller.Core.DialogueSystem.Instance?.ForceEnd();
             if (overlay != null) overlay.SetActive(false);
         }
 

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b911f14d6f70ad64a99e6e9d46ac3073, type: 3}
   m_Name: NpcKindData_citizenA
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.NpcKindData
-  viewAngle: 120
+  viewAngle: 114
   viewRange: 3
+  initialFacingDeg: 0
   suspicionGainRate: 30
   suspicionDecayRate: 8
   alertThreshold: 40

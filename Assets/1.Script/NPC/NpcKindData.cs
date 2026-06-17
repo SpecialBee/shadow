@@ -9,8 +9,10 @@ namespace ShadowSeller.Core
     public class NpcKindData : ScriptableObject
     {
         [Header("Vision")]
-        public float viewAngle = 90f;
+        [Range(10f, 360f)] public float viewAngle = 90f;
         public float viewRange = 6f;
+        [Tooltip("초기 시선 방향 (도). 0=오른쪽, 90=위, 180=왼쪽, 270=아래. 순찰 포인트가 있으면 무시됨.")]
+        [Range(0f, 360f)] public float initialFacingDeg = 0f;
 
         [Header("Individual Suspicion")]
         public float suspicionGainRate   = 30f;

@@ -15,6 +15,7 @@ namespace ShadowSeller.Core
             public Sprite             sprite;
             public string             itemName;
             public InteractableObject sourceObject;
+            public bool               droppable;
         }
 
         public static event System.Action<int, ItemData> OnItemAdded;
@@ -33,12 +34,12 @@ namespace ShadowSeller.Core
             if (Instance == this) Instance = null;
         }
 
-        public bool TryAddItem(Sprite sprite, string name, InteractableObject source = null)
+        public bool TryAddItem(Sprite sprite, string name, InteractableObject source = null, bool droppable = true)
         {
             for (int i = 0; i < MaxSlots; i++)
             {
                 if (_slots[i] != null) continue;
-                var item = new ItemData { sprite = sprite, itemName = name, sourceObject = source };
+                var item = new ItemData { sprite = sprite, itemName = name, sourceObject = source, droppable = droppable };
                 _slots[i] = item;
                 OnItemAdded?.Invoke(i, item);
                 return true;
@@ -48,6 +49,13 @@ namespace ShadowSeller.Core
 
         public ItemData? GetSlot(int index) =>
             index >= 0 && index < MaxSlots ? _slots[index] : null;
+
+        public bool HasItem(string itemName)
+        {
+            for (int i = 0; i < MaxSlots; i++)
+                if (_slots[i] != null && _slots[i].Value.itemName == itemName) return true;
+            return false;
+        }
 
         public ItemData? RemoveItem(int index)
         {

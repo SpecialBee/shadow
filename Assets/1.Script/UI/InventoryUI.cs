@@ -71,8 +71,9 @@ namespace ShadowSeller.UI
 
         private void OnSlotClicked(int index)
         {
-            var item = InventoryManager.Instance?.RemoveItem(index);
-            if (item == null) return;
+            var item = InventoryManager.Instance?.GetSlot(index);
+            if (item == null || !item.Value.droppable) return;
+            InventoryManager.Instance.RemoveItem(index);
             SpawnDroppedItem(item.Value);
         }
 

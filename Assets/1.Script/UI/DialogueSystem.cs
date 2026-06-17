@@ -18,6 +18,10 @@ namespace ShadowSeller.Core
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private GameObject      nextIndicator;
 
+        [Header("패널 페이드 — 대화창 루트에 CanvasGroup 추가 후 연결")]
+        [SerializeField] private CanvasGroup panelGroup;
+        [SerializeField] private float       panelFadeDuration = 0.2f;
+
         [Header("타이핑 설정")]
         [SerializeField] private float typeSpeed = 0.04f;
 
@@ -26,6 +30,7 @@ namespace ShadowSeller.Core
         private DialogueLine[]   _lines;
         private int              _index;
         private Coroutine        _typeRoutine;
+        private Coroutine        _panelFadeRoutine;
         private bool             _lineComplete;
         private PlayerController _player;
         private System.Action    _onComplete;
@@ -34,6 +39,7 @@ namespace ShadowSeller.Core
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
+            if (panelGroup != null) { panelGroup.alpha = 0f; panelGroup.interactable = false; panelGroup.blocksRaycasts = false; }
             HideTexts();
         }
 
@@ -47,7 +53,7 @@ namespace ShadowSeller.Core
         public void StartDialogue(DialogueData data, System.Action onComplete = null)
         {
             if (data == null || data.lines.Length == 0) { onComplete?.Invoke(); return; }
-            if (IsPlaying) return;
+            if (IsPlaying) { onComplete?.Invoke(); return; }
 
             _lines      = data.lines;
             _index      = 0;
@@ -57,7 +63,15 @@ namespace ShadowSeller.Core
             if (_player != null) _player.IsLocked = true;
 
             ShowTexts();
+            FadePanelTo(1f);
             ShowLine(_lines[_index]);
+        }
+
+        public void ForceEnd()
+        {
+            if (!IsPlaying) return;
+            if (_typeRoutine != null) { StopCoroutine(_typeRoutine); _typeRoutine = null; }
+            EndDialogue();
         }
 
         public void Next()
@@ -96,6 +110,28 @@ namespace ShadowSeller.Core
             nextIndicator?.SetActive(false);
         }
 
+        private void FadePanelTo(float target)
+        {
+            if (panelGroup == null) return;
+            if (_panelFadeRoutine != null) StopCoroutine(_panelFadeRoutine);
+            _panelFadeRoutine = StartCoroutine(FadePanelRoutine(panelGroup.alpha, target));
+        }
+
+        private IEnumerator FadePanelRoutine(float from, float to)
+        {
+            panelGroup.interactable   = to > 0f;
+            panelGroup.blocksRaycasts = to > 0f;
+            float elapsed = 0f;
+            while (elapsed < panelFadeDuration)
+            {
+                elapsed += Time.deltaTime;
+                panelGroup.alpha = Mathf.Lerp(from, to, elapsed / panelFadeDuration);
+                yield return null;
+            }
+            panelGroup.alpha = to;
+            _panelFadeRoutine = null;
+        }
+
         private void ShowLine(DialogueLine line)
         {
             _lineComplete = false;
@@ -125,10 +161,20 @@ namespace ShadowSeller.Core
             _lines    = null;
 
             if (_typeRoutine != null) { StopCoroutine(_typeRoutine); _typeRoutine = null; }
+            nextIndicator?.SetActive(false);
 
+            StartCoroutine(EndFadeRoutine());
+        }
+
+        private IEnumerator EndFadeRoutine()
+        {
+            if (panelGroup != null)
+            {
+                FadePanelTo(0f);
+                yield return new WaitUntil(() => _panelFadeRoutine == null);
+            }
             HideTexts();
             if (_player != null) _player.IsLocked = false;
-
             var cb = _onComplete;
             _onComplete = null;
             cb?.Invoke();

@@ -17,6 +17,7 @@ public class InteractableObjectEditor : Editor
     // 문
     SerializedProperty _doorCollider, _doorRenderer, _openSprite, _closedSprite, _startOpen;
     SerializedProperty _openSortingOrder, _closedSortingOrder;
+    SerializedProperty _requiredItemName;
     // 조명
     SerializedProperty _controlledSources;
     // 인벤토리
@@ -28,7 +29,7 @@ public class InteractableObjectEditor : Editor
     // 목표 대화
     SerializedProperty _dialogue;
     // 확인하기
-    SerializedProperty _examineSprite;
+    SerializedProperty _examineSprite, _examineDialogue;
     // 접근
     SerializedProperty _highlightColor, _highlightAlpha, _approachRadius;
     // 벽 감지
@@ -61,6 +62,7 @@ public class InteractableObjectEditor : Editor
         _startOpen            = serializedObject.FindProperty("startOpen");
         _openSortingOrder     = serializedObject.FindProperty("openSortingOrder");
         _closedSortingOrder   = serializedObject.FindProperty("closedSortingOrder");
+        _requiredItemName     = serializedObject.FindProperty("requiredItemName");
 
         _controlledSources = serializedObject.FindProperty("controlledSources");
         _itemName          = serializedObject.FindProperty("itemName");
@@ -73,6 +75,7 @@ public class InteractableObjectEditor : Editor
         _rewardedDialogue     = serializedObject.FindProperty("rewardedDialogue");
         _dialogue             = serializedObject.FindProperty("dialogue");
         _examineSprite     = serializedObject.FindProperty("examineSprite");
+        _examineDialogue   = serializedObject.FindProperty("examineDialogue");
 
         _highlightColor  = serializedObject.FindProperty("highlightColor");
         _highlightAlpha  = serializedObject.FindProperty("highlightAlpha");
@@ -150,6 +153,8 @@ public class InteractableObjectEditor : Editor
             EditorGUILayout.PropertyField(_closedSortingOrder,C("닫힌 상태 Order in Layer"));
             EditorGUILayout.Space(2);
             EditorGUILayout.PropertyField(_startOpen,         C("시작 시 열려있음"));
+            EditorGUILayout.Space(4);
+            EditorGUILayout.PropertyField(_requiredItemName,  C("잠금 열쇠 이름", "이 이름의 아이템이 인벤토리에 있어야 문이 열림. 비워두면 잠금 없음."));
             Space();
         }
 
@@ -173,7 +178,8 @@ public class InteractableObjectEditor : Editor
         if (_canExamine.boolValue)
         {
             Label("확인하기 설정");
-            EditorGUILayout.PropertyField(_examineSprite, C("확인 이미지 (Sprite)"));
+            EditorGUILayout.PropertyField(_examineSprite,    C("확인 이미지 (Sprite)"));
+            EditorGUILayout.PropertyField(_examineDialogue,  C("동시 재생 대사", "이미지와 함께 표시할 DialogueData. 비워두면 대사 없음."));
             Space();
         }
 

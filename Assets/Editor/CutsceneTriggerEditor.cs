@@ -11,6 +11,9 @@ public class CutsceneTriggerEditor : Editor
     private SerializedProperty _steps;
     private SerializedProperty _overrideSpawn;
     private SerializedProperty _spawnPoint;
+    private SerializedProperty _requiredMeetFlag;
+    private SerializedProperty _deactivateOnEnd;
+    private SerializedProperty _meetFlag;
 
     private bool[] _foldouts = new bool[0];
 
@@ -19,12 +22,15 @@ public class CutsceneTriggerEditor : Editor
 
     private void OnEnable()
     {
-        _mode           = serializedObject.FindProperty("mode");
-        _oneShot        = serializedObject.FindProperty("oneShot");
-        _approachRadius = serializedObject.FindProperty("approachRadius");
-        _steps          = serializedObject.FindProperty("steps");
-        _overrideSpawn  = serializedObject.FindProperty("overridePlayerSpawn");
-        _spawnPoint     = serializedObject.FindProperty("spawnPoint");
+        _mode             = serializedObject.FindProperty("mode");
+        _oneShot          = serializedObject.FindProperty("oneShot");
+        _approachRadius   = serializedObject.FindProperty("approachRadius");
+        _steps            = serializedObject.FindProperty("steps");
+        _overrideSpawn    = serializedObject.FindProperty("overridePlayerSpawn");
+        _spawnPoint       = serializedObject.FindProperty("spawnPoint");
+        _requiredMeetFlag = serializedObject.FindProperty("requiredMeetFlag");
+        _deactivateOnEnd  = serializedObject.FindProperty("deactivateOnEnd");
+        _meetFlag         = serializedObject.FindProperty("meetFlag");
     }
 
     public override void OnInspectorGUI()
@@ -98,11 +104,24 @@ public class CutsceneTriggerEditor : Editor
 
         EditorGUILayout.Space(8);
 
+        // ── 발동 조건 ───────────────────────────────────────────────
+        EditorGUILayout.LabelField("발동 조건", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(_requiredMeetFlag, new GUIContent("필요 플래그", "이 플래그가 등록돼 있어야 트리거 발동. 비워두면 조건 없음."));
+
+        EditorGUILayout.Space(8);
+
         // ── 컷씬 후 플레이어 위치 ───────────────────────────────────
         EditorGUILayout.LabelField("컷씬 종료 후 플레이어 위치", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(_overrideSpawn, new GUIContent("위치 변경 사용"));
         if (_overrideSpawn.boolValue)
             EditorGUILayout.PropertyField(_spawnPoint, new GUIContent("시작 위치 (씬의 빈 오브젝트)"));
+
+        EditorGUILayout.Space(8);
+
+        // ── 컷씬 종료 후 처리 ───────────────────────────────────────
+        EditorGUILayout.LabelField("컷씬 종료 후 처리", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(_deactivateOnEnd, new GUIContent("비활성화할 오브젝트들", "컷씬이 끝나면 꺼질 오브젝트 (NPC 등)."), true);
+        EditorGUILayout.PropertyField(_meetFlag, new GUIContent("등록할 플래그", "CheckpointManager에 저장할 플래그 이름. 비워두면 생략."));
 
         serializedObject.ApplyModifiedProperties();
     }

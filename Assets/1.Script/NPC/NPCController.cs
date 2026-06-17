@@ -78,7 +78,13 @@ namespace ShadowSeller.Core
 
         private void Start()
         {
-            // Guard 초기 시선 방향: 첫 순찰 포인트 방향으로 설정
+            // SO에 설정된 초기 시선 방향 적용 (순찰 포인트가 있으면 덮어씀)
+            if (data != null)
+            {
+                float rad = data.initialFacingDeg * Mathf.Deg2Rad;
+                _facingDir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+            }
+
             if (patrolPoints != null && patrolPoints.Length > 0)
             {
                 var dir = (Vector2)patrolPoints[0].position - (Vector2)transform.position;
@@ -614,14 +620,25 @@ namespace ShadowSeller.Core
                 _                   => new Color(1f, 1f, 1f, 0.4f),
             };
 
+            // 에디터에서는 SO의 initialFacingDeg로 방향 계산, 플레이 중에는 런타임 방향 사용
+            Vector2 gizmoDir = Application.isPlaying
+                ? _facingDir
+                : DegToDir(data.initialFacingDeg);
+
             float half  = data.viewAngle * 0.5f;
-            var   left  = (Vector3)(RotateVec(_facingDir,  half) * data.viewRange);
-            var   right = (Vector3)(RotateVec(_facingDir, -half) * data.viewRange);
-            var   fwd   = (Vector3)(_facingDir * data.viewRange);
+            var   left  = (Vector3)(RotateVec(gizmoDir,  half) * data.viewRange);
+            var   right = (Vector3)(RotateVec(gizmoDir, -half) * data.viewRange);
+            var   fwd   = (Vector3)(gizmoDir * data.viewRange);
 
             Gizmos.DrawRay(transform.position, left);
             Gizmos.DrawRay(transform.position, right);
             Gizmos.DrawRay(transform.position, fwd);
+        }
+
+        private static Vector2 DegToDir(float deg)
+        {
+            float rad = deg * Mathf.Deg2Rad;
+            return new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
         }
 
         private static Vector2 RotateVec(Vector2 v, float deg)

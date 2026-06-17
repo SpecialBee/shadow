@@ -80,6 +80,16 @@ namespace ShadowSeller.Core
         [Header("사운드 스텝용 AudioSource (비워두면 PlayClipAtPoint 사용)")]
         [SerializeField] private AudioSource sfxSource;
 
+        [Header("HUD 표시 설정")]
+        [Tooltip("이 인덱스 이상의 챕터 진입 시 hudRoot를 활성화합니다 (0부터 시작)")]
+        [SerializeField] private int hudShowFromChapter = 999;
+        [Tooltip("창고 챕터부터 보여줄 HUD 루트 GameObject")]
+        [SerializeField] private GameObject hudRoot;
+
+        [Header("디버그 — 테스트 시작 챕터")]
+        [Tooltip("0 = 처음부터, 그 외 = 해당 챕터 인덱스부터 시작 (빌드 시 반드시 0으로 되돌릴 것)")]
+        [SerializeField] private int debugStartChapter = 0;
+
         // ── 런타임 ────────────────────────────────────────────────────────────
         private int              _currentChapter = -1;
         private bool             _transitioning  = false;
@@ -108,7 +118,7 @@ namespace ShadowSeller.Core
             if (fadeImage != null) fadeImage.gameObject.SetActive(true);
 
             if (chapters != null && chapters.Length > 0)
-                StartCoroutine(EnterChapter(0));
+                StartCoroutine(EnterChapter(Mathf.Clamp(debugStartChapter, 0, chapters.Length - 1)));
             else
                 Debug.LogError("[PrologueDirector] chapters 배열이 비어 있습니다.");
         }
@@ -137,6 +147,8 @@ namespace ShadowSeller.Core
             yield return StartCoroutine(DoFade(1f, 0f, chapter.fadeDuration, easeOut: true));
 
             yield return StartCoroutine(RunSteps(chapter.introSteps));
+
+            ApplyHUDForChapter(index);
 
             if (chapter.autoAdvance)
                 yield return StartCoroutine(TransitionToNext());
@@ -184,6 +196,8 @@ namespace ShadowSeller.Core
             yield return StartCoroutine(DoFade(1f, 0f, chapter.fadeDuration, easeOut: true));
 
             yield return StartCoroutine(RunSteps(chapter.introSteps));
+
+            ApplyHUDForChapter(nextIndex);
 
             if (chapter.autoAdvance)
                 yield return StartCoroutine(TransitionToNext());
@@ -256,6 +270,27 @@ namespace ShadowSeller.Core
             bool done = false;
             DialogueSystem.Instance.StartDialogue(data, () => done = true);
             yield return new WaitUntil(() => done);
+        }
+
+        private void ApplyHUDForChapter(int index)
+        {
+            if (hudRoot == null) return;
+            bool shouldShow = index >= hudShowFromChapter;
+
+            // CanvasGroup이 있으면 SetActive 대신 alpha로 숨김 처리
+            // → HUDPanel 항상 active 유지 → Awake 정상 실행 → 싱글톤 초기화됨
+            var cg = hudRoot.GetComponent<CanvasGroup>();
+            if (cg != null)
+            {
+                cg.alpha          = shouldShow ? 1f : 0f;
+                cg.interactable   = shouldShow;
+                cg.blocksRaycasts = shouldShow;
+            }
+            else
+            {
+                if (hudRoot.activeSelf != shouldShow)
+                    hudRoot.SetActive(shouldShow);
+            }
         }
 
         private void ApplyCameraForChapter(ChapterData chapter)

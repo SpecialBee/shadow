@@ -18,6 +18,16 @@ namespace ShadowSeller.Core
         [SerializeField] private bool      overridePlayerSpawn = false;
         [SerializeField] private Transform spawnPoint;
 
+        [Header("발동 조건")]
+        [Tooltip("이 플래그가 등록되어 있어야 트리거 발동. 비워두면 조건 없음.")]
+        [SerializeField] private string requiredMeetFlag;
+
+        [Header("컷씬 종료 후 처리")]
+        [Tooltip("컷씬이 끝나면 비활성화할 오브젝트들 (NPC 등).")]
+        [SerializeField] private GameObject[] deactivateOnEnd;
+        [Tooltip("CheckpointManager에 등록할 플래그 이름. 비워두면 생략.")]
+        [SerializeField] private string meetFlag;
+
         private bool _fired;
 
         private void Update()
@@ -51,6 +61,11 @@ namespace ShadowSeller.Core
         private void Fire()
         {
             if (_fired && oneShot) return;
+
+            if (!string.IsNullOrEmpty(requiredMeetFlag) &&
+                (CheckpointManager.Instance == null || !CheckpointManager.Instance.IsCollected(requiredMeetFlag)))
+                return;
+
             _fired = true;
 
             var director = CutsceneDirector.Instance;
@@ -59,7 +74,18 @@ namespace ShadowSeller.Core
                 Debug.LogWarning("[CutsceneTrigger] CutsceneDirector가 씬에 없습니다.");
                 return;
             }
-            director.Play(steps, overridePlayerSpawn, spawnPoint);
+
+            director.Play(steps, overridePlayerSpawn, spawnPoint, OnCutsceneEnd);
+        }
+
+        private void OnCutsceneEnd()
+        {
+            if (deactivateOnEnd != null)
+                foreach (var go in deactivateOnEnd)
+                    if (go != null) go.SetActive(false);
+
+            if (!string.IsNullOrEmpty(meetFlag))
+                CheckpointManager.Instance?.RegisterCollected(meetFlag);
         }
 
         private void OnDrawGizmos()
