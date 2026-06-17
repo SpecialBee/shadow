@@ -24,9 +24,6 @@ MonoBehaviour:
     m_path: Assets/4.Scenes/MainMenu.unity
     m_guid: 3aaa9ef8354c86e46abce40ada24d088
   - m_enabled: 1
-    m_path: Assets/4.Scenes/Prologue_test.unity
-    m_guid: dfe6645039cd754469f015e4d144f8a0
-  - m_enabled: 1
     m_path: Assets/4.Scenes/Stage1_Real.unity
     m_guid: b978f17a577454f4cbaea5f670f9d48e
   - m_enabled: 1

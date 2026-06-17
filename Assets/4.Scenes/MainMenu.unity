@@ -2150,6 +2150,9 @@ MonoBehaviour:
   sfxDialogueNext: {fileID: 8300000, guid: 279f84fb2e7d47a498f69d74732598dc, type: 3}
   sfxUIClick: {fileID: 8300000, guid: e06cd93c49f426b4c9dfca27a8c44df9, type: 3}
   sfxCutsceneLetterbox: {fileID: 0}
+  sfxInteractableEnter: {fileID: 8300000, guid: 6bad9b23c223fb842b373631cc943c9b, type: 3}
+  sfxQuestActivate: {fileID: 8300000, guid: 8b7eb73ced8e52b42b7808efe2fd8add, type: 3}
+  sfxQuestProgress: {fileID: 8300000, guid: 8b7eb73ced8e52b42b7808efe2fd8add, type: 3}
   defaultBGMVolume: 0.7
   defaultSFXVolume: 1
   fadeDuration: 2.5

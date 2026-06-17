@@ -43,7 +43,7 @@ public class QuestTriggerEditor : Editor
         Label("퀘스트 연결");
         EditorGUILayout.PropertyField(_questData,  C("퀘스트 데이터"));
         EditorGUILayout.PropertyField(_role,       C("역할", "퀘스트 시작 or 진행도 추가"));
-        EditorGUILayout.PropertyField(_mode,       C("발동 방식", "Zone: 콜라이더 진입 / OnExamine: 확인하기 버튼"));
+        EditorGUILayout.PropertyField(_mode,       C("발동 방식", "Zone: 콜라이더 진입 / OnExamine: 확인하기 버튼 / OnTalk: 대화 완료 시"));
         EditorGUILayout.PropertyField(_oneShot,    C("한 번만 발동"));
         Space();
 

@@ -9,15 +9,20 @@ namespace ShadowSeller.Core
     public enum PrologueStepType
     {
         Dialogue,    // DialogueData 순차 재생
-        MovePlayer,  // 플레이어를 moveTarget으로 순간이동
+        MovePlayer,  // 플레이어를 moveTarget으로 걸어서 이동
         PlaySound,   // AudioClip 1회 재생
         Wait,        // waitSeconds만큼 대기
+        CameraShake, // 카메라 흔들기
+        StopBGM,     // BGM 즉시 정지
     }
 
     [Serializable]
     public class PrologueStep
     {
         public PrologueStepType type = PrologueStepType.Dialogue;
+
+        [Tooltip("false로 설정하면 이 스텝을 시작하자마자 다음 스텝도 동시 실행 (사운드 + 나레이션 동시 재생 등에 활용)")]
+        public bool waitForComplete = true;
 
         [Tooltip("type = Dialogue — 재생할 대화 데이터")]
         public DialogueData dialogue;
@@ -31,6 +36,17 @@ namespace ShadowSeller.Core
         [Tooltip("type = Wait — 대기 시간 (초)")]
         [Range(0f, 10f)]
         public float waitSeconds = 0.5f;
+
+        [Tooltip("type = CameraShake — 흔들기 강도 (월드 단위). 0.1~0.3 권장")]
+        [Range(0f, 1f)]
+        public float shakeStrength = 0.15f;
+
+        [Tooltip("type = CameraShake — 흔들기 지속 시간 (초)")]
+        [Range(0f, 3f)]
+        public float shakeDuration = 0.3f;
+
+        [Tooltip("type = StopBGM — true=즉시 정지 / false=페이드 아웃")]
+        public bool stopBGMInstant = true;
     }
 
     [Serializable]
@@ -216,36 +232,86 @@ namespace ShadowSeller.Core
 
             foreach (var step in steps)
             {
-                switch (step.type)
-                {
-                    case PrologueStepType.Dialogue:
-                        yield return StartCoroutine(PlayDialogue(step.dialogue));
-                        break;
+                var co = ExecuteStep(step);
+                if (co == null) continue;
 
-                    case PrologueStepType.MovePlayer:
-                        if (_player != null && step.moveTarget != null)
-                        {
-                            bool arrived = false;
-                            _player.WalkTo(step.moveTarget.position, () => arrived = true);
-                            yield return new WaitUntil(() => arrived);
-                        }
-                        break;
-
-                    case PrologueStepType.PlaySound:
-                        if (step.sound != null)
-                        {
-                            if (sfxSource != null)
-                                sfxSource.PlayOneShot(step.sound);
-                            else
-                                AudioSource.PlayClipAtPoint(step.sound, Camera.main.transform.position);
-                        }
-                        break;
-
-                    case PrologueStepType.Wait:
-                        yield return new WaitForSeconds(step.waitSeconds);
-                        break;
-                }
+                if (step.waitForComplete)
+                    yield return StartCoroutine(co);
+                else
+                    StartCoroutine(co); // 다음 스텝과 동시 실행
             }
+        }
+
+        private IEnumerator ExecuteStep(PrologueStep step)
+        {
+            switch (step.type)
+            {
+                case PrologueStepType.Dialogue:
+                    if (step.dialogue != null)
+                        yield return StartCoroutine(PlayDialogue(step.dialogue));
+                    break;
+
+                case PrologueStepType.MovePlayer:
+                    if (_player != null && step.moveTarget != null)
+                    {
+                        bool arrived = false;
+                        _player.WalkTo(step.moveTarget.position, () => arrived = true);
+                        yield return new WaitUntil(() => arrived);
+                    }
+                    break;
+
+                case PrologueStepType.PlaySound:
+                    if (step.sound != null)
+                    {
+                        if (sfxSource != null)
+                            sfxSource.PlayOneShot(step.sound);
+                        else
+                            AudioSource.PlayClipAtPoint(step.sound, Camera.main.transform.position);
+                    }
+                    break;
+
+                case PrologueStepType.Wait:
+                    yield return new WaitForSeconds(step.waitSeconds);
+                    break;
+
+                case PrologueStepType.CameraShake:
+                    yield return StartCoroutine(ShakeCamera(step.shakeStrength, step.shakeDuration));
+                    break;
+
+                case PrologueStepType.StopBGM:
+                    if (step.stopBGMInstant)
+                        AudioManager.Instance?.StopBGMInstant();
+                    else
+                        AudioManager.Instance?.StopBGM();
+                    break;
+            }
+        }
+
+        private IEnumerator ShakeCamera(float strength, float duration)
+        {
+            if (Camera.main == null) yield break;
+            var cam = Camera.main.transform;
+
+            bool wasFollowing = _cameraFollow != null && _cameraFollow.enabled;
+            if (wasFollowing) _cameraFollow.enabled = false;
+
+            var origin  = cam.position;
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float t = 1f - Mathf.Clamp01(elapsed / duration); // 점점 약해짐
+                float s = strength * t;
+                cam.position = new Vector3(
+                    origin.x + (UnityEngine.Random.value * 2f - 1f) * s,
+                    origin.y + (UnityEngine.Random.value * 2f - 1f) * s,
+                    origin.z);
+                yield return null;
+            }
+            cam.position = origin;
+
+            if (wasFollowing) _cameraFollow.enabled = true;
         }
 
         // ── 유틸 ──────────────────────────────────────────────────────────────

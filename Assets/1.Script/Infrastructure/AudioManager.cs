@@ -11,7 +11,8 @@ namespace ShadowSeller.Core
         DoorOpen, DoorClose, LightOn, LightOff, ObjectSlide,
         NpcSuspicious, NpcAlert, NpcSearch, NpcArrest,
         CheckpointSave, AlertLevelUp, SuspicionSpike,
-        DialogueNext, UIClick, CutsceneLetterbox
+        DialogueNext, UIClick, CutsceneLetterbox,
+        InteractableEnter, QuestActivate, QuestProgress
     }
 
     // BGM + SFX 통합 관리 싱글턴. DontDestroyOnLoad.
@@ -56,6 +57,9 @@ namespace ShadowSeller.Core
         [SerializeField] private AudioClip sfxDialogueNext;
         [SerializeField] private AudioClip sfxUIClick;
         [SerializeField] private AudioClip sfxCutsceneLetterbox;
+        [SerializeField] private AudioClip sfxInteractableEnter;
+        [SerializeField] private AudioClip sfxQuestActivate;
+        [SerializeField] private AudioClip sfxQuestProgress;
 
         [Header("기본 볼륨")]
         [Range(0f, 1f)] [SerializeField] private float defaultBGMVolume = 0.7f;
@@ -157,6 +161,14 @@ namespace ShadowSeller.Core
             _fadeCoroutine = StartCoroutine(FadeBGM(null));
         }
 
+        public void StopBGMInstant()
+        {
+            _currentTrack = BGMTrack.None;
+            if (_fadeCoroutine != null) { StopCoroutine(_fadeCoroutine); _fadeCoroutine = null; }
+            _bgmSource.Stop();
+            _bgmSource.volume = _bgmTargetVol;
+        }
+
         private IEnumerator FadeBGM(AudioClip newClip)
         {
             float half = fadeDuration * 0.5f;
@@ -233,9 +245,12 @@ namespace ShadowSeller.Core
             SFXClip.AlertLevelUp      => sfxAlertLevelUp,
             SFXClip.SuspicionSpike    => sfxSuspicionSpike,
             SFXClip.DialogueNext      => sfxDialogueNext,
-            SFXClip.UIClick           => sfxUIClick,
-            SFXClip.CutsceneLetterbox => sfxCutsceneLetterbox,
-            _                         => null,
+            SFXClip.UIClick            => sfxUIClick,
+            SFXClip.CutsceneLetterbox  => sfxCutsceneLetterbox,
+            SFXClip.InteractableEnter  => sfxInteractableEnter,
+            SFXClip.QuestActivate      => sfxQuestActivate,
+            SFXClip.QuestProgress      => sfxQuestProgress,
+            _                          => null,
         };
     }
 }

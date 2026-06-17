@@ -38,6 +38,7 @@ namespace ShadowSeller.Core
 
             _states[data.questId] = new QuestState { isActive = true };
             OnQuestActivated?.Invoke(data);
+            AudioManager.Instance?.PlaySFX(SFXClip.QuestActivate);
         }
 
         public void AddProgress(QuestData data)
@@ -48,6 +49,7 @@ namespace ShadowSeller.Core
             s.progress++;
             _states[data.questId] = s;
             OnQuestProgress?.Invoke(data, s.progress);
+            AudioManager.Instance?.PlaySFX(SFXClip.QuestProgress);
 
             if (s.progress >= data.totalCount)
             {

@@ -180,7 +180,10 @@ namespace ShadowSeller.Core
             _nearbyPlayer = nearby ? _player : null;
 
             if (nearby)
+            {
                 s_nearby.Add(this);
+                AudioManager.Instance?.PlaySFX(SFXClip.InteractableEnter);
+            }
             else
             {
                 s_nearby.Remove(this);
@@ -595,6 +598,14 @@ namespace ShadowSeller.Core
                     if (giveItemOnce)
                         CheckpointManager.Instance?.RegisterCollected(rewardID);
                 };
+            }
+
+            // 대화 완료 시 QuestTrigger(OnTalk) 발동
+            var qt = GetComponent<QuestTrigger>();
+            if (qt != null && qt.Mode == QuestTrigger.TriggerMode.OnTalk)
+            {
+                var prev = onComplete;
+                onComplete = () => { prev?.Invoke(); qt.Fire(); };
             }
 
             if (npcDialogue != null)

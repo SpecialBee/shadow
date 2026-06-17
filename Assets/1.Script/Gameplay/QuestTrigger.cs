@@ -5,7 +5,9 @@ namespace ShadowSeller.Core
     public class QuestTrigger : MonoBehaviour
     {
         public enum TriggerRole { ActivateQuest, AddProgress }
-        public enum TriggerMode { Zone, OnExamine }
+        public enum TriggerMode { Zone, OnExamine, OnTalk }
+
+        public TriggerMode Mode => mode;
 
         [Header("퀘스트 연결")]
         [SerializeField] private QuestData   questData;
