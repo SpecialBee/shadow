@@ -1647,8 +1647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -96.88, y: 53.96}
-  m_SizeDelta: {x: -1100.16, y: 180}
+  m_AnchoredPosition: {x: -7.739, y: 53.95999}
+  m_SizeDelta: {x: -534.5001, y: 180}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &245988796
 GameObject:
@@ -16547,7 +16547,7 @@ MonoBehaviour:
   sfxSource: {fileID: 0}
   hudShowFromChapter: 5
   hudRoot: {fileID: 1437077778}
-  debugStartChapter: 3
+  debugStartChapter: 0
 --- !u!4 &1115034596
 Transform:
   m_ObjectHideFlags: 0
@@ -24888,6 +24888,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 0.35315442, g: 1, b: 0, a: 1}
   highlightAlpha: 1
   approachRadius: 1
@@ -41986,6 +41990,10 @@ MonoBehaviour:
   canExamine: 0
   examineSprite: {fileID: 0}
   examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
   highlightColor: {r: 0.12878746, g: 1, b: 0, a: 1}
   highlightAlpha: 1
   approachRadius: 1

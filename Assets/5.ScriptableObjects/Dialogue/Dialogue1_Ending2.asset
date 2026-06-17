@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.DialogueData
   lines:
   - speakerName: 
-    text: "\uBA54\uC778 \uD640\uC5D4 \uC0AC\uB78C\uC774 \uAC70\uC758 \uC5C6\uC744
-      \uAC70\uC694."
+    text: "(\uBA54\uC778 \uD640\uC5D4 \uC0AC\uB78C\uC774 \uAC70\uC758 \uC5C6\uC744
+      \uAC70\uC694.)"
   - speakerName: 
     text: "\uC0AC\uB78C\uB4E4\uC758 \uBAA9\uC18C\uB9AC\uAC00 \uB4E4\uB824\uC628\uB2E4."
   - speakerName: 
