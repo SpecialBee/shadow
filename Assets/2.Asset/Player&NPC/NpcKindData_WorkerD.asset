@@ -19,8 +19,8 @@ MonoBehaviour:
   suspicionDecayRate: 0
   alertThreshold: 0
   chaseThreshold: 0
-  patrolSpeed: 1
-  chaseSpeed: 0
+  patrolSpeed: 6
+  chaseSpeed: 3
   arrestTime: 0
   sightLoseDelay: 0
   searchDuration: 0
