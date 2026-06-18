@@ -17,7 +17,7 @@ namespace ShadowSeller.Core
 
     public enum NpcType  { Guard, Civilian }
 
-    public enum GameOverReason { SuspicionFull, Arrested }
+    public enum GameOverReason { SuspicionFull, Arrested, TimeOver }
 
     public enum NpcState { Idle, Patrol, Suspicious, Alert, Chase, Search }
 }

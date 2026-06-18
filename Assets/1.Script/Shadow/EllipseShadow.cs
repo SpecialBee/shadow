@@ -95,7 +95,10 @@ namespace ShadowSeller.Core
             {
                 float dist  = Vector2.Distance(new Vector2(x + 0.5f, y + 0.5f), Vector2.one * center);
                 float t     = Mathf.Clamp01(dist / center);
-                float alpha = 1f - t * t; // 역이차 — 중심 넓게 유지, 가장자리만 부드럽게
+                float alpha = 1f - t * t;
+                // 가장자리 직전(t≈0.85)에서 림(rim) 테두리 추가
+                float rim   = Mathf.Exp(-Mathf.Pow((t - 0.85f) / 0.07f, 2f)) * 0.45f;
+                alpha       = Mathf.Clamp01(alpha + rim);
                 tex.SetPixel(x, y, new Color(1f, 1f, 1f, alpha));
             }
             tex.Apply();

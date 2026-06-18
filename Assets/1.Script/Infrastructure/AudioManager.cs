@@ -12,7 +12,8 @@ namespace ShadowSeller.Core
         NpcSuspicious, NpcAlert, NpcSearch, NpcArrest,
         CheckpointSave, AlertLevelUp, SuspicionSpike,
         DialogueNext, UIClick, CutsceneLetterbox,
-        InteractableEnter, QuestActivate, QuestProgress
+        InteractableEnter, QuestActivate, QuestProgress,
+        TutorialOpen
     }
 
     // BGM + SFX 통합 관리 싱글턴. DontDestroyOnLoad.
@@ -60,6 +61,7 @@ namespace ShadowSeller.Core
         [SerializeField] private AudioClip sfxInteractableEnter;
         [SerializeField] private AudioClip sfxQuestActivate;
         [SerializeField] private AudioClip sfxQuestProgress;
+        [SerializeField] private AudioClip sfxTutorialOpen;
 
         [Header("기본 볼륨")]
         [Range(0f, 1f)] [SerializeField] private float defaultBGMVolume = 0.7f;
@@ -250,6 +252,7 @@ namespace ShadowSeller.Core
             SFXClip.InteractableEnter  => sfxInteractableEnter,
             SFXClip.QuestActivate      => sfxQuestActivate,
             SFXClip.QuestProgress      => sfxQuestProgress,
+            SFXClip.TutorialOpen       => sfxTutorialOpen,
             _                          => null,
         };
     }

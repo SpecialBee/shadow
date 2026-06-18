@@ -330,6 +330,10 @@ namespace ShadowSeller.Core
 
         // ── 팝업 열기 / 닫기 ──────────────────────────────────────────────────
 
+        // MinimapFog가 참조하는 프로퍼티
+        public Camera        MinimapCam   => _minimapCam;
+        public RectTransform MinimapPanel => minimapPanel;
+
         public void OpenFullMap()
         {
             if (_fullMapOverlay == null) return;

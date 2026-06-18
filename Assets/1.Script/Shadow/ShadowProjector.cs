@@ -26,11 +26,16 @@ namespace ShadowSeller.Core
         [SerializeField] private float shadowAlpha      = 0.65f;
         [SerializeField] private bool  createHidingZone = true;
 
+        [Header("그림자 색상")]
+        [SerializeField] private Color normalShadowColor = new Color(0.02f, 0f, 0.08f);
+        [SerializeField] private Color hidingShadowColor  = new Color(0.05f, 0.1f, 0.4f);
+
         private Transform      _shadowTransform;
         private SpriteRenderer _shadowSR;
         private EllipseShadow  _hidingZone;
         private LightSource[]  _lights = System.Array.Empty<LightSource>();
         private InteractableObject _bring;
+        private Transform      _playerTransform;
 
         // 스프라이트 로컬 기준값 (Awake 시 한 번만 계산)
         private float _localHalfWidth;   // 스프라이트 가로 반경 (로컬)
@@ -63,7 +68,7 @@ namespace ShadowSeller.Core
 
             _shadowSR                = go.AddComponent<SpriteRenderer>();
             _shadowSR.sprite         = EllipseShadow.BuildGradientSprite(64, 64f);
-            _shadowSR.color          = new Color(0f, 0f, 0f, shadowAlpha);
+            _shadowSR.color          = new Color(normalShadowColor.r, normalShadowColor.g, normalShadowColor.b, shadowAlpha);
             _shadowSR.sortingLayerID = sr.sortingLayerID;
             _shadowSR.sortingOrder   = sr.sortingOrder - 1;
             var shader = Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default");
@@ -80,6 +85,8 @@ namespace ShadowSeller.Core
         {
             _lights = Object.FindObjectsByType<LightSource>(FindObjectsInactive.Exclude);
             _bring  = GetComponent<InteractableObject>();
+            var player = Object.FindAnyObjectByType<PlayerController>();
+            if (player != null) _playerTransform = player.transform;
         }
 
         private void LateUpdate()
@@ -140,6 +147,15 @@ namespace ShadowSeller.Core
             // 판정 반경 = 타원 반경(a, b)과 일치 = lossyScale * 0.5
             if (_hidingZone != null)
                 _hidingZone.detectionRadiusMultiplier = 0.5f * detectionScale;
+
+            // 플레이어 은신 시 그림자 색상 변화
+            if (_hidingZone != null && _playerTransform != null)
+            {
+                bool  hiding   = _hidingZone.ContainsPoint(_playerTransform.position);
+                Color col      = hiding ? hidingShadowColor : normalShadowColor;
+                float colAlpha = hiding ? Mathf.Min(shadowAlpha + 0.18f, 1f) : shadowAlpha;
+                _shadowSR.color = new Color(col.r, col.g, col.b, colAlpha);
+            }
         }
 
         public float CurrentAlpha => _shadowSR != null ? _shadowSR.color.a : 0f;
@@ -147,7 +163,7 @@ namespace ShadowSeller.Core
         public void SetAlpha(float alpha)
         {
             if (_shadowSR != null)
-                _shadowSR.color = new Color(0f, 0f, 0f, Mathf.Clamp01(alpha));
+                _shadowSR.color = new Color(normalShadowColor.r, normalShadowColor.g, normalShadowColor.b, Mathf.Clamp01(alpha));
         }
 
         private void OnDestroy()

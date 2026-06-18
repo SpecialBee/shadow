@@ -92,7 +92,12 @@ namespace ShadowSeller.Core
             }
         }
 
-        private void OnDestroy()
+        private void OnEnable()
+        {
+            GameLoopController.Instance?.Register(this);
+        }
+
+        private void OnDisable()
         {
             if (npcType == NpcType.Guard)
             {
@@ -100,8 +105,16 @@ namespace ShadowSeller.Core
                 _tracker?.UnregisterSoftThreat(this);
             }
             if (npcType == NpcType.Civilian && _wasSeeingPlayer)
+            {
                 _tracker?.UnregisterCivilianWatch();
+                _wasSeeingPlayer = false;
+            }
             GameLoopController.Instance?.Unregister(this);
+        }
+
+        private void OnDestroy()
+        {
+            // OnDisable이 OnDestroy 직전에 실행되므로 Unregister는 이미 처리됨
         }
 
         public void Tick()
@@ -442,7 +455,7 @@ namespace ShadowSeller.Core
 
             Vector2 dir = AvoidWalls(desired.normalized);
 
-            var next = (Vector2)transform.position + dir * speed * Time.deltaTime;
+            var next = (Vector2)transform.position + dir * speed * Time.fixedDeltaTime;
             if (_rb != null) _rb.MovePosition(next);
             else              transform.position = next;
 

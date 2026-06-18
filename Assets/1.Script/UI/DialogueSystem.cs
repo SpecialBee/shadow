@@ -53,7 +53,7 @@ namespace ShadowSeller.Core
         public void StartDialogue(DialogueData data, System.Action onComplete = null)
         {
             if (data == null || data.lines.Length == 0) { onComplete?.Invoke(); return; }
-            if (IsPlaying) { onComplete?.Invoke(); return; }
+            if (IsPlaying) return;
 
             _lines      = data.lines;
             _index      = 0;

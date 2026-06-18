@@ -21,6 +21,8 @@ namespace ShadowSeller.Core
         [Header("발동 조건")]
         [Tooltip("이 플래그가 등록되어 있어야 트리거 발동. 비워두면 조건 없음.")]
         [SerializeField] private string requiredMeetFlag;
+        [Tooltip("인벤토리에 이 아이템이 있으면 트리거 발동 안 함. 비워두면 조건 없음.")]
+        [SerializeField] private string blockedByItemName;
 
         [Header("컷씬 종료 후 처리")]
         [Tooltip("컷씬이 끝나면 비활성화할 오브젝트들 (NPC 등).")]
@@ -64,6 +66,10 @@ namespace ShadowSeller.Core
 
             if (!string.IsNullOrEmpty(requiredMeetFlag) &&
                 (CheckpointManager.Instance == null || !CheckpointManager.Instance.IsCollected(requiredMeetFlag)))
+                return;
+
+            if (!string.IsNullOrEmpty(blockedByItemName) &&
+                InventoryManager.Instance != null && InventoryManager.Instance.HasItem(blockedByItemName))
                 return;
 
             _fired = true;

@@ -8,13 +8,14 @@ namespace ShadowSeller.Core
 {
     public enum PrologueStepType
     {
-        Dialogue,    // DialogueData 순차 재생
-        MovePlayer,  // 플레이어를 moveTarget으로 걸어서 이동
-        PlaySound,   // AudioClip 1회 재생
-        Wait,        // waitSeconds만큼 대기
-        CameraShake, // 카메라 흔들기
-        StopBGM,     // BGM 즉시 정지
-        FadeShadow,  // 플레이어 그림자 페이드 아웃
+        Dialogue,     // DialogueData 순차 재생
+        MovePlayer,   // 플레이어를 moveTarget으로 걸어서 이동
+        PlaySound,    // AudioClip 1회 재생
+        Wait,         // waitSeconds만큼 대기
+        CameraShake,  // 카메라 흔들기
+        StopBGM,      // BGM 즉시 정지
+        FadeShadow,   // 플레이어 그림자 페이드 아웃
+        ShowTutorial, // 조작법 팝업 표시 — 확인 누를 때까지 대기
     }
 
     [Serializable]
@@ -55,6 +56,18 @@ namespace ShadowSeller.Core
         [Tooltip("type = FadeShadow — 그림자가 사라지는 데 걸리는 시간 (초)")]
         [Range(0.5f, 5f)]
         public float shadowFadeDuration = 2.5f;
+
+        [Tooltip("type = ShowTutorial — 띄울 패널 오브젝트. 직접 연결하면 해당 패널 사용, 비워두면 TutorialPopup.Instance 사용")]
+        public ShadowSeller.UI.TutorialPopup targetPopup;
+
+        [Tooltip("type = ShowTutorial — 팝업 제목")]
+        public string tutorialTitle = "조작법 안내";
+
+        [Tooltip("type = ShowTutorial — 표시할 항목들 (키 이름 + 설명). contentText가 연결된 패널에서 사용")]
+        public TutorialEntry[] tutorialEntries;
+
+        [Tooltip("type = ShowTutorial — 표시할 이미지. contentImage가 연결된 패널에서 사용. 설정 시 텍스트 항목 대신 이 이미지를 표시")]
+        public Sprite tutorialSprite;
     }
 
     [Serializable]
@@ -300,6 +313,21 @@ namespace ShadowSeller.Core
                         if (sr != null)
                             yield return StartCoroutine(FadeSpriteOut(sr, step.shadowFadeDuration));
                     }
+                    break;
+
+                case PrologueStepType.ShowTutorial:
+                    var tutPopup = step.targetPopup != null
+                        ? step.targetPopup
+                        : ShadowSeller.UI.TutorialPopup.Instance;
+                    bool tutDone = false;
+                    if (tutPopup != null)
+                    {
+                        if (step.tutorialSprite != null)
+                            tutPopup.Show(step.tutorialSprite, () => tutDone = true);
+                        else
+                            tutPopup.Show(step.tutorialTitle, step.tutorialEntries, () => tutDone = true);
+                    }
+                    yield return new WaitUntil(() => tutDone);
                     break;
             }
         }

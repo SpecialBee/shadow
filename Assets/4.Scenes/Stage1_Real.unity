@@ -563,6 +563,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &22751004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -731,7 +733,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -818,6 +820,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6344278, y: 1.9900169}
   m_EdgeRadius: 0
+--- !u!1 &23771019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 181118032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &27494031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1188,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &41372593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1337,6 +1346,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &44223512
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1803,6 +1814,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &53249279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2269,6 +2282,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &66709995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2425,6 +2440,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &69383011
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2668,11 +2685,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2711,8 +2728,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3325,6 +3342,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &121519928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3787,6 +3806,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &138142388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3955,7 +3976,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4264,6 +4285,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &149979967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4617,6 +4640,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &165520771
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4937,6 +4962,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.414433, y: 1.933749}
   m_EdgeRadius: 0
+--- !u!1 &171505108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 2052677001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180037750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,13 +5136,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 181118038}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &181118033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4786572647695213287, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
   m_PrefabInstance: {fileID: 181118032}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &181118035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 181118032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23771019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &181118038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23771019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 181118035}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1001 &182794148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5326,6 +5428,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd: []
   meetFlag: 
 --- !u!1 &192822795
@@ -5479,6 +5582,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &193621114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5517,7 +5622,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5636,8 +5741,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5748,6 +5853,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &204659984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5981,6 +6088,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &210399853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6140,6 +6249,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &210589150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6308,7 +6419,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6621,6 +6732,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &220283673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7083,6 +7196,66 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -31, y: -53, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -30, y: -53, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -31, y: -52, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -30, y: -52, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -31, y: -51, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 14
+      m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -30, y: -51, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 15
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 7, y: -51, z: 0}
     second:
       serializedVersion: 2
@@ -7185,6 +7358,24 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b9f53c50a59c33f4fa7bab1a3920344b, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: f363f8d51b455384c8b9d564118a6a45, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 5c3a8cd3643a1b0408d02cc8ae02bf6b, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 67407741258970248b1f7eff57b564d8, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 38f8c39e59a611b4f9c7a662aa5de828, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 34323c67c61eb314ba057578a8a39437, type: 2}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 52f0d89adebc07a4890c0154e945aab4, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
     m_RefCount: 2
@@ -7216,9 +7407,27 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 1
     m_Data: {fileID: 1243668911, guid: 577888f9a093e794584bfdcecb0bbc82, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: -1248363166, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 904810769, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: -1410577631, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 1280744042, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: 1697706118, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 1
+    m_Data: {fileID: -48898453, guid: 2fe05a65a867d184ba7e6fb33f8255e8, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 22
+    m_RefCount: 28
     m_Data:
       e00: 1
       e01: 0
@@ -7238,13 +7447,13 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 22
+    m_RefCount: 28
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -17, y: -89, z: 0}
-  m_Size: {x: 51, y: 89, z: 1}
+  m_Origin: {x: -31, y: -89, z: 0}
+  m_Size: {x: 65, y: 89, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -7588,6 +7797,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &248426443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8322,6 +8533,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &267543446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8490,7 +8703,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8706,6 +8919,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &269162556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8893,6 +9108,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &270026759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9144,6 +9361,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &276149862
 GameObject:
   m_ObjectHideFlags: 0
@@ -9354,6 +9573,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &285060284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9522,7 +9743,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9803,6 +10024,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &297350501
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9841,7 +10064,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.1, y: 11.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9960,8 +10183,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3037687429117188188, guid: ceef1ffab821acb4d9f8b36a1504b2cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10446,6 +10669,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &309435147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10484,7 +10709,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.67, y: 11.62}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10603,8 +10828,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1440209194674927380, guid: 7e354f6a1ee37384fa77e0a2eee7f459, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10813,11 +11038,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10856,8 +11081,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -11003,6 +11228,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &318251693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11517,6 +11744,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &361298419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11736,6 +11965,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &365650456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11774,7 +12005,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11858,8 +12089,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0.9622642, g: 0.047568474, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12664,6 +12895,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &391474799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12820,6 +13053,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &399421159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12976,6 +13211,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &401850566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13215,6 +13452,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &405700780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13253,7 +13492,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.67, y: 11.62}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -13382,8 +13621,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1440209194674927380, guid: 7e354f6a1ee37384fa77e0a2eee7f459, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13466,7 +13705,7 @@ MonoBehaviour:
   examineGiveItemOnce: 0
   highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
   highlightAlpha: 1
-  approachRadius: 4
+  approachRadius: 2
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -13522,6 +13761,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &405767111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13886,6 +14127,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &414511795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14217,6 +14460,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &420048895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14407,6 +14652,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &426602629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14859,6 +15106,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &434960508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15174,6 +15423,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &436867954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15212,7 +15463,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.1, y: 11.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15331,8 +15582,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3037687429117188188, guid: ceef1ffab821acb4d9f8b36a1504b2cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15470,6 +15721,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &442495970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15575,6 +15828,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &443093648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 2015380994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &448614749
 GameObject:
   m_ObjectHideFlags: 0
@@ -15704,6 +15962,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &458080067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15967,6 +16227,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!58 &467726336
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16553,6 +16815,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &485288174
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16591,7 +16855,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16720,8 +16984,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16766,6 +17030,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!58 &486238157
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17102,6 +17368,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &498143697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17944,6 +18212,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &521345839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18112,7 +18382,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18172,6 +18442,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &525006521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18458,6 +18730,7 @@ GameObject:
   - component: {fileID: 527515128}
   - component: {fileID: 527515127}
   - component: {fileID: 527515126}
+  - component: {fileID: 527515130}
   m_Layer: 0
   m_Name: HUDPanel
   m_TagString: Untagged
@@ -18564,6 +18837,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527515124}
   m_CullTransparentMesh: 1
+--- !u!114 &527515130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527515124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908a7b69185474040a4a00c221ef6112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.TimerUI
+  anchoredPos: {x: 0, y: -60}
+  panelSize: {x: 160, y: 48}
+  fadeDuration: 0.5
+  colorNormal: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+  colorWarning: {r: 1, g: 0.85, b: 0.1, a: 1}
+  colorCritical: {r: 1, g: 0.2, b: 0.2, a: 1}
 --- !u!1 &536719537
 GameObject:
   m_ObjectHideFlags: 0
@@ -18987,6 +19278,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &541009493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19486,11 +19779,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -19529,8 +19822,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -19941,6 +20234,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &574425272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20109,7 +20404,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20461,6 +20756,192 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8765461, y: 1.0028982}
   m_EdgeRadius: 0
+--- !u!1 &585159531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585159535}
+  - component: {fileID: 585159534}
+  - component: {fileID: 585159533}
+  - component: {fileID: 585159532}
+  m_Layer: 0
+  m_Name: "Item_\uC2DC\uACC4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &585159532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585159531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 0
+  canInventory: 1
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources: []
+  itemName: "\uC2DC\uACC4"
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.9, b: 0.3, a: 1}
+  highlightAlpha: 1
+  approachRadius: 1.8
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
+--- !u!58 &585159533
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585159531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 3
+--- !u!212 &585159534
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585159531}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 8581363780399802525, guid: 781df4042e48d3e4a95cc1a37c6aa67e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &585159535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585159531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.46, y: -53.85, z: 0}
+  m_LocalScale: {x: 0.10481022, y: 0.10481022, z: 0.10481022}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586885918
 GameObject:
   m_ObjectHideFlags: 0
@@ -20515,6 +20996,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &586885921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20683,7 +21166,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21071,6 +21554,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &600573393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21602,6 +22087,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &620532462
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21772,6 +22259,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd: []
   meetFlag: 
 --- !u!61 &623062539
@@ -22847,6 +23335,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &640568571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23268,6 +23758,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &669144574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23478,6 +23970,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &674880106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23617,7 +24111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.55}
   m_AnchorMax: {x: 0.9, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 88}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678562419
@@ -23844,6 +24338,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd: []
   meetFlag: 
 --- !u!1 &681239253
@@ -24131,6 +24626,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &688342976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24299,7 +24796,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24596,6 +25093,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &696738196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24814,6 +25313,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &699112180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24970,6 +25471,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &702138865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25106,7 +25609,7 @@ Transform:
   m_GameObject: {fileID: 702765506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.27, y: -55.74, z: 0}
+  m_LocalPosition: {x: 25.41, y: -55.74, z: 0}
   m_LocalScale: {x: 0.15910898, y: 0.17067198, z: 0.21333998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25129,6 +25632,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &702765509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25167,7 +25672,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 6.24, y: 11.85}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -25188,7 +25693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.SpeechBubbleArea
   triggerRadius: 2
-  bubbleText: "\uCC38 \uB9C8\uC74C\uC5D0 \uB4DC\uB294 \uC544\uAC00\uC528\uC778\uB370..."
+  bubbleText: "(\uD6D7,,, \uC2F8\uAD6C\uB824 \uC637\uC774\uB098 \uC785\uACE0 \uB2E4\uB2C8\uB2E4\uB2C8...)"
 --- !u!114 &702765511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25286,8 +25791,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -601870395120069637, guid: 0df2a792342232448a15a2c85cad5eed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -25347,6 +25852,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &711991423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25600,6 +26107,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &720026397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26130,6 +26639,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &730439073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26298,7 +26809,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26358,6 +26869,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &731172885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27065,11 +27578,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -27108,8 +27621,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -27424,6 +27937,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &748136069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27693,6 +28208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757347765}
   - component: {fileID: 757347764}
+  - component: {fileID: 757347766}
   m_Layer: 0
   m_Name: MinimapSystem
   m_TagString: Untagged
@@ -27737,6 +28253,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757347766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757347763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8ce0d4e9443b64aad32154c8842cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.UI.MinimapFog
+  minimapController: {fileID: 0}
+  revealRadius: 5
+  cellSize: 0.5
+  fogResolution: 256
+  fogColor: {r: 0.04, g: 0.04, b: 0.06, a: 0.9}
 --- !u!1 &764193691
 GameObject:
   m_ObjectHideFlags: 0
@@ -27788,6 +28321,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &764193694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28178,6 +28713,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &773725516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28787,6 +29324,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &785428553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29022,6 +29561,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &789654593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29060,7 +29601,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -29165,8 +29706,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29240,6 +29781,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &793970639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29552,6 +30095,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &800540988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29720,7 +30265,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29780,6 +30325,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &800792100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29939,6 +30486,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &807595514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29977,7 +30526,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.1, y: 11.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -30097,8 +30646,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3037687429117188188, guid: ceef1ffab821acb4d9f8b36a1504b2cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -30214,7 +30763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35, y: 0.35}
   m_AnchorMax: {x: 0.65, y: 0.48}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: 309, y: -71}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812330887
@@ -30237,8 +30786,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -30558,7 +31107,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 902280553}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &818746106 stripped
 Transform:
@@ -30619,6 +31171,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &819592216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30657,7 +31211,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -30776,8 +31330,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -30840,6 +31394,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &820348543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31785,6 +32341,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &840610519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31941,6 +32499,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &842210155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32097,6 +32657,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &846018237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32331,6 +32893,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &847877489
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32490,6 +33054,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &852570685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32658,7 +33224,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -32721,6 +33287,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &856336813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33363,8 +33931,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -33563,6 +34131,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &885769899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33801,6 +34371,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &893112505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33839,7 +34411,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.67, y: 11.62}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -33970,8 +34542,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1440209194674927380, guid: 7e354f6a1ee37384fa77e0a2eee7f459, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -34181,6 +34753,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 1402403461}
   requiredMeetFlag: 
+  blockedByItemName: SecondFloorKey
   deactivateOnEnd: []
   meetFlag: 
 --- !u!61 &901744129
@@ -34229,6 +34802,80 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &902280548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 818746105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &902280550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 818746105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902280548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &902280553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902280548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 902280550}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1 &903080677
 GameObject:
   m_ObjectHideFlags: 0
@@ -34280,6 +34927,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &903080680
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34545,6 +35194,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &910076725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34779,6 +35430,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &911989534
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35091,6 +35744,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &928648250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35247,6 +35902,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &928875298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35403,6 +36060,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &929556957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35562,6 +36221,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &932982836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35963,6 +36624,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5242581, y: 2.111312}
   m_EdgeRadius: 0
+--- !u!1 &950835479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 1432078419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950853066
 GameObject:
   m_ObjectHideFlags: 0
@@ -36249,6 +36915,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &958642893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36438,7 +37106,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4295459556478574255, guid: de4b866104ebaa547b87297bfd3d529b, type: 3}
+  m_Sprite: {fileID: 7055178044789989456, guid: 5e9cc24100568f843914abd1157fc655, type: 3}
   m_Color: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -36558,6 +37226,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &961609454
 GameObject:
   m_ObjectHideFlags: 0
@@ -38050,6 +38720,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1012505577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38088,7 +38760,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.1, y: 11.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -38172,8 +38844,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0.9622642, g: 0.047568474, b: 0, a: 1}
+  m_Sprite: {fileID: 3037687429117188188, guid: ceef1ffab821acb4d9f8b36a1504b2cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -38600,6 +39272,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1027469358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38832,6 +39506,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1030946219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39066,6 +39742,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1032108009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61038,6 +61716,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1033404988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -61076,7 +61756,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -61195,8 +61875,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -61518,6 +62198,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &1039734838
 GameObject:
   m_ObjectHideFlags: 0
@@ -61701,7 +62383,7 @@ Transform:
   m_GameObject: {fileID: 1044640697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.22, y: -12.92, z: 0}
+  m_LocalPosition: {x: 4.22, y: -11.865, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61816,6 +62498,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1047356293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -62413,8 +63097,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 12, y: 0}
-  m_SizeDelta: {x: -32, y: -4}
+  m_AnchoredPosition: {x: 43.7, y: 0}
+  m_SizeDelta: {x: 25.0309, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072220265
 MonoBehaviour:
@@ -62436,13 +63120,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uACBD\uACC4 1"
+  m_text: "\uACBD\uACC4\uB808\uBCA8 : 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
-  m_sharedMaterial: {fileID: -6168767152312784534, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
+  m_sharedMaterial: {fileID: 1334049957}
+  m_fontSharedMaterials:
+  - {fileID: 1334049957}
+  m_fontMaterial: {fileID: 1334049957}
+  m_fontMaterials:
+  - {fileID: 1334049957}
   m_fontColor32:
     serializedVersion: 2
     rgba: 4291611852
@@ -62502,7 +63188,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 99.39721, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -62799,6 +63485,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1082777540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63163,6 +63851,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1087923787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63478,8 +64168,8 @@ Transform:
   m_GameObject: {fileID: 1094884808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 33.65, z: 0}
-  m_LocalScale: {x: 0.8984375, y: 5.239375, z: 1}
+  m_LocalPosition: {x: 0.7239, y: 33.65, z: 0}
+  m_LocalScale: {x: 1.9438689, y: 5.239375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 439193718}
@@ -63535,7 +64225,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1792453, g: 0.15803102, b: 0.120906025, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -63655,6 +64345,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1097512890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63823,7 +64515,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -64030,6 +64722,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1101908330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64068,7 +64762,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -64187,8 +64881,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -64344,6 +65038,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!114 &1102840223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64453,6 +65149,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1103110111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64609,6 +65307,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1103633897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64865,6 +65565,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1110110547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65033,7 +65735,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -65093,6 +65795,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1110288911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65453,6 +66157,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1117879411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65491,7 +66197,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.37, y: 11.47}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -65610,8 +66316,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 5251072446506379597, guid: e0f8f12361256d942971e36bc530e37d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -65902,6 +66608,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1127731197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66136,6 +66844,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1128838004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66448,6 +67158,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1144864483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66741,7 +67453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 630, y: 354}
+  m_AnchoredPosition: {x: 960, y: 640}
   m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1156908526
@@ -66920,6 +67632,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1160712816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67120,7 +67834,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200200215}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &1161183025 stripped
 Transform:
@@ -67650,6 +68367,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1184112608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67688,7 +68407,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -67817,8 +68536,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -68256,6 +68975,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198859489}
   m_CullTransparentMesh: 1
+--- !u!1 &1200200210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 1161183024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200200212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 1161183024}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200200210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &1200200215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200200210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 1200200212}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1 &1201007480
 GameObject:
   m_ObjectHideFlags: 0
@@ -68560,6 +69353,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1212814905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68798,7 +69593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.35, y: 0.35}
   m_AnchorMax: {x: 0.65, y: 0.48}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -316, y: -69}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218252285
@@ -68821,8 +69616,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -69072,6 +69867,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1224819330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135194,7 +135991,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.85, b: 0.6, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -135766,6 +136563,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1320421548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136090,6 +136889,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1401782988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1334049957
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DungGeunMo SDF Material (Instance)
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: -5580339143469952525, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutlineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Ambient: 0.5
+    - _Bevel: 0.5
+    - _BevelClamp: 0
+    - _BevelOffset: 0
+    - _BevelRoundness: 0
+    - _BevelWidth: 0
+    - _BumpFace: 0
+    - _BumpOutline: 0
+    - _ColorMask: 15
+    - _CullMode: 0
+    - _Diffuse: 0.5
+    - _FaceDilate: 0
+    - _FaceUVSpeedX: 0
+    - _FaceUVSpeedY: 0
+    - _GlowInner: 0.05
+    - _GlowOffset: 0
+    - _GlowOuter: 0.05
+    - _GlowPower: 0.75
+    - _GradientScale: 6
+    - _LightAngle: 3.1416
+    - _MaskSoftnessX: 0
+    - _MaskSoftnessY: 0
+    - _OutlineSoftness: 0
+    - _OutlineUVSpeedX: 0
+    - _OutlineUVSpeedY: 0
+    - _OutlineWidth: 0
+    - _PerspectiveFilter: 0.875
+    - _Reflectivity: 10
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
+    - _ScaleX: 1
+    - _ScaleY: 1
+    - _ShaderFlags: 0
+    - _Sharpness: 0
+    - _SpecularPower: 2
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _TextureHeight: 4096
+    - _TextureWidth: 4096
+    - _UnderlayDilate: 0
+    - _UnderlayOffsetX: 0
+    - _UnderlayOffsetY: 0
+    - _UnderlaySoftness: 0
+    - _VertexOffsetX: 0
+    - _VertexOffsetY: 0
+    - _WeightBold: 0.75
+    - _WeightNormal: 0
+    m_Colors:
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1334311260
 GameObject:
   m_ObjectHideFlags: 0
@@ -136853,7 +137761,7 @@ Transform:
   m_GameObject: {fileID: 1356281686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.55, y: -55.76, z: 0}
+  m_LocalPosition: {x: 22.06, y: -55.76, z: 0}
   m_LocalScale: {x: 0.15910898, y: 0.17067198, z: 0.21333998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136876,6 +137784,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1356281689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136914,7 +137824,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 5.67, y: 11.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -136935,9 +137845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.SpeechBubbleArea
   triggerRadius: 2
-  bubbleText: "\uB204\uAD70\uAC00 \uAE30\uB2E4\uB9AC\uB098\uBCF4\uAD70. \uBCA0\uB974\uD06C
-    \uACBD\uAED8 \uC5EC\uCB64\uBCF4\uB824 \uD574\uB3C4 \uC774 \uC0AC\uB78C, \uC800
-    \uC0AC\uB78C \uB9CC\uB098\uB290\uB77C \uBC14\uC058\uC2DC\uB2C8..."
+  bubbleText: "\uC5B4\uBA38, \uADF8 \uB4DC\uB808\uC2A4 \uC5B4\uB514 \uAEC0\uAC00\uC694?"
 --- !u!114 &1356281691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137035,8 +137943,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4985599890745668985, guid: 0e624bc320135604baf2b6c5565ba502, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -137096,6 +138004,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1356322136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137512,6 +138422,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1367027440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -137810,6 +138722,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1375606041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138028,6 +138942,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1380280673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138628,11 +139544,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -138671,8 +139587,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -138733,6 +139649,7 @@ Transform:
   - {fileID: 436867952}
   - {fileID: 702765507}
   - {fileID: 1356281687}
+  - {fileID: 1482823463}
   - {fileID: 893112503}
   - {fileID: 241779359}
   - {fileID: 527074660}
@@ -138966,6 +139883,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd: []
   meetFlag: 
 --- !u!1 &1406280332
@@ -139028,7 +139946,9 @@ MonoBehaviour:
   talkBtn: {fileID: 2046736513}
   examineBtn: {fileID: 316942693}
   activeAlpha: 1
-  inactiveAlpha: 0.509
+  inactiveAlpha: 0.416
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  pulseColor: {r: 0.38124967, g: 1, b: 0, a: 1}
 --- !u!114 &1406280335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139350,6 +140270,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1415754223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139518,7 +140440,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139578,6 +140500,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1417821280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139899,11 +140823,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -139942,8 +140866,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -140070,8 +140994,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -20.725983, y: 0}
+  m_SizeDelta: {x: -41.451, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430694402
 MonoBehaviour:
@@ -140206,13 +141130,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1432078425}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &1432078420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4786572647695213287, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
   m_PrefabInstance: {fileID: 1432078419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432078422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 1432078419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950835479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &1432078425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950835479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 1432078422}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1 &1434197533
 GameObject:
   m_ObjectHideFlags: 0
@@ -140555,6 +141551,7 @@ MonoBehaviour:
   sfxInteractableEnter: {fileID: 0}
   sfxQuestActivate: {fileID: 0}
   sfxQuestProgress: {fileID: 0}
+  sfxTutorialOpen: {fileID: 0}
   defaultBGMVolume: 0.7
   defaultSFXVolume: 1
   fadeDuration: 2.5
@@ -141008,6 +142005,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1469718242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -141403,6 +142402,229 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482562802}
   m_CullTransparentMesh: 1
+--- !u!1 &1482823462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482823463}
+  - component: {fileID: 1482823469}
+  - component: {fileID: 1482823468}
+  - component: {fileID: 1482823467}
+  - component: {fileID: 1482823466}
+  - component: {fileID: 1482823465}
+  - component: {fileID: 1482823464}
+  m_Layer: 0
+  m_Name: NPC_Customer_1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1482823463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.61, y: -75.2, z: 0}
+  m_LocalScale: {x: 0.15910898, y: 0.17067198, z: 0.21333998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1401782988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482823464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.ShadowProjector
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
+  shadowAlpha: 0.75
+  createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
+--- !u!61 &1482823465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.7, y: 11.87}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.92, y: 4}
+  m_EdgeRadius: 0
+--- !u!114 &1482823466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5cbd9da449ead4ba53de4020c1fd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.SpeechBubbleArea
+  triggerRadius: 2
+  bubbleText: "\uC369 \uAEBC\uC838\uB77C, \uD558\uB4F1\uD55C \uAC83."
+--- !u!114 &1482823467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a7911b0e7d3594aae68e085fe3e618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.SpeechBubble
+  bubbleSprite: {fileID: 3704988796269433362, guid: c4fa10dffa27b5b46bad0e3143f42f97, type: 3}
+  xOffset: -5
+  yOffset: 7
+  paddingX: 0.35
+  paddingY: 0.25
+  maxWidth: 3.5
+  duration: 2
+  fadeTime: 0.4
+  font: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
+--- !u!50 &1482823468
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!212 &1482823469
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482823462}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 9095062332328406929, guid: 77f5e64d063499f47897e15fba12a085, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &1483224791
 GameObject:
   m_ObjectHideFlags: 0
@@ -141921,8 +143143,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -142388,6 +143610,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd:
   - {fileID: 1515437182}
   meetFlag: 
@@ -142625,6 +143848,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1521644856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142859,6 +144084,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1529544490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143046,6 +144273,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1546327539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143434,7 +144663,7 @@ Transform:
   m_GameObject: {fileID: 1567153250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.304, y: -36.436, z: 0}
+  m_LocalPosition: {x: -14.304, y: -36.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143457,7 +144686,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -143962,6 +145191,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1581384342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144130,7 +145361,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144526,6 +145757,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1594627137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144775,8 +146008,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -145215,6 +146448,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1627813271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145831,6 +147066,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1656916769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146068,6 +147305,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1662467508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146106,7 +147345,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 3.97, y: 10.69}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146241,8 +147480,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 4081258960102700902, guid: c8c91471096a6ee41b94f141ff1febbe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -146867,6 +148106,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1689856013
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147263,6 +148504,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd:
   - {fileID: 272181009}
   - {fileID: 678597994}
@@ -147878,6 +149120,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1715239845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148046,7 +149290,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148106,6 +149350,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1716255862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148309,6 +149555,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1729220944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148698,6 +149946,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1735413100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148866,7 +150116,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149290,6 +150540,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1755814065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149681,6 +150933,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1760090032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149719,7 +150973,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.1, y: 11.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -149838,8 +151092,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 3037687429117188188, guid: ceef1ffab821acb4d9f8b36a1504b2cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156640,6 +157894,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1787327507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157370,6 +158626,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1808991523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157526,6 +158784,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1810513935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157838,6 +159098,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1818415644
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157994,6 +159256,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1821711121
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158255,6 +159519,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &1825291415
 GameObject:
   m_ObjectHideFlags: 0
@@ -158911,6 +160177,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1836226942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158949,7 +160217,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.88, y: 11.52}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159078,8 +160346,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Sprite: {fileID: 356081050652101649, guid: 88c38a6e4fd9a41498769a6d71d0d3e9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159217,6 +160485,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1841101446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159623,6 +160893,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1846048807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159779,6 +161051,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1849177575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159935,6 +161209,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1853962198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160336,6 +161612,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1865928100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160592,6 +161870,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1872301896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -160630,7 +161910,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.31, y: 11.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -160750,8 +162030,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1776270418843668321, guid: 442a4377c87a14f458114d3e77bf16df, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161034,6 +162314,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1880384260
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161072,7 +162354,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.44, y: 11.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -161192,8 +162474,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0.990566, b: 0.05958895, a: 1}
+  m_Sprite: {fileID: -7705522541011903705, guid: b9358c5170dd2d84fa5975b2dda8accc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161325,6 +162607,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1881125211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161484,6 +162768,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1882915997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161652,7 +162938,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161712,6 +162998,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1883237931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -161949,6 +163237,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1884223074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162184,6 +163474,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1885227602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162352,7 +163644,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -162412,6 +163704,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1892180065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162782,6 +164076,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1903060155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163050,6 +164346,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1912276151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163218,7 +164516,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163281,6 +164579,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1914383938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163449,7 +164749,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163587,6 +164887,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1917319621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164724,6 +166026,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1942431078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165074,6 +166378,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1950375105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165312,6 +166618,7 @@ GameObject:
   - component: {fileID: 1959825964}
   - component: {fileID: 1959825963}
   - component: {fileID: 1959825965}
+  - component: {fileID: 1959825966}
   m_Layer: 0
   m_Name: SuspicionManager
   m_TagString: Untagged
@@ -165363,6 +166670,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef58f93d18c36c44fa064d0d641b8065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.AlertManager
+--- !u!114 &1959825966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959825962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c8d39433dd4514b8756296eb158dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.TimerManager
+  totalTime: 600
+  watchItemName: "\uC2DC\uACC4"
 --- !u!1 &1964619698
 GameObject:
   m_ObjectHideFlags: 0
@@ -165692,6 +167013,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1971564749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165860,7 +167183,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165920,6 +167243,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1972052396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166575,6 +167900,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1985705666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166825,7 +168152,7 @@ SpriteRenderer:
   m_SortingOrder: 200
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.80784315}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -166978,6 +168305,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &1998743647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167252,6 +168581,7 @@ MonoBehaviour:
   overridePlayerSpawn: 0
   spawnPoint: {fileID: 0}
   requiredMeetFlag: 
+  blockedByItemName: 
   deactivateOnEnd:
   - {fileID: 901744126}
   meetFlag: 123
@@ -167381,6 +168711,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2007354731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167618,6 +168950,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2013244088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167786,7 +169120,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -167890,13 +169224,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015381000}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &2015380995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4786572647695213287, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
   m_PrefabInstance: {fileID: 2015380994}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2015380997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 2015380994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443093648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &2015381000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443093648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 2015380997}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1 &2016756945
 GameObject:
   m_ObjectHideFlags: 0
@@ -167938,7 +169344,7 @@ MonoBehaviour:
   m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -6168767152312784534, guid: 32e2f5f6a1044c744b3a567a98fd250e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -168004,7 +169410,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2016756947
@@ -168031,7 +169437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 14.4}
+  m_AnchoredPosition: {x: 0, y: 102.4}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2019284479
@@ -168406,6 +169812,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2033862236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168444,7 +169852,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.88, y: 11.52}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -168573,8 +169981,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Sprite: {fileID: 356081050652101649, guid: 88c38a6e4fd9a41498769a6d71d0d3e9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -168637,6 +170045,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2034925709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168870,6 +170280,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2036736199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169038,7 +170450,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169176,6 +170588,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2043952123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169341,11 +170755,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -169384,8 +170798,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -169456,6 +170870,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2046957908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169494,7 +170910,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.92, y: 11.93}
+    oldSize: {x: 4.67, y: 11.62}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -169613,8 +171029,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -1440209194674927380, guid: 7e354f6a1ee37384fa77e0a2eee7f459, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169970,6 +171386,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2052558571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170166,13 +171584,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 506684181763104722, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052677007}
   m_SourcePrefab: {fileID: 100100000, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
 --- !u!4 &2052677002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4786572647695213287, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
   m_PrefabInstance: {fileID: 2052677001}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2052677004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
+  m_PrefabInstance: {fileID: 2052677001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171505108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.LightSource
+--- !u!114 &2052677007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171505108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 0
+  canPush: 0
+  canPull: 0
+  isDoor: 0
+  canToggleLight: 1
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources:
+  - {fileID: 2052677004}
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
 --- !u!1 &2054118249
 GameObject:
   m_ObjectHideFlags: 0
@@ -170762,8 +172252,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -170854,6 +172344,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2058801257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171022,7 +172514,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171082,6 +172574,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2059084636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171314,7 +172808,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.85, b: 0.6, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.05
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -171471,11 +172965,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.15, g: 0.15, b: 0.15, a: 0.9}
-    m_HighlightedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_PressedColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    m_SelectedColor: {r: 0.3, g: 0.3, b: 0.3, a: 0.95}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.19215687}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.95}
+    m_DisabledColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -171514,8 +173008,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8d8a9b626da0fb45bc39380d2e13b58, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 694905761202071033, guid: 8c42f390770b65b4997691886ba9792c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -171583,6 +173077,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2072997110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171742,6 +173238,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2076422553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171910,7 +173408,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3542664259116896452, guid: 459b2329839ad5549b80f088e8bed403, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9917103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -172087,6 +173585,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2085209035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172698,6 +174198,222 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8, y: 1.8}
   m_EdgeRadius: 0
+--- !u!1 &2104104226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104104229}
+  - component: {fileID: 2104104228}
+  - component: {fileID: 2104104227}
+  - component: {fileID: 2104104230}
+  - component: {fileID: 2104104231}
+  m_Layer: 0
+  m_Name: Furniture_teatable_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2104104227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104104226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 1
+  canPush: 1
+  canPull: 1
+  isDoor: 0
+  canToggleLight: 0
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources: []
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
+--- !u!212 &2104104228
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104104226}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 6481484617200356708, guid: 57d30a9b856f3034091a057271ae9ebb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 8.16, y: 8.85}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &2104104229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104104226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.457, y: -54.086, z: 0}
+  m_LocalScale: {x: 0.15147, y: 0.15147, z: 0.15147}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2104104230
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104104226}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.16, y: 8.85}
+    newSize: {x: 8.16, y: 8.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.16, y: 8.85}
+  m_EdgeRadius: 0
+--- !u!114 &2104104231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104104226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.ShadowProjector
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
+  shadowAlpha: 0.65
+  createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &2109545551
 GameObject:
   m_ObjectHideFlags: 0
@@ -172749,6 +174465,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2109545554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172932,6 +174650,222 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5978061, y: 0.9471128}
   m_EdgeRadius: 0
+--- !u!1 &2128259708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128259712}
+  - component: {fileID: 2128259711}
+  - component: {fileID: 2128259710}
+  - component: {fileID: 2128259709}
+  - component: {fileID: 2128259713}
+  m_Layer: 0
+  m_Name: Furniture_teatable_0 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2128259709
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128259708}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.16, y: 8.85}
+    newSize: {x: 8.16, y: 8.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.16, y: 8.85}
+  m_EdgeRadius: 0
+--- !u!114 &2128259710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128259708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbb37f7a3c152c4f8860840f0a148b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
+  canCarry: 1
+  canPush: 1
+  canPull: 1
+  isDoor: 0
+  canToggleLight: 0
+  canInventory: 0
+  canTalk: 0
+  isTarget: 0
+  holdOffset: 0.7
+  pushDistance: 2
+  pushSpeed: 4
+  pullDistance: 2
+  pullSpeed: 4
+  doorCollider: {fileID: 0}
+  doorRenderer: {fileID: 0}
+  openSprite: {fileID: 0}
+  closedSprite: {fileID: 0}
+  startOpen: 0
+  openSortingOrder: 0
+  closedSortingOrder: 0
+  controlledSources: []
+  itemName: 
+  npcDialogue: {fileID: 0}
+  speechBubble: {fileID: 0}
+  giveItemAfterTalk: 0
+  rewardItemName: 
+  rewardItemSprite: {fileID: 0}
+  giveItemOnce: 1
+  rewardedDialogue: {fileID: 0}
+  dialogue: {fileID: 0}
+  requiredItemName: 
+  canExamine: 0
+  examineSprite: {fileID: 0}
+  examineDialogue: {fileID: 0}
+  giveItemAfterExamine: 0
+  examineRewardSprite: {fileID: 0}
+  examineRewardItemName: 
+  examineGiveItemOnce: 0
+  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightAlpha: 1
+  approachRadius: 2
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dirArrow: {fileID: 0}
+--- !u!212 &2128259711
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128259708}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 6481484617200356708, guid: 57d30a9b856f3034091a057271ae9ebb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 8.16, y: 8.85}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &2128259712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128259708}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.138, y: -55.165, z: 0}
+  m_LocalScale: {x: 0.15147, y: 0.15147, z: 0.15147}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128259713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128259708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a7c5abf5e6354598b8d344dd328fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.ShadowProjector
+  shadowExtend: 0.25
+  lightOffsetStrength: 0.12
+  detectionScale: 1
+  shadowAlpha: 0.65
+  createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!1 &2129946563
 GameObject:
   m_ObjectHideFlags: 0
@@ -173065,8 +174999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1814.6799, y: -25.41272}
-  m_SizeDelta: {x: 90, y: 36}
+  m_AnchoredPosition: {x: -1721.4, y: -25.41272}
+  m_SizeDelta: {x: 180, y: 36}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2130930476
 MonoBehaviour:
@@ -173264,6 +175198,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2132247573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -173627,6 +175563,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0.75
   createHidingZone: 0
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2144129323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174051,6 +175989,8 @@ MonoBehaviour:
   detectionScale: 1
   shadowAlpha: 0
   createHidingZone: 1
+  normalShadowColor: {r: 0.02, g: 0, b: 0.08, a: 1}
+  hidingShadowColor: {r: 0.05, g: 0.1, b: 0.4, a: 1}
 --- !u!61 &2146055445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174517,3 +176457,6 @@ SceneRoots:
   - {fileID: 2131683827}
   - {fileID: 1304481410}
   - {fileID: 409997838}
+  - {fileID: 2104104229}
+  - {fileID: 2128259712}
+  - {fileID: 585159535}

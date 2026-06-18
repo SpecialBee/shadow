@@ -1,4 +1,5 @@
 using UnityEngine;
+using ShadowSeller.UI;
 
 namespace ShadowSeller.Core
 {
@@ -61,9 +62,14 @@ namespace ShadowSeller.Core
             CurrentExposure = state;
         }
 
+        private static bool IsGameplayPaused =>
+            (DialogueSystem.Instance != null  && DialogueSystem.Instance.IsPlaying) ||
+            (CutsceneDirector.Instance != null && CutsceneDirector.Instance.IsPlaying);
+
         public void Tick()
         {
             if (_gameOver) return;
+            if (IsGameplayPaused) return;
 
             float rate = CurrentExposure switch
             {
@@ -104,6 +110,13 @@ namespace ShadowSeller.Core
             if (_gameOver) return;
             _gameOver = true;
             OnGameOver?.Invoke(GameOverReason.Arrested);
+        }
+
+        public void TriggerTimeOver()
+        {
+            if (_gameOver) return;
+            _gameOver = true;
+            OnGameOver?.Invoke(GameOverReason.TimeOver);
         }
 
         public void ResetForRespawn()

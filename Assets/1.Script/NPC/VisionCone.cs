@@ -15,13 +15,15 @@ namespace ShadowSeller.Core
         private NPCController _npc;
         private Mesh          _mesh;
 
-        private readonly Vector3[] _verts = new Vector3[Segments + 2];
-        private readonly int[]     _tris  = new int[Segments * 3];
+        private readonly Vector3[] _verts  = new Vector3[Segments + 2];
+        private readonly int[]     _tris   = new int[Segments * 3];
+        private readonly Color[]   _colors = new Color[Segments + 2];
 
-        private static readonly Color ColIdle       = new Color(1.0f, 1.0f, 0.4f, 0.18f);
-        private static readonly Color ColSuspicious = new Color(1.0f, 0.75f, 0.0f, 0.28f);
-        private static readonly Color ColAlert      = new Color(1.0f, 0.4f,  0.0f, 0.35f);
-        private static readonly Color ColChase      = new Color(0.9f, 0.1f,  0.1f, 0.42f);
+        // 중심(NPC): 밝은 색상 / 끝: 투명 — Additive 블렌드로 빛 느낌 연출
+        private static readonly Color ColIdle       = new Color(1.0f, 1.0f, 0.3f, 0.45f);
+        private static readonly Color ColSuspicious = new Color(1.0f, 0.65f, 0.0f, 0.60f);
+        private static readonly Color ColAlert      = new Color(1.0f, 0.3f,  0.0f, 0.72f);
+        private static readonly Color ColChase      = new Color(1.0f, 0.05f, 0.05f, 0.85f);
 
         private void Awake()
         {
@@ -32,9 +34,12 @@ namespace ShadowSeller.Core
             _mesh      = new Mesh { name = "VisionConeMesh" };
             _mf.mesh   = _mesh;
 
-            var shader = Shader.Find("Sprites/Default");
-            var mat    = new Material(shader != null ? shader : Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default"));
-            mat.color  = ColIdle;
+            // Additive 블렌딩: 겹치는 영역이 더 밝아져 빛처럼 보임
+            var shader = Shader.Find("Legacy Shaders/Particles/Additive")
+                      ?? Shader.Find("Sprites/Default")
+                      ?? Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default");
+            var mat          = new Material(shader);
+            mat.color        = Color.white; // 버텍스 컬러가 실제 색상 담당
             _mr.material     = mat;
             _mr.sortingOrder = -1;
         }
@@ -74,13 +79,20 @@ namespace ShadowSeller.Core
 
         private void ApplyStateColor(NpcState state)
         {
-            _mr.material.color = state switch
+            Color c = state switch
             {
                 NpcState.Suspicious => ColSuspicious,
                 NpcState.Alert      => ColAlert,
                 NpcState.Chase      => ColChase,
                 _                   => ColIdle,
             };
+
+            // 중심(index 0): 불투명하게 밝음 / 호 꼭짓점들: 완전 투명 → 그라디언트 생성
+            _colors[0] = c;
+            for (int i = 1; i < _colors.Length; i++)
+                _colors[i] = new Color(c.r, c.g, c.b, 0f);
+
+            _mesh.colors = _colors;
         }
 
         private static Vector2 RotateVec(Vector2 v, float deg)

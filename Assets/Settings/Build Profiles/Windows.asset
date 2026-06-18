@@ -29,7 +29,7 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/4.Scenes/Prologue_real.unity
     m_guid: 999e1904e0266564da9a0be57d85f129
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/4.Scenes/Stage1_test.unity
     m_guid: c04902ff5df749f4b81ea75d4dc394f0
   m_HasScriptingDefines: 0

@@ -596,6 +596,7 @@ namespace ShadowSeller.Core
 
         private void DoTalk()
         {
+            if (DialogueSystem.Instance != null && DialogueSystem.Instance.IsPlaying) return;
             ReleaseOwnership();
             if (speechBubble != null) speechBubble.Hide();
             if (DialogueSystem.Instance == null) return;

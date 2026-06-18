@@ -58,7 +58,7 @@ namespace ShadowSeller.UI
         {
             Color col = Colors[Mathf.Clamp(level - 1, 0, 3)];
             if (levelIcon   != null) levelIcon.color = col;
-            if (levelNumber != null) { levelNumber.text = level.ToString(); levelNumber.color = col; }
+            if (levelNumber != null) { levelNumber.text = $"경계레벨 : {level}"; levelNumber.color = col; }
         }
 
         private IEnumerator NotifyRoutine(int level)

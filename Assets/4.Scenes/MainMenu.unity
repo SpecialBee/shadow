@@ -2153,7 +2153,8 @@ MonoBehaviour:
   sfxInteractableEnter: {fileID: 8300000, guid: 6bad9b23c223fb842b373631cc943c9b, type: 3}
   sfxQuestActivate: {fileID: 8300000, guid: 8b7eb73ced8e52b42b7808efe2fd8add, type: 3}
   sfxQuestProgress: {fileID: 8300000, guid: 8b7eb73ced8e52b42b7808efe2fd8add, type: 3}
-  defaultBGMVolume: 0.7
+  sfxTutorialOpen: {fileID: 8300000, guid: 8b7eb73ced8e52b42b7808efe2fd8add, type: 3}
+  defaultBGMVolume: 0.557
   defaultSFXVolume: 1
   fadeDuration: 2.5
 --- !u!4 &607013537
