@@ -12246,9 +12246,9 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 0}
   examineRewardItemName: 
   examineGiveItemOnce: 0
-  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightColor: {r: 0.5147649, g: 1, b: 0.39999998, a: 1}
   highlightAlpha: 1
-  approachRadius: 2
+  approachRadius: 3
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -13703,9 +13703,9 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 0}
   examineRewardItemName: 
   examineGiveItemOnce: 0
-  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightColor: {r: 0.5991347, g: 1, b: 0.39999998, a: 1}
   highlightAlpha: 1
-  approachRadius: 2
+  approachRadius: 3
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -66476,7 +66476,7 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 0}
   examineRewardItemName: 
   examineGiveItemOnce: 0
-  highlightColor: {r: 0, g: 1, b: 0.045587063, a: 1}
+  highlightColor: {r: 0.3066038, g: 1, b: 0.33923423, a: 1}
   highlightAlpha: 1
   approachRadius: 3
   wallLayer:
@@ -66551,7 +66551,7 @@ Transform:
   m_GameObject: {fileID: 1127117381}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.779999, y: 31.54, z: 0}
+  m_LocalPosition: {x: -16.779999, y: 31.682, z: 0}
   m_LocalScale: {x: 1, y: 0.11000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162549,9 +162549,9 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 0}
   examineRewardItemName: 
   examineGiveItemOnce: 0
-  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightColor: {r: 0.49646762, g: 1, b: 0.39999998, a: 1}
   highlightAlpha: 1
-  approachRadius: 2
+  approachRadius: 3
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -165653,7 +165653,7 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 0}
   examineRewardItemName: 
   examineGiveItemOnce: 0
-  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightColor: {r: 0.49801436, g: 1, b: 0.3160377, a: 1}
   highlightAlpha: 1
   approachRadius: 2
   wallLayer:
@@ -168496,7 +168496,7 @@ MonoBehaviour:
   examineRewardSprite: {fileID: 3707194719738656611, guid: 3986885c942c1a649bc7c5c43cb3194c, type: 3}
   examineRewardItemName: SecondFloorKey
   examineGiveItemOnce: 1
-  highlightColor: {r: 1, g: 0.92, b: 0.4, a: 1}
+  highlightColor: {r: 0.5552017, g: 1, b: 0.39999998, a: 1}
   highlightAlpha: 1
   approachRadius: 2
   wallLayer:
