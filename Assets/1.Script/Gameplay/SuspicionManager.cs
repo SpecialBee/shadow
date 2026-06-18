@@ -62,6 +62,18 @@ namespace ShadowSeller.Core
             CurrentExposure = state;
         }
 
+        private void Update()
+        {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#if ENABLE_INPUT_SYSTEM
+            var kb = UnityEngine.InputSystem.Keyboard.current;
+            if (kb != null && kb.f2Key.wasPressedThisFrame) ResetForRespawn();
+#else
+            if (Input.GetKeyDown(KeyCode.F2)) ResetForRespawn();
+#endif
+#endif
+        }
+
         private static bool IsGameplayPaused =>
             (DialogueSystem.Instance != null  && DialogueSystem.Instance.IsPlaying) ||
             (CutsceneDirector.Instance != null && CutsceneDirector.Instance.IsPlaying);

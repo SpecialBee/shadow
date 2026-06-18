@@ -87,8 +87,12 @@ namespace ShadowSeller.Core
         private void Update()
         {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
-            if (Input.GetKeyDown(KeyCode.F1))
-                AddTime(60f);
+#if ENABLE_INPUT_SYSTEM
+            var kb = UnityEngine.InputSystem.Keyboard.current;
+            if (kb != null && kb.f1Key.wasPressedThisFrame) AddTime(60f);
+#else
+            if (Input.GetKeyDown(KeyCode.F1)) AddTime(60f);
+#endif
 #endif
         }
     }

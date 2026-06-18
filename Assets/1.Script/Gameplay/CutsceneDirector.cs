@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 using ShadowSeller.UI;
 
 namespace ShadowSeller.Core
@@ -35,6 +37,9 @@ namespace ShadowSeller.Core
         private IEnumerator PlayRoutine(CutsceneStep[] steps, bool overrideSpawn, Transform spawnPoint, System.Action onComplete)
         {
             IsPlaying = true;
+
+            // 이전 대화창이 열려있거나 페이드 중이면 즉시 숨김
+            DialogueSystem.Instance?.ForceHide();
 
             if (_player != null) _player.IsLocked = true;
 
@@ -84,6 +89,10 @@ namespace ShadowSeller.Core
 
         private IEnumerator ExecuteStep(CutsceneStep step)
         {
+            // 대화 스텝이 아니면 대화창 즉시 숨김
+            if (step.type != CutsceneStepType.Dialogue)
+                DialogueSystem.Instance?.ForceHide();
+
             switch (step.type)
             {
                 case CutsceneStepType.Dialogue:
@@ -107,6 +116,12 @@ namespace ShadowSeller.Core
                         if (step.fadeOut) yield return StartCoroutine(SceneFader.Instance.FadeOut());
                         else              yield return StartCoroutine(SceneFader.Instance.FadeIn());
                     }
+                    break;
+                case CutsceneStepType.PlaySound:
+                    yield return StartCoroutine(StepPlaySound(step));
+                    break;
+                case CutsceneStepType.PlayVideo:
+                    yield return StartCoroutine(StepPlayVideo(step));
                     break;
             }
         }
@@ -172,6 +187,121 @@ namespace ShadowSeller.Core
 
             if (step.cameraFollowAfter && _cameraFollow != null)
                 _cameraFollow.enabled = true;
+        }
+
+        // ── PlaySound ─────────────────────────────────────────────────────────
+
+        private IEnumerator StepPlaySound(CutsceneStep step)
+        {
+            if (step.soundClip == null) yield break;
+
+            var pos = Camera.main != null ? Camera.main.transform.position : Vector3.zero;
+            AudioSource.PlayClipAtPoint(step.soundClip, pos);
+
+            // waitForComplete=true 이면 클립 길이만큼 대기
+            if (step.waitForComplete)
+                yield return new WaitForSeconds(step.soundClip.length);
+        }
+
+        // ── PlayVideo ─────────────────────────────────────────────────────────
+
+        private IEnumerator StepPlayVideo(CutsceneStep step)
+        {
+            if (step.videoClip == null) yield break;
+
+            // Canvas 탐색
+            Canvas canvas = null;
+            var cGo = GameObject.Find("UICanvas");
+            if (cGo != null) canvas = cGo.GetComponent<Canvas>();
+            if (canvas == null)
+                foreach (var c in Object.FindObjectsByType<Canvas>(FindObjectsSortMode.None))
+                    if (c.renderMode != RenderMode.WorldSpace) { canvas = c; break; }
+            if (canvas == null) yield break;
+
+            // RenderTexture
+            int w = Mathf.Max(1, (int)step.videoClip.width);
+            int h = Mathf.Max(1, (int)step.videoClip.height);
+            var rt = new RenderTexture(w, h, 0);
+
+            // 전체화면 검정 패널
+            var panelGo    = new GameObject("_VideoPanel", typeof(RectTransform));
+            panelGo.transform.SetParent(canvas.transform, false);
+            panelGo.transform.SetAsLastSibling();
+            var panelRT    = panelGo.GetComponent<RectTransform>();
+            panelRT.anchorMin = Vector2.zero;
+            panelRT.anchorMax = Vector2.one;
+            panelRT.offsetMin = Vector2.zero;
+            panelRT.offsetMax = Vector2.zero;
+            var panelImg   = panelGo.AddComponent<Image>();
+            panelImg.color = Color.black;
+
+            // RawImage + CanvasGroup (페이드용)
+            var rawGo  = new GameObject("_VideoRaw", typeof(RectTransform));
+            rawGo.transform.SetParent(panelGo.transform, false);
+            var rawRT  = rawGo.GetComponent<RectTransform>();
+            rawRT.anchorMin = Vector2.zero;
+            rawRT.anchorMax = Vector2.one;
+            rawRT.offsetMin = Vector2.zero;
+            rawRT.offsetMax = Vector2.zero;
+            var rawImg = rawGo.AddComponent<RawImage>();
+            rawImg.texture = rt;
+            var cg     = rawGo.AddComponent<CanvasGroup>();
+            cg.alpha   = 0f;
+
+            // VideoPlayer
+            var vpGo  = new GameObject("_VideoPlayer");
+            var vp    = vpGo.AddComponent<VideoPlayer>();
+            vp.playOnAwake      = false;
+            vp.clip             = step.videoClip;
+            vp.renderMode       = VideoRenderMode.RenderTexture;
+            vp.targetTexture    = rt;
+            vp.isLooping        = false;
+
+            if (step.videoAudio)
+            {
+                vp.audioOutputMode = VideoAudioOutputMode.AudioSource;
+                var asSrc = vpGo.AddComponent<AudioSource>();
+                vp.SetTargetAudioSource(0, asSrc);
+            }
+            else
+            {
+                vp.audioOutputMode = VideoAudioOutputMode.None;
+            }
+
+            vp.Prepare();
+            yield return new WaitUntil(() => vp.isPrepared);
+            vp.Play();
+
+            // 페이드 인
+            float fd = Mathf.Max(0f, step.videoFadeDuration);
+            for (float t = 0f; t < fd; t += Time.deltaTime)
+            {
+                if (cg != null) cg.alpha = t / fd;
+                yield return null;
+            }
+            if (cg != null) cg.alpha = 1f;
+
+            // 재생 대기
+            float timeout = step.videoTimeout > 0f ? step.videoTimeout : float.MaxValue;
+            float elapsed = 0f;
+            while (vp.isPlaying && elapsed < timeout - fd)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            // 페이드 아웃
+            for (float t = 0f; t < fd; t += Time.deltaTime)
+            {
+                if (cg != null) cg.alpha = 1f - t / fd;
+                yield return null;
+            }
+            if (cg != null) cg.alpha = 0f;
+
+            vp.Stop();
+            rt.Release();
+            Destroy(vpGo);
+            Destroy(panelGo);
         }
     }
 }

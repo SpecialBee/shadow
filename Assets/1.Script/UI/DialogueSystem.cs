@@ -74,6 +74,17 @@ namespace ShadowSeller.Core
             EndDialogue();
         }
 
+        // 컷씬 진입 시 패널을 즉시 숨김 — 이전 대화 페이드 중이어도 강제 초기화
+        public void ForceHide()
+        {
+            if (_typeRoutine     != null) { StopCoroutine(_typeRoutine);     _typeRoutine     = null; }
+            if (_panelFadeRoutine != null) { StopCoroutine(_panelFadeRoutine); _panelFadeRoutine = null; }
+            IsPlaying = false;
+            if (panelGroup != null) { panelGroup.alpha = 0f; panelGroup.interactable = false; panelGroup.blocksRaycasts = false; }
+            HideTexts();
+            if (_player != null) _player.IsLocked = false;
+        }
+
         public void Next()
         {
             if (!IsPlaying) return;

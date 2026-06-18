@@ -13240,7 +13240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6816200cf09ae774cb87fcab729b2f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShadowSeller::ShadowSeller.UI.SuspicionUI
-  fillBar: {fileID: 463682535}
+  slider: {fileID: 0}
   valueLabel: {fileID: 1470270802}
 --- !u!114 &412384038
 MonoBehaviour:
@@ -18694,8 +18694,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -43488,8 +43488,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
