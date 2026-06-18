@@ -180,17 +180,19 @@ namespace ShadowSeller.Core
             cb?.Invoke();
         }
 
-        // ── E키 / 스페이스 입력 ───────────────────────────────────────────────
+        // ── E키 / 스페이스 / 마우스 좌클릭 입력 ─────────────────────────────────
 
         private void Update()
         {
             if (!IsPlaying) return;
 #if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
-                Next();
+            var kb    = UnityEngine.InputSystem.Keyboard.current;
+            var mouse = UnityEngine.InputSystem.Mouse.current;
+            bool pressed = (kb    != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
+                        || (mouse != null && mouse.leftButton.wasPressedThisFrame);
+            if (pressed) Next();
 #else
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
                 Next();
 #endif
         }

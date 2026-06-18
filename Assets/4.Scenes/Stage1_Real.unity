@@ -5119,7 +5119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_PointLightOuterRadius
@@ -12514,7 +12514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 5.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_Intensity
@@ -31086,7 +31086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 5.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_Intensity
@@ -138188,7 +138188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cd196fb21bdfd40b3f4e5fde27060a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.LightSource
-  range: 5
+  range: 2
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -141109,7 +141109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 5.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_Intensity
@@ -169203,7 +169203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 5.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_Intensity
@@ -171567,7 +171567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299059917223234228, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: range
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5863122070359324598, guid: a8116cf5d93189f4da1d40eb58b832cf, type: 3}
       propertyPath: m_PointLightOuterRadius
@@ -174231,8 +174231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
   canCarry: 1
-  canPush: 1
-  canPull: 1
+  canPush: 0
+  canPull: 0
   isDoor: 0
   canToggleLight: 0
   canInventory: 0
@@ -174729,8 +174729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.InteractableObject
   canCarry: 1
-  canPush: 1
-  canPull: 1
+  canPush: 0
+  canPull: 0
   isDoor: 0
   canToggleLight: 0
   canInventory: 0

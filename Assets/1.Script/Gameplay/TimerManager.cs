@@ -63,9 +63,16 @@ namespace ShadowSeller.Core
             }
         }
 
+        public void AddTime(float seconds)
+        {
+            if (IsExpired) return;
+            Remaining = Mathf.Min(totalTime, Remaining + seconds);
+        }
+
         public void Tick()
         {
             if (IsExpired) return;
+            if (CutsceneDirector.Instance != null && CutsceneDirector.Instance.IsPlaying) return;
 
             Remaining = Mathf.Max(0f, Remaining - Time.deltaTime);
 
@@ -75,6 +82,14 @@ namespace ShadowSeller.Core
                 OnTimerExpired?.Invoke();
                 SuspicionManager.Instance?.TriggerTimeOver();
             }
+        }
+
+        private void Update()
+        {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (Input.GetKeyDown(KeyCode.F1))
+                AddTime(60f);
+#endif
         }
     }
 }
