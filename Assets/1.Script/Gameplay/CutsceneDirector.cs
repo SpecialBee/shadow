@@ -12,6 +12,7 @@ namespace ShadowSeller.Core
         public static CutsceneDirector Instance { get; private set; }
 
         public bool IsPlaying { get; private set; }
+        public bool IsDialogueStep { get; private set; }
 
         private PlayerController _player;
         private CameraFollow     _cameraFollow;
@@ -89,6 +90,8 @@ namespace ShadowSeller.Core
 
         private IEnumerator ExecuteStep(CutsceneStep step)
         {
+            IsDialogueStep = step.type == CutsceneStepType.Dialogue;
+
             // 대화 스텝이 아니면 대화창 즉시 숨김
             if (step.type != CutsceneStepType.Dialogue)
                 DialogueSystem.Instance?.ForceHide();

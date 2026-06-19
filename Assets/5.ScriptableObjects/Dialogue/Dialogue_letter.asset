@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43af71a745db8cf49984c234f252689c, type: 3}
-  m_Name: example
-  m_EditorClassIdentifier: Assembly-CSharp::ShadowSeller.Core.DialogueData
+  m_Name: Dialogue_letter
+  m_EditorClassIdentifier: ShadowSeller::ShadowSeller.Core.DialogueData
   lines:
   - speakerName: 
-    text: "\uD558\uB140\uC7A5\uC774 \uB0A8\uAE34 \uCABD\uC9C0\uB85C \uBCF4\uC778\uB2E4."
+    text: "\uC9D1\uC548\uAD6C\uC870\uB97C \uB300\uB7B5\uC801\uC73C\uB85C \uADF8\uB824\uB454
+      \uC9C0\uB3C4\uC774\uB2E4."

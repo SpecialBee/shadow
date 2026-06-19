@@ -54,6 +54,9 @@ namespace ShadowSeller.Core
         {
             if (data == null || data.lines.Length == 0) { onComplete?.Invoke(); return; }
             if (IsPlaying) return;
+            // 컷씬 진행 중이고 현재 Dialogue 스텝이 아니면 차단 (영상·이동 스텝 중 외부 호출 방지)
+            var cd = ShadowSeller.Core.CutsceneDirector.Instance;
+            if (cd != null && cd.IsPlaying && !cd.IsDialogueStep) return;
 
             _lines      = data.lines;
             _index      = 0;

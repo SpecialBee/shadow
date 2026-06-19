@@ -27,11 +27,18 @@ namespace ShadowSeller.UI
         [Header("이미지 모드 (그림 1장)")]
         [SerializeField] private Image contentImage;
 
-        private System.Action _onClose;
+        private System.Action                    _onClose;
+        private ShadowSeller.Core.PlayerController _player;
+        private bool                             _wasPlayerLocked;
 
         private void Awake()
         {
             if (Instance == null) Instance = this;
+        }
+
+        private void Start()
+        {
+            _player = Object.FindAnyObjectByType<ShadowSeller.Core.PlayerController>();
         }
 
         private void OnDestroy()
@@ -42,7 +49,8 @@ namespace ShadowSeller.UI
         // 텍스트 모드: 항목 리스트를 contentText에 출력
         public void Show(string title, TutorialEntry[] entries, System.Action onClose = null)
         {
-            if (titleText != null)
+            // title이 기본값("조작법 안내")이거나 비어있으면 씬에 직접 설정한 titleText 유지
+            if (titleText != null && !string.IsNullOrEmpty(title) && title != "조작법 안내")
                 titleText.text = title;
 
             if (contentText != null && entries != null)
@@ -71,7 +79,19 @@ namespace ShadowSeller.UI
         private void Open(System.Action onClose)
         {
             _onClose = onClose;
-            gameObject.SetActive(true);           // 부모가 꺼져 있어도 반드시 활성화
+
+            // 비활성 상태로 시작한 경우 Start()가 늦게 호출되므로 여기서 재탐색
+            if (_player == null)
+                _player = Object.FindAnyObjectByType<ShadowSeller.Core.PlayerController>();
+
+            // 팝업 표시 중 플레이어 조작 잠금 (이전 상태 보존)
+            if (_player != null)
+            {
+                _wasPlayerLocked = _player.IsLocked;
+                _player.IsLocked = true;
+            }
+
+            gameObject.SetActive(true);
             if (overlay != null) overlay.SetActive(true);
             ShadowSeller.Core.AudioManager.Instance?.PlaySFX(ShadowSeller.Core.SFXClip.TutorialOpen);
 
@@ -84,11 +104,15 @@ namespace ShadowSeller.UI
 
         public void Close()
         {
+            // 팝업 닫힐 때 플레이어 잠금 상태 복원
+            if (_player != null)
+                _player.IsLocked = _wasPlayerLocked;
+
             if (overlay != null) overlay.SetActive(false);
-            gameObject.SetActive(false);          // 닫으면 다시 비활성화
+            gameObject.SetActive(false);
             var cb = _onClose;
             _onClose = null;
-            cb?.Invoke();                         // gameObject 비활성 후 콜백 실행
+            cb?.Invoke();
         }
 
     }

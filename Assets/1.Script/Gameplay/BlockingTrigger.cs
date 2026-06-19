@@ -29,6 +29,7 @@ namespace ShadowSeller.Core
         {
             if (_isBusy) return;
             if (!other.CompareTag("Player")) return;
+            if (CutsceneDirector.Instance != null && CutsceneDirector.Instance.IsPlaying) return;
 
             var player = other.GetComponent<PlayerController>();
             if (player == null) return;

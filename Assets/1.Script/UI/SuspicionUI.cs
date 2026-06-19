@@ -13,11 +13,16 @@ namespace ShadowSeller.UI
         [SerializeField] private Slider          slider;
         [SerializeField] private TextMeshProUGUI valueLabel;
 
+        [Header("이미지 커스텀")]
+        [Tooltip("슬라이더 Fill 이미지. 스프라이트 교체 및 색상 변화 적용 대상.")]
+        [SerializeField] private Image fillImage;
+        [Tooltip("슬라이더 Background 이미지. 스프라이트 교체 가능. (선택 사항)")]
+        [SerializeField] private Image backgroundImage;
+
         private static readonly Color ColorSafe    = new Color(0.6f, 0.6f, 0.6f);
         private static readonly Color ColorCaution = new Color(1.0f, 0.55f, 0.0f);
         private static readonly Color ColorDanger  = new Color(0.9f, 0.15f, 0.15f);
 
-        private Image                _fillImage;
         private PlayerExposureTracker _tracker;
 
         private void Start()
@@ -26,8 +31,9 @@ namespace ShadowSeller.UI
             if (playerGo != null)
                 _tracker = playerGo.GetComponent<PlayerExposureTracker>();
 
-            if (slider != null && slider.fillRect != null)
-                _fillImage = slider.fillRect.GetComponent<Image>();
+            // fillImage를 인스펙터에서 연결하지 않은 경우 slider.fillRect에서 자동 탐색
+            if (fillImage == null && slider != null && slider.fillRect != null)
+                fillImage = slider.fillRect.GetComponent<Image>();
         }
 
         private void Update()
@@ -39,7 +45,7 @@ namespace ShadowSeller.UI
             if (slider != null)
                 slider.value = val / 100f;
 
-            if (_fillImage != null)
+            if (fillImage != null)
             {
                 Color baseColor = val < 40f ? ColorSafe
                                 : val < 70f ? ColorCaution
@@ -56,7 +62,7 @@ namespace ShadowSeller.UI
                     }
                 }
 
-                _fillImage.color = baseColor;
+                fillImage.color = baseColor;
             }
 
             if (valueLabel != null)
